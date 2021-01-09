@@ -1,4 +1,32 @@
 # grupo_4_games
-Grupo 4 de DH e-commerce videojuegos
 
 URL REPO: https://github.com/rockop11/grupo_4_games
+
+# Tematica del sitio
+- Ecommerce. Tienda virtual de Consolas y Juegos. 
+- link Wireframe : *COPIAR AQUI LINK DEL BOCETO*
+
+
+# Publico objetivo
+- Nuestro sitio web esta orientado a usuarios de 15 a 40 años, amantes de los videojuegos y consolas.
+
+# Productos o servicios
+- ofrecemos venta de juegos y consolas, y articulos varios del mundo gaming.
+
+# Listado de 5 páginas referentes
+*[PLAY STATION AR](https://www.playstation.com/es-ar/)
+*[XBOX AR](https://www.xbox.com/es-AR/)
+*[COMPRAGAMER AR](https://www.compragamer.com/)
+*[ELECTRONIC THINGS AR](https://www.electronicthings.com.ar/)
+*[PAGINA DE LAYOUTS](https://www.behance.net/gallery/47770539/Drap-Agency-Branding)
+
+
+# Listado del grupo con una breve descripción de cada uno
+* RODRIGO PONCE: LARGA VIDA AL MUNDO GAMING!!
+
+* JUAN MOLINA:
+
+* SANTIAGO ORTIGOZA:
+
+
+
