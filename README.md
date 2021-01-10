@@ -24,7 +24,7 @@ URL REPO: https://github.com/rockop11/grupo_4_games
 # Listado del grupo con una breve descripción de cada uno
 * RODRIGO PONCE: LARGA VIDA AL MUNDO GAMING!!
 
-* JUAN MOLINA:
+* JUAN MOLINA: ARKANOID IS NOT DEAD!
 
 * SANTIAGO ORTIGOZA: AGUANTE RIVER Y LOS VIDEOJUEGOS! 
 
