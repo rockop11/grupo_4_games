@@ -26,7 +26,7 @@ URL REPO: https://github.com/rockop11/grupo_4_games
 
 * JUAN MOLINA:
 
-* SANTIAGO ORTIGOZA:
+* SANTIAGO ORTIGOZA: AGUANTE RIVER Y LOS VIDEOJUEGOS! 
 
 
 
