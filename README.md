@@ -4,7 +4,6 @@ URL REPO: https://github.com/rockop11/grupo_4_games
 
 # Tematica del sitio
 - Ecommerce. Tienda virtual de Consolas y Juegos. 
-- link Wireframe : *COPIAR AQUI LINK DEL BOCETO*
 
 
 # Publico objetivo
