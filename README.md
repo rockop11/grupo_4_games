@@ -3,7 +3,7 @@
 URL REPO: https://github.com/rockop11/grupo_4_games
 
 # Tematica del sitio
-- Ecommerce. Tienda virtual de Consolas y Juegos. 
+- Ecommerce. Tienda virtual de Consolas y Juegos.
 
 
 # Publico objetivo
@@ -25,7 +25,7 @@ URL REPO: https://github.com/rockop11/grupo_4_games
 
 * JUAN MOLINA: ARKANOID IS NOT DEAD!
 
-* SANTIAGO ORTIGOZA: AGUANTE RIVER Y LOS VIDEOJUEGOS! 
+* SANTIAGO ORTIGOZA: AGUANTE RIVER Y LOS VIDEOJUEGOS!
 
 
 
