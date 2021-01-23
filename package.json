@@ -1,0 +1,22 @@
+{
+  "name": "grupo_4_games",
+  "version": "1.0.0",
+  "description": "URL REPO: https://github.com/rockop11/grupo_4_games",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockop11/grupo_4_games.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rockop11/grupo_4_games/issues"
+  },
+  "homepage": "https://github.com/rockop11/grupo_4_games#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
