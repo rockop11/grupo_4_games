@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header div.top-header {
+    padding: 5%;
+}
+
+header div.logo img{
+    width: 25%;
+}
