@@ -1,0 +1,29 @@
+
+div img{
+    width: 80%;
+    border: solid 2px rgb(0, 78, 255);
+    margin-left: 50px;
+    
+}
+
+h2{
+    text-align: left;
+    
+}
+
+body p{
+    text-align: left;
+}
+
+.color{
+    color: magenta;
+    
+}
+
+.maschico{
+    width: 23%;
+}
+
+span{
+    margin-left:10px;
+}
