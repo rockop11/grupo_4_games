@@ -1,0 +1,35 @@
+=== COLORES ===
+XBOX-green:  #107C10;
+bright_green: #44d62d; RGB(68, 214, 45);
+PS5_blue: #003087; rgb(0, 48, 135);
+bright_blue:  #004EFF; RGB(0,78,255);
+dark_grey: RGB(50, 63, 72); #323f48;
+light_grey_1: RGB(245, 245, 245); #f5f5f5;
+light_grey_2: RGB(235, 236, 238); #ebecee;
+grey: RGB(145, 148, 153); #919499;
+
+
+
+
+=== TIPOGRAFÍAS ===
+Familia: 'Lato'
+Versiones: 300, 400, 700, 900
+Familia: 'Paytone One'
+Versiones: 400
+
+
+=== HEADER - TEXTOS ===
+Buscar productos, marcas y más
+Comprá en cuotas y sin tarjeta de crédito
+
+
+=== NAVBAR - TEXTOS ===
+Ofertas
+Consolas
+Juegos
+Accesorios
+Ayuda
+---
+Creá tu cuenta
+Ingresá
+Mis compras
