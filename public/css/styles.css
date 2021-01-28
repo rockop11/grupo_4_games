@@ -16,8 +16,13 @@ body {
     padding: 20px;
 }
 
+.logo-burger {
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo {
-    width: 200px;
+    width: 100px;
 }
 
 .copy-header {
@@ -34,7 +39,7 @@ header p {
     margin-bottom: 10px;
 }
 
-.burger-button {
+.fa-bars {
     border: solid 1px #44d62d;
     color: #44d62d;
     display: block;
@@ -64,6 +69,21 @@ header p {
     padding: 5px 0;
     font-size: 17px;
 }
+
+/* MAIN */
+
+
+/* Estilos del Menú duos */
+
+main {
+    background-color: red;
+}
+
+.duos {
+    display: flex;
+    width: 100%;
+}
+
 
 /* MEDIA QUERIES */
 
