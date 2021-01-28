@@ -103,22 +103,44 @@ div.form .input {
 /* Estilos del Menú duos */
 
 main {
-    background-color: red;
+    /* background-color: red; */
 }
+
+.banner {
+    width: 100%;
+    background-size: cover;
+}
+
+/* main .banner img {
+} */
 
 .duos {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
 }
 
 .plays{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    background-color:  #004EFF;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .xbox {
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    background-color: #44d62d;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.duos img {
+    width: 50%;
+    margin: 50px;
+    opacity: 15%;
 }
 
 
