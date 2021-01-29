@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,6 +30,7 @@ body {
 .copy-header {
     font-weight: 400;
     text-align: center;
+    padding: 25px 5px;
     font-size: 30px;
 }
 
@@ -97,22 +100,20 @@ div.form .input {
     color: #44d62d;
 }
 
-/* MAIN */
+/* ------------------------ MAIN --------------------------- */
+
+/*IMAGEN PRINCIPAL DEL INDEX O SIDESHOW MAS ADELTANTE*/
+div.banner {
+    /* OVERFLOW HIDDEN PARA ACHICAR A LOS COSTADOS LA IMAGEN, DSP VEMOS QUE HACEMOS*/
+    overflow: hidden;
+}
+
+div.banner img {
+    display: block;
+}
 
 
 /* Estilos del Menú duos */
-
-main {
-    /* background-color: red; */
-}
-
-.banner {
-    width: 100%;
-    background-size: cover;
-}
-
-/* main .banner img {
-} */
 
 .duos {
     display: flex;
@@ -143,6 +144,18 @@ main {
     opacity: 15%;
 }
 
+
+/*---------------- FOOTER ----------------*/
+footer {
+    width: 100%;
+    background-color: #323f48;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+div.footer-icons {
+    color: #44d62d;
+}
 
 /* MEDIA QUERIES */
 
