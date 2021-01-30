@@ -145,6 +145,82 @@ div.banner img {
 }
 
 
+/* -- Sección de Ofertas -- */
+
+.ofertas {
+    width: 90%;
+    margin: auto;
+}
+
+h3 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #666;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.img-producto {
+    width: 100%;
+}
+
+main section article {
+    margin: 10px;
+}
+
+.producto {
+    border-top: 1px solid #ebebeb;
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+.fa-truck { 
+    display: block; 
+    font-size: 16px; 
+    padding: 5px; 
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #44d62d; 
+    background-color: #FFF; 
+    border-radius: 50%; 
+    position: absolute; 
+    right: 20px; 
+    top: -15px;
+}
+
+.descuento {
+    flex-grow: 7;
+    font-size: 16px;
+}
+
+.precio {
+    flex-grow: 3;
+    font-size: 18px;
+    color: #323f48;
+}
+
+.descuento,
+.fa-truck {
+    color: #44d62d;
+    border-radius: 50%;
+}
+
+.fa-truck {
+    padding-bottom: 15px;
+}
+
+.descripcion {
+    padding-top: 15px;
+}
+
+
+
 /*---------------- FOOTER ----------------*/
 footer {
     width: 100%;
@@ -160,6 +236,20 @@ div.footer-icons {
 /* MEDIA QUERIES */
 
 @media (min-width: 340px) {
+    .ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 10;
+    }
+    main section article {
+        width: 95%;
+    }
+    .descripcion {
+        display: none;
+    }
     .main-navbar {
         display: none;
     }
