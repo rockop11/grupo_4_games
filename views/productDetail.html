@@ -3,33 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
     <link rel="stylesheet" href="/css/styles-detalle.css">
     <title>Producto</title>
 </head>
 <body>
-    <div>
-        <img src="/img/Control.jpg" alt="Imagen del producto">
-    </div>
+    <header class="main-header">
+        <div class="top-header">
+            <div class="logo-burger">
+                <a href="/"><img src="/img/Zona-Gamer_logo_light_grey_2.png" class="logo"></a>
+                <a href="#" class="burger-button">
+                    <i class = "fa fa-bars"></i>
+                </a>
+            </div>
+            <h2 class="copy-header">
+                <i class="fas fa-gamepad"></i>
+                La mejor opción para los gamers
+            </h2>
+        </div>
 
-    <br>
+        <div class="form" action='#' method="GET">
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Consolas</a></li>
+                <li><a href="">Juegos</a></li>
+                <li><a href="">Accesorios</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+
+            <ul class="right-navbar">
+                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
+                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-producto">
+        <div>
+            <img src="/img/Control.jpg" alt="Imagen del producto">
+        </div>
     
-    <span> <img class="maschico" src="/img/Control.jpg" alt="Imagen del producto">
-     <img class="maschico" src="/img/Control.jpg" alt="Imagen del producto">
-     <img class="maschico" src="/img/Control.jpg" alt="Imagen del producto">
-     <img class="maschico" src="/img/Control.jpg" alt="Imagen del producto"></span>
-    
-    <h2>Joystick inalámbrico Sony DualSense PS5</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam explicabo exercitationem asperiores voluptate quasi totam nemo,
-       fugiat velit suscipit at unde neque atque cum vel expedita! Laudantium, in reprehenderit. Numquam.</p>
+        <br>
+        
+        <span> <img class="maschico" src="/img/ps5_consola_04.jpg" alt="Imagen del producto">
+         <img class="maschico" src="/img/ps5_joystick_01.jpg" alt="Imagen del producto">
+         <img class="maschico" src="/img/ps5_joystick_02.jpg" alt="Imagen del producto">
+         <img class="maschico" src="/img/ps5_joystick_03.jpg" alt="Imagen del producto"></span>
+        
+        <article>
+            <h1>Joystick inalámbrico Sony DualSense PS5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam explicabo exercitationem asperiores voluptate quasi totam nemo,
+               fugiat velit suscipit at unde neque atque cum vel expedita! Laudantium, in reprehenderit. Numquam.</p>
+        
+            <h2>$11.500</h2>
+        
+            <p class="color">12 cuotas s/interés</p>
+               <br>
+            <h2>Especificaciones</h2>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut expedita nostrum nulla facilis quod fuga! Eius, voluptatem?
+               In maxime esse ut deleniti voluptatibus amet optio necessitatibus obcaecati laudantium vel?</p>
+        </article>
+    </main>
+    <footer>
+        <article class="footer-art">
+            <img src="/img/Zona-Gamer_logo_light_grey_2.png" class="logo" alt="">
+        </article>
 
-    <h2>$11.500</h2>
+        <article class="footer-art">
+            <h3>La mejor opción para los gamers</h3>
+            <div class="footer-icons">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </article>
 
-    <p class="color">12 cuotas s/interés</p>
-       <br>
-    <h2>Especificaciones</h2>    
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut expedita nostrum nulla facilis quod fuga! Eius, voluptatem?
-       In maxime esse ut deleniti voluptatibus amet optio necessitatibus obcaecati laudantium vel?</p>
-
+        <article class="footer-art">
+        </article>
+    </footer>
 </body>
 
 </html>
