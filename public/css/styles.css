@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    color: #ebecee;
 }
 
 /* HEADER */
@@ -32,6 +31,7 @@ body {
     text-align: center;
     padding: 25px 5px;
     font-size: 30px;
+    color: #ffffff;
 }
 
 header nav {
@@ -152,12 +152,11 @@ div.banner img {
     margin: auto;
 }
 
-h3 {
+.titulo-section {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.2rem;
-    color: #666;
     width: 100%;
     text-align: center;
     font-weight: 300;

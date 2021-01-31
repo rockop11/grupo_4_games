@@ -1,6 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: 'Lato', sans-serif;
-    color: #ebecee;
 }
 
 /* HEADER */
@@ -24,6 +30,7 @@ body {
     text-align: center;
     padding: 25px 5px;
     font-size: 30px;
+    color: #ffffff;
 }
 
 header nav {
