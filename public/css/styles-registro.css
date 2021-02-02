@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADER */
+
+.main-header {
+    background-color: #323f48;
+    padding: 20px;
+}
+
+.logo-burger {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+    padding: 25px 5px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+header nav {
+    margin-bottom: 10px;
+}
+
+header p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fa-bars {
+    border: solid 1px #44d62d;
+    color: #44d62d;
+    display: block;
+    width: 30px;
+    padding: 8px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.main-navbar {
+    /* display: none; */
+}
+
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+div.form {
+    display: flex;
+    justify-content: center;
+    height: 23px;
+}
+
+div.form .input {
+    background-color: #FFF;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    border-radius: 8px 8px 8px 8px;
+    line-height: 17px;
+    font-size: 12px;
+}
+
+.fa-search {
+    margin-left: 7px;
+    font-size: 17px;
+    color: #44d62d;
+    padding-top: 3px;
+}
+
+.fa-gamepad {
+    color: #44d62d;
+}
+/*----------------  ----------------*/
+.control-formulario{
+    margin-bottom: 15px;
+}
+
+.form{
+    padding: 10px 10px;
+
+}
+
+.control{
+    width: 100%;
+    padding: 8px 8px;
+}
+
+/*---------------- FOOTER ----------------*/
+
+footer {
+    width: 100%;
+    background-color: #323f48;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+div.footer-icons {
+    color: #44d62d;
+}
+
+.arte-boton{
+    background-color:#44d62d;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-formulario{
+    text-align: center;
+}
