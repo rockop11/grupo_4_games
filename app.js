@@ -4,23 +4,23 @@ const app = express();
 
 app.use(express.static('public'))
 
-app.get ('/', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(path.resolve('./views/index.html'));
 });
 
-app.get ('/Producto', function(req, res) {
+app.get('/producto', function(req, res) {
     res.sendFile(path.resolve('./views/productDetail.html'));
 });
 
-app.get ('/Carrito', function(req, res) {
+app.get('/carrito', function(req, res) {
     res.sendFile(path.resolve('./views/productCart.html'));
 });
 
-app.get ('/Registro', function(req, res) {
+app.get('/registro', function(req, res) {
     res.sendFile(path.resolve('./views/register.html'));
 });
 
-app.get ('/Login', function(req, res) {
+app.get('/login', function(req, res) {
     res.sendFile(path.resolve('./views/login.html'));
 });
 
