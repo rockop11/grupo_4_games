@@ -232,9 +232,34 @@ footer {
     padding: 25px 0;
 }
 
-div.footer-icons {
-    color: #44d62d;
+footer article {
+    text-align: center;
 }
+
+.footer-art {
+    padding: 15px 0;
+}
+
+article.footer-dos h3{
+    padding-bottom: 10px;
+}
+
+div.footer-icons i {
+    color: #44d62d;
+    font-size: 25px;
+    margin: 0px 15px;
+}
+
+.footer-art h3, .footer-art p {
+    color: rgb(153, 149, 149);
+}
+
+p.blanco {
+    color: #ffffff;
+    padding-top: 6px;
+}
+
+
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
