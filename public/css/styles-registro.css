@@ -98,7 +98,69 @@ header div.form .input {
 
 /*---------------- FORMULARIO  ----------------*/
 
+.form-registro {
+    margin: auto;
+    max-width: 700px;
+    padding: 20px 0;
+}
 
+.form-registro div {
+    margin: 15px;
+}
+
+.form-registro label {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.form-registro input {
+    width: 100%;
+    border: solid #44d62d 1px;
+    outline: none;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.form-registro h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.form-registro button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #44d62d;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/*form.form-registro {
+    max-width: 700px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+.form-registro .control-formulario {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.form-registro button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #44d62d;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+}/*
 
 
 /*---------------- FOOTER ----------------*/
