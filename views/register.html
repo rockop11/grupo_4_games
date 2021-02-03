@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
     <link rel="stylesheet" href="/css/styles-registro.css">
     <title>Registro</title>
 </head>
+
 <body>
+
     <header class="main-header">
         <div class="top-header">
             <div class="logo-burger">
@@ -53,41 +54,42 @@
         <h2 class="titulo-formulario">CREAR CUENTA</h2>
 
         <div class="control-formulario">
-            <label for="nombre">Nombre:</label>
-            <input id="nombre" type="text" name="nombre" class="control">
+            <label for="nombre"><i class="fas fa-address-card"></i></label>
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo">
         </div>
 
         <div class="control-formulario">
-            <label for="apellido">Apellido:</label>
-            <input id="apellido" type="text" name="apellido" class="control">
+            <label for="usuario"><i class="fas fa-user"></i></label>
+            <input id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario">
         </div>
         
         <div class="control-formulario">
-            <label for="email">Email:</label>
-            <input id="email" type="email" name="email" class="control">
+            <label for="email"><i class="fas fa-envelope"></i></label>
+            <input id="email" type="email" name="email" placeholder="Email">
         </div>
 
         <div class="control-formulario">
-            <label for="contraseña">Contraseña:</label>
-            <input id="contraseña" type="password" name="contraseña" class="control">
+            <label for="contraseña"><i class="fas fa-lock"></i></label>
+            <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
         </div>
 
         <div class="control-formulario">
-            <label for="repetir-contraseña">Repetir contraseña:</label>
-            <input id="repetir-contraseña" type="password" name="repetir-contraseña" class="control">
+            <label for="repetir-contraseña"><i class="fas fa-lock"></i></label>
+            <input id="repetir-contraseña" type="password" name="repetir-contraseña" placeholder="Repetir Contraseña">
         </div>
 
 
         <button type="submit" class="arte-boton">Registrarme</button>
+
     </form>
 
     <footer>
-        <article class="footer-art">
+        <article class="footer-art footer-uno">
             <img src="/img/ZonaGamer_logo.png" class="logo" alt="">
         </article>
 
-        <article class="footer-art">
-            <h3>La mejor opción para los gamers</h3>
+        <article class="footer-art footer-dos">
+            <h3>Seguinos en las redes</h3>
             <div class="footer-icons">
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-facebook-f"></i>
@@ -95,7 +97,9 @@
             </div>
         </article>
 
-        <article class="footer-art">
+        <article class="footer-art footer-tres">
+            <p>Todos los derechos Reservados</p>
+            <p class="blanco">Diseño: Juan M., Santi O., Rocko P.</p>
         </article>
     </footer>
 </body>
