@@ -220,6 +220,53 @@ main section article {
     padding-top: 15px;
 }
 
+/*---------------- LOGIN ----------------*/
+
+main .form {
+    margin: auto;
+    max-width: 700px;
+    padding: 20px 0;
+}
+
+main .form div {
+    margin: 15px;
+}
+
+main .form label {
+    display: block;
+    padding-bottom: 3px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+main .form input {
+    width: 100%;
+    border: solid #44d62d 1px;
+    outline: none;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.form h2,
+.form p {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.form button {
+    width: 100%;
+    background-color: #44d62d;
+    outline: none;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form a {
+    margin-top: 10px;
+    text-decoration: none;
+    color:  #44d62d;
+}
 
 
 /*---------------- FOOTER ----------------*/
