@@ -14,6 +14,7 @@ body {
 .main-header {
     background-color: #323f48;
     padding: 20px;
+    border-bottom: solid 3px #44d62d;
 }
 
 .logo-burger {
@@ -45,7 +46,6 @@ header p {
 .fa-bars {
     border: solid 1px #44d62d;
     color: #44d62d;
-    display: block;
     width: 30px;
     padding: 8px 0;
     border-radius: 5px;
@@ -102,9 +102,7 @@ div.form .input {
 
 /*dellate del producto (main)*/
 main div img{
-    width: 80%;
-    border: solid 2px rgb(0, 78, 255);
-    margin-left: 50px;
+    width: 100%;
     
 }
 
@@ -113,7 +111,7 @@ main article{
 }
 
 h1{
-    text-align: left;
+    text-align: center;
     color: black;
     
 }
@@ -137,10 +135,13 @@ span{
     margin-left:10px;
 }
 
+.producto{
+    width: 100%;
+}
+
 .main-producto{
     padding: 10px;
     background-color:  #ffffff;
-    border-top: solid 5px  #44d62d;
 }
 
 .precio{
@@ -149,8 +150,9 @@ span{
 }
 
 .descuento{
-    color:rgb(0, 78, 255) ;
+    color:#44d62d ;
     font-weight: 400;
+    padding: 40px 20px;
 }
 
 .barra-precio{
@@ -159,15 +161,19 @@ span{
 }
 
 .boton-formulario{
-    background-color: rgb(0, 78, 255);
+    background-color: #44d62d;
     border: none;
+    margin-top: 20px;
     font-size: 20px;
     color:#FFF;
-    padding: 5px 10px;
+    padding: 13px;
     border-radius: 5px;
-    display: flex;
     justify-content: center;
 
+}
+
+h2, .barra-precio{
+    margin-top: 25px;
 }
 /*---------------- FOOTER ----------------*/
 footer {
@@ -175,11 +181,34 @@ footer {
     background-color: #323f48;
     color: #ffffff;
     padding: 25px 0;
-    border-top: solid 5px  #44d62d;
+    border-top: solid 3px #44d62d;
 }
 
-div.footer-icons {
+footer article {
+    text-align: center;
+}
+
+.footer-art {
+    padding: 15px 0;
+}
+
+article.footer-dos h3{
+    padding-bottom: 10px;
+}
+
+div.footer-icons i {
     color: #44d62d;
+    font-size: 25px;
+    margin: 0px 15px;
+}
+
+.footer-art h3, .footer-art p {
+    color: rgb(153, 149, 149);
+}
+
+p.blanco {
+    color: #ffffff;
+    padding-top: 6px;
 }
 
 @media (min-width: 340px) {
