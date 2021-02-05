@@ -12,6 +12,8 @@ URL REPO: https://github.com/rockop11/grupo_4_games
 # Productos o servicios
 - ofrecemos venta de juegos y consolas, y articulos varios del mundo gaming.
 
+# Diseño y estilo
+- Se encuentra en la carpeta de diseño.
 # Listado de 5 páginas referentes
 *[PLAY STATION AR](https://www.playstation.com/es-ar/)
 *[XBOX AR](https://www.xbox.com/es-AR/)
