@@ -48,17 +48,59 @@
         </nav>
     </header>
 
-    <main>
+    <main class="contenedor-cart">
         <h4>Carrito de compras</h4>
         
-        <section class="producto-carrito">
-            <div class="img-carrito"><img src="" alt=""> </div>
-            <div class="descripcion-carrito"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt ut nostrum, perferendis est consequuntur fugit tempore, explicabo quidem incidunt temporibus eaque natus harum magnam alias velit aliquam, molestias et!</div>
-            
-
-
+        <section class="checkout-cart">
+            <article class="item-cart">
+                <form action="#" method="GET">
+                    <button type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </form>
+                <div class="img-cart"><img src="img/JuegosCaja_03_TheLastOfUs.jpg" alt=""> </div>
+                <div class="descripcion-cart"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="precio-cart">$4500</div>
+            </article>
+            <article class="cant-cart">
+                <form action="#" method="GET">
+                    <label for="cantidad">Cantidad:</label>
+                    <input class="cant-prod" type="text" name="cantidad" id="cantidad">
+                </form>
+            </article>
         </section>
 
+        <section class="sumario-cart">
+            <h4>Resumen de compra</h4>
+            <div class="descuento-cart">
+                <form action="#" method="GET">
+                    <label for="descuento">Ingrese código de descuento.
+                        <input type="text" name="descuento" id="descuento" placeholder="Ingrese código de descuento">
+                    </label>
+                </form>
+            </div>
+            <p>Debido a la emergencia sanitaria, la preparación y entrega de los pedidos pueden verse afectados con una demora extra a lo habitual.</p>
+            <div class="totales">
+                <div class="subtotal">
+                    <h2>SUBTOTAL:</h2>
+                    <h4>$16.000</h4>
+                </div>
+                <div class="subtotal">
+                    <h2>ENVÍO:</h2>
+                    <h4>calcular</h4>
+                </div>
+                <div class="total">
+                    <h2>TOTAL:</h2>
+                    <h4>$16.000</h4>
+                </div>
+            </div>
+            <form action="#" method="GET">
+                <button type="submit">Iniciar Pago</button>
+            </form>
+            <form action="#" method="GET">
+                <button type="submit">Agregar más productos</button>
+            </form>
+        </section>
     </main>
 
     <footer>

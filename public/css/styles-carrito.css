@@ -100,9 +100,52 @@ div.form .input {
 
 /* ------------------------ MAIN --------------------------- */
 
-.producto-carrito{
-    
+main {
+    margin: 15px;
 }
+
+.checkout-cart {
+    display: flex;
+    flex-grow: 1;
+}
+
+.item-cart {
+    display: flex;
+    flex-grow: 0.8;
+    padding: 10px;
+    /* justify-content: space-between; */
+}
+
+.cant-cart {
+    flex-grow: 0.2;
+    padding: 10px;
+}
+
+.item-cart button {
+    flex-grow: 0.1;
+}
+
+.item-cart div {
+    margin: 0 5px;
+}
+
+.cant-prod {
+    width: 29px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+main h4 {
+    display: block;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.img-cart img {
+    width: 100%;
+    min-width: 70px;
+}
+
 /*---------------- FOOTER ----------------*/
 
 footer {
@@ -153,7 +196,7 @@ p.blanco {
         flex-grow: 10;
     }
     main section article {
-        width: 95%;
+        /* width: 95%; */
     }
     .descripcion {
         display: none;
