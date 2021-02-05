@@ -223,7 +223,7 @@ p.blanco {
     .burger-button {
         display: none;
     }
-    
+
     .main-navbar {
         display: flex;
         justify-content: space-between;
@@ -231,10 +231,21 @@ p.blanco {
     
     .main-navbar ul {
         display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
     
     .main-navbar li {
         margin: 0 5px;
+    }
+
+    .main-navbar a {
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 15px;
     }
 
     main section article {
