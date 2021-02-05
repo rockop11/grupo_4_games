@@ -223,11 +223,6 @@ p.blanco {
         justify-content: space-between;
     }
     
-    .copy-header {
-        max-width: 350px;
-        text-align: right;
-    }
-    
     .burger-button {
         display: none;
     }

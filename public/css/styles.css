@@ -35,10 +35,6 @@ body {
     color: #ffffff;
 }
 
-header nav {
-    margin-bottom: 10px;
-}
-
 header p {
     text-align: center;
     margin-bottom: 10px;
@@ -55,23 +51,6 @@ header p {
     line-height: 20px;
 }
 
-.main-navbar {
-    /* display: none; */
-}
-
-.main-navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navbar a {
-    text-decoration: none;
-    color: #ffffff;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
-}
 
 div.form {
     display: flex;
@@ -96,7 +75,8 @@ div.form .input {
     padding: 2px;
     border-radius: 8px 8px 8px 8px;
     line-height: 17px;
-    font-size: 12px;
+    font-size: 13px;
+    width: 88%;
 }
 
 .fa-search {
@@ -107,6 +87,10 @@ div.form .input {
 }
 
 .fa-gamepad {
+    color: #44d62d;
+}
+
+.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
 }
 
@@ -317,6 +301,10 @@ p.blanco {
     padding-top: 6px;
 }
 
+.footer-copy-header {
+    display: none;
+}
+
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
@@ -348,11 +336,6 @@ p.blanco {
         justify-content: space-between;
     }
     
-    /* .copy-header {
-        max-width: 350px;
-        text-align: right;
-    } */
-    
     .burger-button {
         display: none;
     }
@@ -364,10 +347,21 @@ p.blanco {
     
     .main-navbar ul {
         display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
     
     .main-navbar li {
         margin: 0 5px;
+    }
+
+    .main-navbar a {
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 15px;
     }
 
     main section article.prod-contenedor {
@@ -387,8 +381,20 @@ p.blanco {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     main section article {
         width: 23%;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 70px;
+    }
+
+    .footer-copy-header {
+        display: block;
+        padding: 25px 0px 0px 59px;
+        font-size: 27px;
     }
 }

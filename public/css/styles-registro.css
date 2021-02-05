@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* GENERAL */
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -33,10 +35,6 @@ body {
     color: #ffffff;
 }
 
-header nav {
-    margin-bottom: 10px;
-}
-
 header p {
     text-align: center;
     margin-bottom: 10px;
@@ -51,24 +49,6 @@ header p {
     text-align: center;
     font-size: 16px;
     line-height: 20px;
-}
-
-.main-navbar {
-    /* display: none; */
-}
-
-.main-navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navbar a {
-    text-decoration: none;
-    color: #ffffff;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
 }
 header div.form {
     display: flex;
@@ -93,6 +73,10 @@ header div.form .input {
 }
 
 .fa-gamepad {
+    color: #44d62d;
+}
+
+.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
 }
 
@@ -201,6 +185,10 @@ p.blanco {
     padding-top: 6px;
 }
 
+.footer-copy-header {
+    display: none;
+}
+
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
@@ -230,11 +218,6 @@ p.blanco {
     .main-header-top-bar {
         display: flex;
         justify-content: space-between;
-    }
-    
-    .copy-header {
-        max-width: 350px;
-        text-align: right;
     }
     
     .burger-button {
@@ -271,7 +254,7 @@ p.blanco {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     main section article {
         width: 23%;
     }
