@@ -17,6 +17,10 @@ body {
     border-bottom: 1px solid #44d62d;
 }
 
+.navbar-brand img {
+    max-width: 70px;
+}
+
 .navbar-nav .nav-item a{
     color: #ffffff !important;
 }
