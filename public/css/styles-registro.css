@@ -280,7 +280,8 @@ p.blanco {
     main section article {
         width: 23%;
     }
-
+    
+    /*FOOTER*/
     .footer-flex {
         display: flex;
         justify-content: space-between;

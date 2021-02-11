@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZONA GAMER</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/img/zgfavicon.png" type="image/x-icon">
     <!--Archivos CSS-->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <!--Fuentes Google-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
     <!--BOOTSTRAP 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -17,41 +20,59 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="top-header">
-            <div class="logo-burger">
-                <a href="./"><img src="img/ZonaGamer_logo.png" class="logo"></a>
-                <a href="#" class="burger-button">
-                    <i class = "fa fa-bars"></i>
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#">LOGO IMG</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Ofertas</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Consolas</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Juegos
                 </a>
-            </div>
-            <h2 class="copy-header">
-                <i class="fas fa-gamepad"></i>
-                La mejor opción para los gamers
-            </h2>
-        </div>
 
-        <div class="form" action='#' method="GET">
-            <input class="input" type="text" name="search-bar" placeholder="Buscar productos, marcas y más">
-            <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-        <nav class="main-navbar">
+                  <li><a class="dropdown-item" href="#">Xbox</a></li>
+                  <li><a class="dropdown-item" href="#">PlayStation</a></li>
+                  <li><hr class="dropdown-divider">asd</li>
+                  <li><a class="dropdown-item" href="#">asdfer</a></li>
+                  <li><a class="dropdown-item" href="#">asdfer</a></li>
 
-            <ul class="left-navbar">
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Consolas</a></li>
-                <li><a href="">Juegos</a></li>
-                <li><a href="">Accesorios</a></li>
-                <li><a href="">Ayuda</a></li>
+                </ul>
+
+              </li>
+
             </ul>
 
-            <ul class="right-navbar">
-                <li><a href="./registro">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-                <li><a href="./login">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="./carrito">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
-        </nav>
+            <form class="d-flex">
+                <a href="./registro" target="_blank"><i class="far fa-id-card"></i></a>
+                <a href="./login" target="_blank"><i class="fas fa-sign-in-alt"></i></a>
+                <a href="./carrito" target="_blank"><i class="fas fa-shopping-basket"></i></a>
+
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </nav>
 
     </header>
 
@@ -95,14 +116,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
-
-
-
-
-
-
-
+        </div>
 
         <div class="duos">
             <article class="plays"><img src="img/PS5_logo.png" alt="logo Play"></article>
