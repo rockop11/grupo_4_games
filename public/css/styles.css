@@ -17,6 +17,11 @@ body {
     border-bottom: 1px solid #44d62d;
 }
 
+/*menu burga despleglable*/
+.navbar-light .navbar-toggler {
+    border: 1px solid #44d62d !important;
+}
+
 .navbar-brand img {
     max-width: 70px;
 }
@@ -42,8 +47,12 @@ body {
     padding: 0px 9px;
     margin-top: 10px;
     font-size: 18px;
-    color: #44d62d;
+    color: #ffffff;
 } 
+
+.fa-id-card:hover, .fa-sign-in-alt:hover, .fa-shopping-basket:hover {
+    color: #44d62d;
+}
 
 /* ------------------------ MAIN --------------------------- */
 
@@ -222,8 +231,8 @@ footer article {
     padding: 15px 0;
 }
 
-article .footer-uno {
-
+.logo {
+    width: 100px;
 }
 
 article.footer-dos h3{
@@ -234,6 +243,10 @@ div.footer-icons i {
     color: #44d62d;
     font-size: 25px;
     margin: 0px 15px;
+}
+
+.fa-gamepad {
+    color: #44d62d;
 }
 
 .footer-art h3, .footer-art p {
@@ -248,7 +261,6 @@ p.blanco {
 .footer-copy-header {
     display: none;
 }
-
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
@@ -352,6 +364,10 @@ p.blanco {
         display: block;
         padding: 25px 0px 0px 59px;
         font-size: 27px;
+    }
+
+    article.footer-dos h3 {
+        font-size: 1.17em;
     }
 
     .footer-icons i:hover {

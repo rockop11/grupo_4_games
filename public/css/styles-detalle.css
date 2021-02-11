@@ -211,6 +211,9 @@ p.blanco {
     padding-top: 6px;
 }
 
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
 @media (min-width: 340px) {
     .main-navbar {
         display: none;
