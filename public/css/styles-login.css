@@ -137,6 +137,11 @@ main .form input {
     border-radius: 8px;
 }
 
+.form button:hover {
+    background-color: #39bb24;
+    cursor: pointer;
+}
+
 .form a {
     display: block;
     margin: auto;
@@ -283,5 +288,9 @@ p.blanco {
         display: block;
         padding: 25px 0px 0px 59px;
         font-size: 27px;
+    }
+
+    .footer-icons i:hover {
+        color: #39bb24;
     }
 }
