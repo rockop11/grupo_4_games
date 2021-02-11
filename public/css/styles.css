@@ -21,6 +21,14 @@ body {
     color: #ffffff !important;
 }
 
+.navbar-nav .nav-item a:hover {
+    color: #44d62d !important;
+}
+
+.dropdown-menu li a.dropdown-item {
+    color: black !important;
+}
+
 .btn-outline-success {
     border: 1px solid #44d62d !important;
     color: #ffffff !important;
@@ -211,7 +219,7 @@ footer article {
 }
 
 article .footer-uno {
-    
+
 }
 
 article.footer-dos h3{
