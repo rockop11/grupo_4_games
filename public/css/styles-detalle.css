@@ -102,7 +102,8 @@ div.form .input {
 
 /*dellate del producto (main)*/
 main div img{
-    width: 100%;
+    width: 50%;
+    float: left;
     
 }
 
@@ -175,6 +176,7 @@ span{
 h2, .barra-precio{
     margin-top: 25px;
 }
+
 /*---------------- FOOTER ----------------*/
 footer {
     width: 100%;
@@ -245,5 +247,6 @@ p.blanco {
 }
 
 @media (min-width: 1200px) {
+    
 
 }
