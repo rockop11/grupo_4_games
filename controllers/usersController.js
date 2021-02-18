@@ -2,10 +2,10 @@ const path = require('path');
 
 const usersController = {
     registro: function(req, res) {
-        res.sendFile(path.resolve('./views/register.html'));
+        res.render('users/register');
     },
     login: function(req, res) {
-        res.sendFile(path.resolve('./views/login.html'));
+        res.render('users/login');
     }
 }
 

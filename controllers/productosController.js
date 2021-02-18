@@ -2,10 +2,10 @@ const path = require('path');
 
 const productosController = {
     show: function(req, res) {
-        res.sendFile(path.resolve('./views/productCart.html'));
+        res.render('products/productCart');
     },
     detalles: function(req, res) {
-        res.sendFile(path.resolve('./views/productDetail.html'));
+        res.render('products/productDetail');
     },
 }
 

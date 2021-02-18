@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
-    <link rel="stylesheet" href="/css/styles-carrito.css">
+    <link rel="stylesheet" href="/css/styles-login.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="/img/zgfavicon.png" type="image/x-icon">
-    <title>ZG - Detalle de Compra</title>
+    <title>ZG - Login</title>
 </head>
 <body>
+
     <header class="main-header">
         <div class="top-header">
             <div class="logo-burger">
-                <img src="/img/ZonaGamer_logo.png" class="logo">
+                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
                 <a href="#" class="burger-button">
                     <i class = "fa fa-bars"></i>
                 </a>
@@ -43,64 +44,32 @@
             </ul>
 
             <ul class="right-navbar">
-                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="./registro">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
+                <li><a href="./login">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="./carrito">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="contenedor-cart">
-        <h4>Carrito de compras</h4>
-        
-        <section class="checkout-cart">
-            <article class="item-cart">
-                <form action="#" method="GET">
-                    <button type="button">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </form>
-                <div class="img-cart"><img src="/img/JuegosCaja_03_TheLastOfUs.jpg" alt=""> </div>
-                <div class="descripcion-cart"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="precio-cart">$4500</div>
-            </article>
-            <article class="cant-cart">
-                <form action="#" method="GET">
-                    <label for="cantidad">Cantidad:</label>
-                    <input class="cant-prod" type="text" name="cantidad" id="cantidad">
-                </form>
-            </article>
-        </section>
-
-        <section class="sumario-cart">
-            <h4>Resumen de compra</h4>
-            <div class="descuento-cart">
-                <form action="#" method="GET">
-                    <label for="descuento">Ingrese código de descuento.
-                        <input type="text" name="descuento" id="descuento" placeholder="Ingrese código de descuento">
-                    </label>
-                </form>
+    <main>
+        <form class="form" action="/" method="GET">
+            <div>
+                <h2>Regístrese</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eum iste adipisci mollitia odio magnam quisquam</p>
             </div>
-            <p>Debido a la emergencia sanitaria, la preparación y entrega de los pedidos pueden verse afectados con una demora extra a lo habitual.</p>
-            <div class="totales">
-                <div class="titulos">
-                    <h5>SUBTOTAL:</h5>
-                    <h5>ENVÍO:</h5>
-                    <h3>TOTAL:</h3>
-                </div>
-                <div class="cantidades">
-                    <h5>$16.000</h5>
-                    <h5>calcular</h5>
-                    <h3>$16.000</h3>
-                </div>
+            <div>
+                <label for="usuario">Ingrese el usuario:</label>
+                <input id="usuario" type="text" name="usuario" placeholder="Usuario">
             </div>
-            <form action="#" method="GET">
-                <button type="submit">Iniciar Pago</button>
-            </form>
-            <form action="#" method="GET">
-                <button type="submit">Agregar más productos</button>
-            </form>
-        </section>
+            <div>
+                <label for="clave">Contraseña</label>
+                <input id="clave" type="password" name="clave" placeholder="Contraseña">
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+                <a href="#">¿Olvidó su contraseña?</a>
+            </div>
+        </form>
     </main>
 
     <footer>
@@ -130,6 +99,6 @@
             <p class="blanco">Diseño: Juan M., Santi O., Rocko P.</p>
         </article>
     </footer>
-    
+
 </body>
 </html>

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
-    <link rel="stylesheet" href="/css/styles-login.css">
+    <link rel="stylesheet" href="/css/styles-registro.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="/img/zgfavicon.png" type="image/x-icon">
-    <title>ZG - Login</title>
+    <title>ZG - Registro</title>
 </head>
+
 <body>
 
     <header class="main-header">
         <div class="top-header">
             <div class="logo-burger">
-                <a href="./"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
+                <a href="/"><img src="img/ZonaGamer_logo.png" class="logo"></a>
                 <a href="#" class="burger-button">
                     <i class = "fa fa-bars"></i>
                 </a>
@@ -44,33 +44,47 @@
             </ul>
 
             <ul class="right-navbar">
-                <li><a href="./registro">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-                <li><a href="./login">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="./carrito">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
+                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
     </header>
+    
+    <form action="" class="form-registro">
 
-    <main>
-        <form class="form" action="/" method="GET">
-            <div>
-                <h2>Regístrese</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eum iste adipisci mollitia odio magnam quisquam</p>
-            </div>
-            <div>
-                <label for="usuario">Ingrese el usuario:</label>
-                <input id="usuario" type="text" name="usuario" placeholder="Usuario">
-            </div>
-            <div>
-                <label for="clave">Contraseña</label>
-                <input id="clave" type="password" name="clave" placeholder="Contraseña">
-            </div>
-            <div>
-                <button type="submit">Enviar</button>
-                <a href="#">¿Olvidó su contraseña?</a>
-            </div>
-        </form>
-    </main>
+        <h2 class="titulo-formulario">CREAR CUENTA</h2>
+
+        <div class="control-formulario">
+            <label for="nombre">Ingrese su Nombre:</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo">
+        </div>
+
+        <div class="control-formulario">
+            <label for="usuario">Ingrese su Usuario:</i></label>
+            <input id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario">
+        </div>
+        
+        <div class="control-formulario">
+            <label for="email">Ingrese su Email:</i></label>
+            <input id="email" type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="control-formulario">
+            <label for="contraseña">Ingrese su Contraseña</i></label>
+            <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+        </div>
+
+        <div class="control-formulario">
+            <label for="repetir-contraseña">Repetir Contraseña</i></label>
+            <input id="repetir-contraseña" type="password" name="repetir-contraseña" placeholder="Repetir Contraseña">
+        </div>
+
+        <div>
+            <button type="submit" class="arte-boton">Registrarme</button>
+        </div>
+
+    </form>
 
     <footer>
         <div class="footer-flex">
@@ -99,6 +113,6 @@
             <p class="blanco">Diseño: Juan M., Santi O., Rocko P.</p>
         </article>
     </footer>
-
+    
 </body>
 </html>

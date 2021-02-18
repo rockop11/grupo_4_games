@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
-    <link rel="stylesheet" href="/css/styles-registro.css">
+    <link rel="stylesheet" href="/css/styles-carrito.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="/img/zgfavicon.png" type="image/x-icon">
-    <title>ZG - Registro</title>
+    <title>ZG - Detalle de Compra</title>
 </head>
-
 <body>
-
     <header class="main-header">
         <div class="top-header">
             <div class="logo-burger">
-                <a href="./"><img src="img/ZonaGamer_logo.png" class="logo"></a>
+                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
                 <a href="#" class="burger-button">
                     <i class = "fa fa-bars"></i>
                 </a>
@@ -50,41 +49,59 @@
             </ul>
         </nav>
     </header>
-    
-    <form action="" class="form-registro">
 
-        <h2 class="titulo-formulario">CREAR CUENTA</h2>
-
-        <div class="control-formulario">
-            <label for="nombre">Ingrese su Nombre:</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo">
-        </div>
-
-        <div class="control-formulario">
-            <label for="usuario">Ingrese su Usuario:</i></label>
-            <input id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario">
-        </div>
+    <main class="contenedor-cart">
+        <h4>Carrito de compras</h4>
         
-        <div class="control-formulario">
-            <label for="email">Ingrese su Email:</i></label>
-            <input id="email" type="email" name="email" placeholder="Email">
-        </div>
+        <section class="checkout-cart">
+            <article class="item-cart">
+                <form action="#" method="GET">
+                    <button type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </form>
+                <div class="img-cart"><img src="/img/JuegosCaja_03_TheLastOfUs.jpg" alt=""> </div>
+                <div class="descripcion-cart"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="precio-cart">$4500</div>
+            </article>
+            <article class="cant-cart">
+                <form action="#" method="GET">
+                    <label for="cantidad">Cantidad:</label>
+                    <input class="cant-prod" type="text" name="cantidad" id="cantidad">
+                </form>
+            </article>
+        </section>
 
-        <div class="control-formulario">
-            <label for="contraseña">Ingrese su Contraseña</i></label>
-            <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
-        </div>
-
-        <div class="control-formulario">
-            <label for="repetir-contraseña">Repetir Contraseña</i></label>
-            <input id="repetir-contraseña" type="password" name="repetir-contraseña" placeholder="Repetir Contraseña">
-        </div>
-
-        <div>
-            <button type="submit" class="arte-boton">Registrarme</button>
-        </div>
-
-    </form>
+        <section class="sumario-cart">
+            <h4>Resumen de compra</h4>
+            <div class="descuento-cart">
+                <form action="#" method="GET">
+                    <label for="descuento">Ingrese código de descuento.
+                        <input type="text" name="descuento" id="descuento" placeholder="Ingrese código de descuento">
+                    </label>
+                </form>
+            </div>
+            <p>Debido a la emergencia sanitaria, la preparación y entrega de los pedidos pueden verse afectados con una demora extra a lo habitual.</p>
+            <div class="totales">
+                <div class="titulos">
+                    <h5>SUBTOTAL:</h5>
+                    <h5>ENVÍO:</h5>
+                    <h3>TOTAL:</h3>
+                </div>
+                <div class="cantidades">
+                    <h5>$16.000</h5>
+                    <h5>calcular</h5>
+                    <h3>$16.000</h3>
+                </div>
+            </div>
+            <form action="#" method="GET">
+                <button type="submit">Iniciar Pago</button>
+            </form>
+            <form action="#" method="GET">
+                <button type="submit">Agregar más productos</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-flex">
