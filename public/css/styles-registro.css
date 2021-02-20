@@ -10,7 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* HEADER */
+/* ------ HEADER GENERAL ------ */
 
 .main-header {
     background-color: #323f48;
@@ -50,10 +50,7 @@ header p {
     font-size: 16px;
     line-height: 20px;
 }
-
-.main-navbar {
-    /* display: none; */
-}
+/*----------------------*/
 
 .main-navbar ul {
     list-style: none;
@@ -157,6 +154,8 @@ div.form .input {
     background-color: #39bb24;
     cursor: pointer;
 }
+
+/*HASTA ACA LISTO*/
 
 
 /*---------------- FOOTER ----------------*/

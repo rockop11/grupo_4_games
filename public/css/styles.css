@@ -10,182 +10,123 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* HEADER */
+/* ------ HEADER GENERAL ------ */
 
-.navbar {
+.main-header {
     background-color: #323f48;
-    border-bottom: 1px solid #44d62d;
+    padding: 20px;
+    border-bottom: solid 3px #44d62d;
 }
 
-/*menu burga despleglable*/
-.navbar-light .navbar-toggler {
-    border: 1px solid #44d62d !important;
+.logo-burger {
+    display: flex;
+    justify-content: space-between;
 }
 
-.navbar-brand img {
-    max-width: 70px;
+.logo {
+    width: 100px;
 }
 
-.navbar-nav .nav-item a{
-    color: #ffffff !important;
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+    padding: 25px 5px;
+    font-size: 30px;
+    color: #ffffff;
 }
 
-.navbar-nav .nav-item a:hover {
-    color: #44d62d !important;
+header p {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.dropdown-menu li a.dropdown-item {
-    color: black !important;
+.fa-bars {
+    border: solid 1px #44d62d;
+    color: #44d62d;
+    width: 30px;
+    padding: 8px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
 }
 
-.btn-outline-success {
-    border: 1px solid #44d62d !important;
-    color: #ffffff !important;
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+div.form {
+    display: flex;
+    justify-content: space-between;
+    height: 23px;
+    font-size: 11px;
+    background-color: #FFF;
+    padding: 12px;
+    align-items: center;
+    border-radius: 8px 8px 8px 8px;
+    color: #666;
+    max-width: 236px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+div.form .input {
+    background-color: #FFF;
+    border-style: none;
+    color: #666;
+    padding: 2px;
+    border-radius: 8px 8px 8px 8px;
+    line-height: 17px;
+    font-size: 12px;
+}
+
+.fa-search {
+    margin-left: 7px;
+    font-size: 12px;
+    color: #44d62d;
+    padding-top: 3px;
+}
+
+.fa-gamepad {
+    color: #44d62d;
 }
 
 .fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
-    padding: 0px 9px;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #ffffff;
-} 
-
-.fa-id-card:hover, .fa-sign-in-alt:hover, .fa-shopping-basket:hover {
     color: #44d62d;
 }
 
-/* ------------------------ MAIN --------------------------- */
+/* ESTILOS GENERALES LOGIN Y REGISTRO */
 
-/* Estilos del Menú duos */
 
-.duos {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    border-top: 5px solid #ffffff;
-    height: 200px;
-}
-
-.plays{
-    background-color:  #004EFF;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.xbox {
-    background-color: #44d62d;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.duos img {
-    width: 70px;
-    margin: auto;
-    opacity: 15%;
-}
-
-.plays:hover img,
-.xbox:hover img {
-    opacity: 100%;
-}
-
-/* ------- Sección de Ofertas ------- */
-
-.ofertas,
-.novedades {
-    width: 90%;
-    margin: auto;
-}
-
-.titulo-section {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-    font-weight: 300;
-}
-
-.img-producto {
-    width: 100%;
-}
-
-main section article {
-    margin: 10px;
-    max-width: 900px;
-}
-
-.producto {
-    border-top: 1px solid #ebebeb;
-    background-color: #fff;
-    padding: 15px;
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-}
-
-.fa-truck { 
-    display: block; 
-    font-size: 16px; 
-    padding: 5px; 
-    width: 30px; 
-    height: 30px; 
-    border: 1px solid #44d62d; 
-    background-color: #FFF; 
-    border-radius: 50%; 
-    position: absolute; 
-    right: 20px; 
-    top: -15px;
-}
-
-.descuento {
-    flex-grow: 7;
-    font-size: 16px;
-}
-
-.precio {
-    flex-grow: 3;
-    font-size: 18px;
-    color: #323f48;
-}
-
-.descuento,
-.fa-truck {
-    color: #44d62d;
-    border-radius: 50%;
-}
-
-.fa-truck {
-    padding-bottom: 15px;
-}
-
-.descripcion {
-    padding-top: 15px;
-}
-
-/*---------------- LOGIN ----------------*/
-
-main .form {
+main .form-user {
     margin: auto;
     max-width: 700px;
     padding: 20px 0;
 }
 
-main .form div {
+main .form-user div {
     margin: 15px;
 }
 
-main .form label {
+main .form-user label {
     display: block;
-    padding-bottom: 3px;
+    padding-bottom: 10px;
     font-size: 15px;
     font-style: italic;
 }
 
-main .form input {
+main .form-user input {
     width: 100%;
     border: solid #44d62d 1px;
     outline: none;
@@ -193,190 +134,51 @@ main .form input {
     border-radius: 8px;
 }
 
-.form h2,
-.form p {
+.form-user h2,
+.form-user p {
     text-align: center;
     padding-top: 15px;
 }
 
-.form button {
-    width: 100%;
+.form-user button {
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px;
     background-color: #44d62d;
-    outline: none;
+    border: none;
     color: #ffffff;
-    padding: 10px;
     border-radius: 8px;
 }
 
-.form a {
-    margin-top: 10px;
+.form-user button:hover {
+    background-color: #39bb24;
+    cursor: pointer;
+}
+
+.form-user a {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
     text-decoration: none;
     color:  #44d62d;
-}
-
-
-/*---------------- FOOTER ----------------*/
-
-footer {
-    width: 100%;
-    background-color: #323f48;
-    color: #ffffff;
-    padding: 25px 0;
-    border-top: solid 3px #44d62d;
-}
-
-footer article {
     text-align: center;
 }
 
-.footer-art {
-    padding: 15px 0;
+/*BOTON CREAR CUENTA DE LOGIN*/
+
+a button.boton-nc {
+    /* background-color: #323f48; */
+    background-color: #ffffff;
+    border: 1px solid #919499;
+    color: #323f48;
+    margin-top: 5px;
 }
 
-.logo {
-    width: 100px;
-}
-
-article.footer-dos h3{
-    padding-bottom: 10px;
-}
-
-div.footer-icons i {
-    color: #44d62d;
-    font-size: 25px;
-    margin: 0px 15px;
-}
-
-.fa-gamepad {
-    color: #44d62d;
-}
-
-.footer-art h3, .footer-art p {
-    color: rgb(153, 149, 149);
-}
-
-p.blanco {
-    color: #ffffff;
-    padding-top: 6px;
-}
-
-.footer-copy-header {
-    display: none;
+a button.boton-nc:hover {
+    background-color: #ebecee;
+    /* color: #ffffff; */
 }
 
 
-/* ---------------- MEDIA QUERIES ---------------- */
-
-@media (min-width: 340px) {
-    .ofertas,
-    .novedades {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-grow: 10;
-    }
-    main section article {
-        width: 95%;
-    }
-    .descripcion {
-        display: none;
-    }
-    .main-navbar {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .main-header-top-bar {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .burger-button {
-        display: none;
-    }
-    
-    .main-navbar {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .main-navbar ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .main-navbar li {
-        margin: 0 5px;
-    }
-
-    .main-navbar a {
-        text-decoration: none;
-        color: #ffffff;
-        display: inline-block;
-        padding: 5px 0;
-        font-size: 15px;
-    }
-
-    .main-navbar a:hover {
-        color: #44d62d;
-    }
-
-    main section article.prod-contenedor {
-        box-shadow : 0px 0px 5px #e5e7e9;
-        border-radius: 10px;
-        width: 45%;
-    }
-
-    .producto {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    
-    .img-producto {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-}
-
-@media (min-width: 1024px) {
-    main section article.prod-contenedor {
-        width: 22%;
-    }
-
-    .prod-contenedor:hover {
-        box-shadow: 0px 0px 10px rgb(78, 78, 78);
-    }
-
-    .duos {
-        height: 300px;
-    }
-
-    /*Estilos provisorios Header Desktop*/
-
-
-    /*FOOTER*/
-    .footer-flex {
-        display: flex;
-        justify-content: space-between;
-        padding: 0px 70px;
-    }
-
-    .footer-copy-header {
-        display: block;
-        padding: 25px 0px 0px 59px;
-        font-size: 27px;
-    }
-
-    article.footer-dos h3 {
-        font-size: 1.17em;
-    }
-
-    .footer-icons i:hover {
-        color: #39bb24;
-    }
-}
+/* ESTILOS GENERALES PRODUCTO Y DETALLE*/

@@ -10,7 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* HEADER */
+/* ------ HEADER GENERAL ------ */
 
 .main-header {
     background-color: #323f48;
@@ -50,10 +50,7 @@ header p {
     font-size: 16px;
     line-height: 20px;
 }
-
-.main-navbar {
-    /* display: none; */
-}
+/*----------------------*/
 
 .main-navbar ul {
     list-style: none;
@@ -95,6 +92,7 @@ div.form .input {
     font-size: 12px;
 }
 
+/*----------------*/
 
 .fa-search {
     margin-left: 7px;
@@ -110,6 +108,8 @@ div.form .input {
 .fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
 }
+
+/*-----------*/
 
 /* ------------------------ MAIN --------------------------- */
 
