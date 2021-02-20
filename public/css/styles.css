@@ -342,7 +342,7 @@ p.blanco {
 }
 
 @media (min-width: 1024px) {
-    main section article {
+    main section article.prod-contenedor {
         width: 23%;
     }
 
