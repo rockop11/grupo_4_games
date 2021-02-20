@@ -128,8 +128,9 @@ main .form input {
 }
 
 .form button {
-    width: 100%;
-    margin-top: 15px;
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
     padding: 15px;
     background-color: #44d62d;
     border: none;
@@ -149,6 +150,19 @@ main .form input {
     text-decoration: none;
     color:  #44d62d;
     text-align: center;
+}
+
+a button.boton-nc {
+    /* background-color: #323f48; */
+    background-color: #ffffff;
+    border: 1px solid #919499;
+    color: #323f48;
+    margin-top: 5px;
+}
+
+a button.boton-nc:hover {
+    background-color: #ebecee;
+    /* color: #ffffff; */
 }
 
 /*---------------- FOOTER ----------------*/
