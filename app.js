@@ -9,22 +9,22 @@ app.set('view engine', 'ejs');
 const mainRoutes = require('./routes/main');
 const productosRoutes = require('./routes/productos');
 const usersRoutes = require('./routes/users');
+const productoAdminRoutes = require('./routes/productoAdmin');
 
-
+//Rutas index
 app.use('/', mainRoutes);
 
+//Rutas productos
 app.use('/productos', productosRoutes);
 
+//Rutas usuarios
 app.use('/users', usersRoutes);
 
-// app.get('/registro', function(req, res) {
-//     res.sendFile(path.resolve('./views/register.html'));
-// });
+//Rutas admin
+app.use('/productoAdmin', productoAdminRoutes);
 
-// app.get('/login', function(req, res) {
-//     res.sendFile(path.resolve('./views/login.html'));
-// });
 
+//Servidor
 app.listen(3000, function(){
     console.log('Servidor Corriendo en el puerto 3000')
 });
