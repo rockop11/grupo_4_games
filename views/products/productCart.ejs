@@ -1,63 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-
-    <!--Codificacion-->
-    <meta charset="UTF-8">
-    <!--Responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS-->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Paytone+One&display=swap" rel="stylesheet">
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/img/zgfavicon.png" type="image/x-icon">
-    <!--Titulo-->
-    <title>ZG - Detalle de Compra</title>
-
-</head>
+    <%- include("../partials/head", {Solapa:"ZG - Carrito de Compras"}) %>
 
 <body>
-    <header class="main-header">
-        <div class="top-header">
-            <div class="logo-burger">
-                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
-                <a href="#" class="burger-button">
-                    <i class = "fa fa-bars"></i>
-                </a>
-            </div>
-            <h2 class="copy-header">
-                <i class="fas fa-gamepad"></i>
-                La mejor opción para los gamers
-            </h2>
-        </div>
 
-        <div class="form" action='#' method="GET">
-            <input class="input" type="text" name="search-bar" placeholder="Buscar productos, marcas y más">
-            <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
-
-
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Consolas</a></li>
-                <li><a href="">Juegos</a></li>
-                <li><a href="">Accesorios</a></li>
-                <li><a href="">Ayuda</a></li>
-            </ul>
-
-            <ul class="right-navbar">
-                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('../partials/header') %> 
 
     <main class="contenedor-cart">
         <h4>Carrito de compras</h4>
@@ -111,34 +59,9 @@
             </form>
         </section>
     </main>
+    
+    <%- include('../partials/footer') %> 
 
-    <footer>
-        <div class="footer-flex">
-            <article class="footer-art footer-uno">
-                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo" alt=""></a>
-            </article>
-
-            <h4 class="footer-copy-header">
-                <i class="fas fa-gamepad"></i>
-                La mejor opción para los gamers
-            </h4>
-
-            <article class="footer-art footer-dos">
-                <h3>Seguinos en las redes</h3>
-                <div class="footer-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </article>
-        </div>
-        
-
-        <article class="footer-art footer-tres">
-            <p>Todos los derechos Reservados</p>
-            <p class="blanco">Diseño: Juan M., Santi O., Rocko P.</p>
-        </article>
-    </footer>
     
 </body>
 

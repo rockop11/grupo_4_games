@@ -72,7 +72,7 @@ header p {
 div.form {
     display: flex;
     justify-content: space-between;
-    height: 23px;
+    height: 35px;
     font-size: 11px;
     background-color: #FFF;
     padding: 12px;
@@ -97,7 +97,7 @@ div.form .input {
 
 .fa-search {
     margin-left: 7px;
-    font-size: 12px;
+    font-size: 15px;
     color: #44d62d;
     padding-top: 3px;
 }
@@ -261,12 +261,6 @@ span{
 
 }
 
-h2, .barra-precio{
-    margin-top: 25px;
-}
-
-
-
 
 /* --- Carrito de Compras ---*/
 main {
@@ -336,6 +330,7 @@ main h4 {
     background-color: #ebecee;
     padding: 15px;
     margin-top: 10px;
+    margin-bottom: 60px;
 }
 
 .descuento-cart {
