@@ -40,3 +40,30 @@ complejizar problemas, que por ahi tienen soluciones simples y nos roban tiempo 
 
 ### Dejar de Hacer
 dejar cosas para ultimo momento, y tener que andar a las corridas. por suerte el sprint 2 nos sirvio para darnos cuenta a tiempo.
+
+
+
+### Retrospectiva del Sprint 3
+
+### Comenzar a hacer.
+Distribuir las tareas acorde a las habilidades de cada uno de los integrantes. Interiorizarnos con lo que estamos haciendo en cada linea de codigo y no conformarnos con que solamente funcione.
+
+### Hacer más.
+RTFM (read the f*** manual)
+Leer documentación.
+buscar soluciones externas a digital house.
+ser mas curiosos con recursos que no estan contemplados dentro del programa.
+
+### Continuar Haciendo
+Seguir trabajando en equipo.
+insepccionar más los códigos de otras paginas.
+Mantener el orden del codigo con comentarios.
+
+
+### Hacer Menos 
+Escribir o duplicar código innecesariamente. Dejar de lado al trello.
+
+### Dejar de Hacer
+Dejar cosas para ultimo momento, y tener que andar a las corridas. 
+
+
