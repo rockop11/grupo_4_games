@@ -7,16 +7,16 @@ app.set('view engine', 'ejs');
 
 // Rutas a vistas
 const mainRoutes = require('./routes/main');
-const productosRoutes = require('./routes/productos');
+const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
-const productoAdminRoutes = require('./routes/productoAdmin');
+const productAdminRoutes = require('./routes/productAdmin');
 
 //Rutas index
 app.use('/', mainRoutes);
 
 //Rutas productos
 //ESTO ES LO QUE TIENE QUE IR EN EL NAVEGADOR!!!
-app.use('/productos', productosRoutes);
+app.use('/productos', productsRoutes);
 
 //Rutas usuarios
 app.use('/users', usersRoutes);

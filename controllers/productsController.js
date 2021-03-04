@@ -1,6 +1,6 @@
 const path = require('path');
 
-const productosController = {
+const productsController = {
     index: function (req, res) {
         //if ()
         res.render('products/products')
@@ -21,4 +21,4 @@ const productosController = {
 
 }
 
-module.exports = productosController;
+module.exports = productsController;
