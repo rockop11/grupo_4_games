@@ -15,13 +15,15 @@ const productoAdminRoutes = require('./routes/productoAdmin');
 app.use('/', mainRoutes);
 
 //Rutas productos
+//ESTO ES LO QUE TIENE QUE IR EN EL NAVEGADOR!!!
 app.use('/productos', productosRoutes);
 
 //Rutas usuarios
 app.use('/users', usersRoutes);
 
 //Rutas admin
-app.use('/productoAdmin', productoAdminRoutes);
+//CREAR RUTA Y COSAS DE ADMIN
+//app.use('/productoAdmin', productoAdminRoutes);
 
 
 //Servidor
