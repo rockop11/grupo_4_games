@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("./partials/head", {Solapa:"ZG - Producto Administrador"}) %>
+
+<body>
+
+    <%- include('./partials/header') %> 
+
+    <main>
+        <form action="" class="form-user">
+
+            <h2>EDITAR PRODUCTO</h2>
+
+            <div>
+                <label for="nombre">Nombre de producto:</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre Producto">
+            </div>
+
+            <div>
+                <label for="description">Descripción:</i></label>
+                <input id="description" type="text" name="description" placeholder="Descripción">
+            </div>
+            
+            
+            <div>
+                <label>Agregar imagenes del producto:</label>
+                <input type="file" name="image" accept=".jpg, .png" multiple>
+            </div>
+            
+
+            <div>
+                <label for="price">Precio:</i></label>
+                <input id="price" type="text" name="price" placeholder="Precio">
+            </div>
+
+            <div>
+                <label>Categorías de interés:</label>
+                    <select name="interes">
+                        <option value="juegos" selected>juegos</option>
+                        <option value="consolas">consolas</option>
+                        <option value="accesorios">accesorios</option>
+                    </select>
+            </div>
+
+            <div>
+                <button type="submit">Agregar Producto</button>
+            </div>
+
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %> 
+
+    
+</body>
+
+</html>

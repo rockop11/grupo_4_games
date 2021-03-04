@@ -1,16 +1,16 @@
 const path = require('path');
 
 const productsController = {
-    index: function (req, res) {
+    index: (req, res) => {
         //if ()
-        res.render('products/products')
+        res.render('products/products');
     },
 
-    show: function(req, res) {
+    show: (req, res) => {
         res.render('products/productCart');
     },
 
-    detalles: function(req, res) {
+    detail: (req, res) => {
         res.render('products/productDetail');
     },
 
@@ -18,6 +18,22 @@ const productsController = {
 		res.send('products/productCreate');
 	},
 
+    store: (req,res) => {
+        res.send('producto creado');
+
+    },
+
+    edit: (req,res) => {
+        res.send('productEdit');
+    }, 
+
+    update: (req,res) => {
+        res.send('edicion del producto');
+    }, 
+
+    delete: (req,res) => {
+        res.send('aca borraste un producto');
+    }
 
 }
 
