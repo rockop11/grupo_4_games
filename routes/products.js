@@ -22,7 +22,7 @@ router.get('/:consola?', productsController.index)
 router.get('/carrito', productsController.show);
 
 // DETALLE DEL PRODUCTO
-router.get('/detail', productsController.detalles);
+router.get('/detail', productsController.detail);
 
 // CREACION DEL PRODUCTO
 router.get('/productCreate', productsController.create);

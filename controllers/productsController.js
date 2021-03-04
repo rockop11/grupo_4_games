@@ -15,7 +15,7 @@ const productsController = {
     },
 
     create: (req, res) => {
-		res.send('products/productCreate');
+		res.render('products/productCreate');
 	},
 
     store: (req,res) => {
