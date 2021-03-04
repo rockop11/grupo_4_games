@@ -19,20 +19,19 @@ const productsController = {
 	},
 
     store: (req,res) => {
-        res.send('producto creado');
-
+        // res.send('producto creado');
     },
 
     edit: (req,res) => {
-        res.send('productEdit');
+         res.render('products/productEdit');
     }, 
 
     update: (req,res) => {
-        res.send('edicion del producto');
+    //     res.send('edicion del producto');
     }, 
 
     delete: (req,res) => {
-        res.send('aca borraste un producto');
+        // res.send('aca borraste un producto');
     }
 
 }

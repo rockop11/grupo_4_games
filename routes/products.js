@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router();
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
@@ -16,7 +17,7 @@ const storage = multer.diskStorage({
   var upload = multer({ storage: storage });
 
 // INDEX
-router.get('/:consola?', productsController.index)
+router.get('/', productsController.index)
 
 //ESTO ES LO QUE VA DESPUES DE /PRODUCTOS!!!!!
 router.get('/carrito', productsController.show);
@@ -25,7 +26,7 @@ router.get('/carrito', productsController.show);
 router.get('/detail', productsController.detail);
 
 // CREACION DEL PRODUCTO
-router.get('/productCreate', productsController.create);
+router.get('/create', productsController.create);
 router.post('/:id', upload.single('image'), productsController.store);
 
 // EDICION DEL PRODUCTO
