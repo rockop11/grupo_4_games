@@ -110,6 +110,29 @@ div.form .input {
     color: #44d62d;
 }
 
+/* ESTILO PARA PAGINA DE PRODUCTOS */
+
+.container-products {
+    width: 90%;
+    margin: auto;
+}
+
+main section article.prod-contenedor {
+    box-shadow : 0px 0px 5px #e5e7e9;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.img-products-gral {
+    width: 100%;
+}
+
+.main-products {
+    width: 100%;
+}
+
+
+
 /* ESTILOS GENERALES LOGIN Y REGISTRO */
 
 
@@ -432,6 +455,25 @@ h4.footer-copy-header {
     .main-navbar {
         display: none;
     }
+
+    /* ESTILOS PARA LOS PRODUCTOS GRAL */
+    .container-products {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 10;
+    }
+    main section article {
+        width: 95%;
+    }
+    .descripcion {
+        display: none;
+    }
+    .main-navbar {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -466,9 +508,33 @@ h4.footer-copy-header {
     .main-navbar a:hover {
         color: #44d62d;
     }
+
+    main section article.prod-contenedor {
+        box-shadow : 0px 0px 5px #e5e7e9;
+        border-radius: 10px;
+        width: 45%;
+    }
+
+    .products-gral {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    .img-products-gral {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
 }
 
 @media (min-width: 1024px)  {
+    main section article.prod-contenedor {
+        width: 22%;
+    }
+
+    .prod-contenedor:hover {
+        box-shadow: 0px 0px 10px rgb(78, 78, 78);
+    }
+
     .footer-flex {
         display: flex;
         justify-content: space-between;
@@ -484,5 +550,6 @@ h4.footer-copy-header {
     .footer-icons i:hover {
         color: #39bb24;
     }
+
 }
 
