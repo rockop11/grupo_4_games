@@ -117,7 +117,7 @@ div.form .input {
     margin: auto;
 }
 
-main section article.prod-contenedor {
+article.prod-contenedor {
     box-shadow : 0px 0px 5px #e5e7e9;
     border-radius: 10px;
     width: 45%;
@@ -527,7 +527,7 @@ h4.footer-copy-header {
 }
 
 @media (min-width: 1024px)  {
-    main section article.prod-contenedor {
+    article.prod-contenedor {
         width: 22%;
     }
 
