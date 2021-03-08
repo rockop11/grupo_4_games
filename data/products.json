@@ -1,0 +1,29 @@
+[
+ {
+  "id": 1,
+  "nombre": "Joystick PS 5",
+  "descripcion": "Joystick de playstation 5 wireless",
+  "imagen": "imagen-1615236603246.jpg",
+  "precio": "10000",
+  "descuento": "5",
+  "interes": "juegos"
+ },
+ {
+  "id": 2,
+  "nombre": "Joystick PS 5",
+  "descripcion": "Joystick de playstation 5 wireless",
+  "imagen": "imagen-1615237848341.jpg",
+  "precio": "10000",
+  "descuento": "5",
+  "interes": "accesorios"
+ },
+ {
+  "id": "3",
+  "nombre": "Play Station 5",
+  "descripcion": "Consola Play Station 5 para viciar mucho, no dormir, ni laburar y viciar como un perro en celo",
+  "imagen": "imagen-1615239788647.jpg",
+  "precio": "150000",
+  "descuento": "5",
+  "interes": "consolas"
+ }
+]

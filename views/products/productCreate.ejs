@@ -8,9 +8,14 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="" class="form-user">
+        <form action="" method="POST" enctype="multipart/form-data" class="form-user">
 
             <h2>AGREGAR PRODUCTO</h2>
+
+            <div>
+                <label for="id">ID de Producto</label>
+                <input id="id" type="number" name="id" placeholder="ID de Producto">
+            </div>
 
             <div>
                 <label for="nombre">Nombre de producto:</label>
@@ -19,19 +24,24 @@
 
             <div>
                 <label for="description">Descripción:</i></label>
-                <input id="description" type="text" name="description" placeholder="Descripción">
+                <input id="description" type="text" name="descripcion" placeholder="Descripción">
             </div>
             
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="image" accept=".jpg, .png" multiple>
+                <input type="file" name="imagen" accept=".jpg, .png" multiple>
             </div>
             
 
             <div>
                 <label for="price">Precio:</i></label>
-                <input id="price" type="text" name="price" placeholder="Precio">
+                <input id="price" type="number" name="precio" placeholder="Precio">
+            </div>
+
+            <div>
+                <label for="descuento">Descuento:</i></label>
+                <input id="descuento" type="number" name="descuento" placeholder="descuento">
             </div>
 
             <div>

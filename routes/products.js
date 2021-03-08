@@ -7,7 +7,7 @@ const productsController = require('../controllers/productsController');
 // Multer
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
-       cb(null, '../public/img'); 
+      cb(null, path.join(__dirname, '../public/img/fotosMulter')); 
     }, 
     filename: function (req, file, cb) { 
        cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);  
@@ -20,20 +20,20 @@ const storage = multer.diskStorage({
 router.get('/', productsController.index)
 
 //ESTO ES LO QUE VA DESPUES DE /PRODUCTOS!!!!!
-router.get('/carrito', productsController.show);
+router.get('/cart', productsController.show);
 
 // DETALLE DEL PRODUCTO
-router.get('/detail', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 // CREACION DEL PRODUCTO
 router.get('/create', productsController.create);
-router.post('/:id', upload.single('image'), productsController.store);
+router.post('/create', upload.any(), productsController.store);
 
 // EDICION DEL PRODUCTO
-router.get('/edit/:id?', productsController.edit);
-router.patch('/:id', upload.single('image'), productsController.update);
+router.get('/edit/:id', productsController.edit);
+router.patch('/edit/:id', upload.single('image'), productsController.update);
 
 // ELIMINACION DEL PRODUCTO
-router.delete('/:id', productsController.delete),
+router.delete('/delete/:id', productsController.delete),
 
 module.exports = router;

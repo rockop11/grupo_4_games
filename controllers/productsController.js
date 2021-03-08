@@ -1,9 +1,13 @@
 const path = require('path');
+const fs = require('fs');
+
 
 const productsController = {
     index: (req, res) => {
-        //if ()
-        res.render('products/products');
+        let productos = path.join(__dirname, '../data/products.json');
+        let producto = fs.readFileSync(productos, 'utf-8');
+        let productosJSON = JSON.parse(producto);
+        res.render('products/products', {productosJSON});
     },
 
     show: (req, res) => {
@@ -11,7 +15,10 @@ const productsController = {
     },
 
     detail: (req, res) => {
-        res.render('products/productDetail');
+        let productos = path.join(__dirname, '../data/products.json');
+        let producto = fs.readFileSync(productos, 'utf-8');
+        let productosJSON = JSON.parse(producto);
+        res.render('products/productDetail', {productosJSON});
     },
 
     create: (req, res) => {
@@ -19,7 +26,28 @@ const productsController = {
 	},
 
     store: (req,res) => {
-        // res.send('producto creado');
+        let productos = path.join(__dirname, '../data/products.json');
+        //NOS TRAEMOS EL JSON
+        let producto = fs.readFileSync(productos, 'utf-8');
+        //MANIPULO EL JSON Y LO CONVIERTO EN OBJ. LIT.
+        let productosJSON = JSON.parse(producto);
+        //Valores Nuevos de mi Obj Literal.
+        productosJSON.push({
+            id: req.body.id,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            imagen: req.files[0].filename,
+            precio: req.body.precio,
+            descuento: req.body.descuento,
+            interes: req.body.interes
+        })  
+        
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productosJSON, null, ' '));
+        res.redirect('/products')
+        
+        //res.redirect('/products')
+
+        
     },
 
     edit: (req,res) => {
