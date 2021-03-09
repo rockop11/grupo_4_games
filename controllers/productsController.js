@@ -18,7 +18,19 @@ const productsController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        res.render('products/productDetail', {productosJSON});
+
+        //ANDA X LA MITAD
+        for (let i=0 ; i<productosJSON.length ; i ++){
+            if(productosJSON[i].id == req.params.id){
+                return res.render('products/productDetail', {productosJSON});
+            } else {
+
+            };  
+        };
+        //let product = productosJSON.find(function(product){
+            //product.id == req.params.id
+        //})
+        //res.render('products/productDetail', {productosJSON});
     },
 
     create: (req, res) => {
@@ -51,7 +63,10 @@ const productsController = {
     },
 
     edit: (req,res) => {
-         res.render('products/productEdit');
+        let productos = path.join(__dirname, '../data/products.json');
+        let producto = fs.readFileSync(productos, 'utf-8');
+        let productosJSON = JSON.parse(producto);
+        res.render('products/productEdit', {productosJSON});
     }, 
 
     update: (req,res) => {
