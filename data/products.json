@@ -25,5 +25,14 @@
   "precio": "150000",
   "descuento": "5",
   "interes": "consolas"
+ },
+ {
+  "id": "4",
+  "nombre": "Anillo de mordor",
+  "descripcion": "Con este anillo aprendes crud en 5 minutos",
+  "imagen": "imagen-1615389996597.jpg",
+  "precio": "250000",
+  "descuento": "10",
+  "interes": "consolas"
  }
 ]

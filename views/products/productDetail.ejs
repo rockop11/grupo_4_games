@@ -11,19 +11,19 @@
     <main class="main-producto">
         
         <div class="producto">
-            <h1><%= productosJSON.nombre %></h1>
-            <img src="/img/Control.jpg" alt="Imagen del producto">
+            <h1><%= productDetail.nombre %></h1>
+            <img src="/img/fotosMulter/<%= productDetail.imagen %>"  alt="Imagen del producto">
         </div>
 
         <div>
             <h2>Descripción</h2>
-            <p> <%= productosJSON.descripcion %> 
+            <p> <%= productDetail.descripcion %> 
             </p>
         </div>
     
         <div class="barra-precio">
-            <h2 class="precio">$11.500</h2>
-            <p class="descuento">20% OFF</p>
+            <h2 class="precio"><%= productDetail.precio %> </h2>
+            <p class="descuento"><%= productDetail.descuento %>%OFF </p>
         </div>
         
         <p class="color">12 cuotas s/interés</p>
@@ -31,6 +31,10 @@
         <button type="submit"class="boton-formulario">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
 
         <a href="/products/edit"><button type="submit"class="boton-formulario">Editar Producto <i class="fas fa-shopping-cart"></i></button></a>
+
+    <form action="/products/delete/<%= productDetail.id %> ?_method=DELETE" method="POST">
+        <button type="submit" class="boton-formulario">Borrar Producto <i class="fas fa-shopping-cart"></i></button>
+    </form>
     
          <div>
              <h2>Especificaciones</h2>    
@@ -39,13 +43,8 @@
              </p>
          </div>  
 
-        <span class="imagenes-chicas"> <img class="maschico" src="/img/PS5_Dig_DS.webp" alt="Imagen del producto">
-         <img class="maschico" src="/img/ps5_joystick_01.jpg" alt="Imagen del producto">
-         <img class="maschico" src="/img/ps5_joystick_02.jpg" alt="Imagen del producto">
-         <img class="maschico" src="/img/ps5_joystick_03.jpg" alt="Imagen del producto"></span>
+ 
         
-       
-
          
     </main>
 
