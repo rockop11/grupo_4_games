@@ -18,7 +18,7 @@ const productsController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        
+
         let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id)
         res.render('products/productDetail',{productDetail})
 
@@ -81,8 +81,9 @@ const productsController = {
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
 
-        let id = req.params.id;
-        let finalProducts = productosJSON.filter()
+        let finalProducts = productosJSON.filter(finalProducts=>finalProducts.id!=req.params.id)
+        fs.writeFileSync(productos, JSON.stringify(finalProducts, null, ' '));
+        res.redirect('/products');
     }
 
 }
