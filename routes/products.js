@@ -31,7 +31,7 @@ router.post('/create', upload.any(), productsController.store);
 
 // EDICION DEL PRODUCTO
 router.get('/edit', productsController.edit);
-router.patch('/edit/:id', upload.single('image'), productsController.update);
+router.put('/edit/:id', upload.any(), productsController.update);
 
 // ELIMINACION DEL PRODUCTO
 router.delete('/delete/:id', productsController.delete),

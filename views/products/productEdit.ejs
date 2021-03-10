@@ -10,11 +10,11 @@
     <main>
         <form action="/products/<%=productosJSON.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>EDITAR PRODUCTO:<% productosJSON.nombre %></h2>
+            <h2>EDITAR PRODUCTO:<%= productosJSON.nombre %></h2>
 
             <div>
                 <label for="nombre"><% productosJSON.nombre %></label>
-                <input id="nombre" type="text" name="nombre" value="<% productosJSON.nombre %>">
+                <input id="nombre" type="text" name="nombre" value="<%= productosJSON.nombre %>">
             </div>
 
             <div>
