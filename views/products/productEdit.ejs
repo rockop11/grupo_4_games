@@ -8,23 +8,18 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="" class="form-user">
+        <form action="/products/<%=productosJSON.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>EDITAR PRODUCTO</h2>
-
-            <div>
-                <label for="id">ID de Producto:</label>
-                <input id="id" type="text" name="id" placeholder="ID de Producto">
-            </div>
+            <h2>EDITAR PRODUCTO:<% productosJSON.nombre %></h2>
 
             <div>
-                <label for="nombre">Nombre de producto:</label>
-                <input id="nombre" type="text" name="nombre" placeholder="Nombre Producto">
+                <label for="nombre"><% productosJSON.nombre %></label>
+                <input id="nombre" type="text" name="nombre" value="<% productosJSON.nombre %>">
             </div>
 
             <div>
                 <label for="description">Descripción:</i></label>
-                <input id="description" type="text" name="description" placeholder="Descripción">
+                <input id="description" type="text" name="description">
             </div>
             
             
@@ -36,15 +31,20 @@
 
             <div>
                 <label for="price">Precio:</i></label>
-                <input id="price" type="text" name="price" placeholder="Precio">
+                <input id="price" type="text" name="price">
+            </div>
+            
+            <div>
+                <label for="descuento">Descuento:</i></label>
+                <input id="descuento" type="number" name="descuento" placeholder="descuento">
             </div>
 
             <div>
                 <label>Categorías de interés:</label>
                     <select name="interes">
-                        <option value="juegos" selected>juegos</option>
-                        <option value="consolas">consolas</option>
-                        <option value="accesorios">accesorios</option>
+                        <option value="novedades" selected>Novedades</option>
+                        <option value="ofertas">Ofertas</option>
+                        <option value="visitados">visitados</option>
                     </select>
             </div>
 

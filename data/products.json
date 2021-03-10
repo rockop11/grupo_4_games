@@ -1,11 +1,20 @@
 [
  {
-  "id": 3,
-  "nombre": "Play Station 5",
-  "descripcion": "Consola Play Station 5 para viciar mucho, no dormir, ni laburar y viciar como un perro en celo",
-  "imagen": "imagen-1615239788647.jpg",
-  "precio": "150000",
+  "id": 0,
+  "nombre": "Playstation 5",
+  "descripcion": "Consola de video juegos playstation 5",
+  "imagen": "imagen-1615401263000.jpg",
+  "precio": "110000",
   "descuento": "5",
-  "interes": "consolas"
+  "interes": "juegos"
+ },
+ {
+  "id": 1,
+  "nombre": "Joystick PS 5",
+  "descripcion": "Joystick de playstation 5 wireless",
+  "imagen": "imagen-1615403077358.jpg",
+  "precio": "10000",
+  "descuento": "5",
+  "interes": "juegos"
  }
 ]
