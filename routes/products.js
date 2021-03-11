@@ -30,7 +30,7 @@ router.get('/create', productsController.create);
 router.post('/create', upload.any(), productsController.store);
 
 // EDICION DEL PRODUCTO
-router.get('/edit', productsController.edit);
+router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', upload.any(), productsController.update);
 
 // ELIMINACION DEL PRODUCTO

@@ -8,35 +8,35 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="/products/<%=productosJSON.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
+        <form action="?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>EDITAR PRODUCTO:<%= productosJSON.nombre %></h2>
+            <h2>EDITAR PRODUCTO:<%= old.nombre %></h2>
 
             <div>
-                <label for="nombre"><% productosJSON.nombre %></label>
-                <input id="nombre" type="text" name="nombre" value="<%= productosJSON.nombre %>">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" value="<%= old.nombre %>">
             </div>
 
             <div>
-                <label for="description">Descripción:</i></label>
-                <input id="description" type="text" name="description">
+                <label for="description">Descripcion</label>
+                <input id="description" type="text" name="descripcion" value="<%= old.descripcion %>">
             </div>
             
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="image" accept=".jpg, .png" multiple>
+                <input type="file" name="imagen" accept=".jpg, .png" multiple>
             </div>
             
 
             <div>
-                <label for="price">Precio:</i></label>
-                <input id="price" type="text" name="price">
+                <label for="price">Precio</label>
+                <input id="price" type="text" name="precio" value="$<%= old.precio %>">
             </div>
             
             <div>
-                <label for="descuento">Descuento:</i></label>
-                <input id="descuento" type="number" name="descuento" placeholder="descuento">
+                <label for="descuento">Descuento</label>
+                <input id="descuento" type="number" name="descuento" placeholder="descuento" value="<%= old.descuento %>">
             </div>
 
             <div>
@@ -59,5 +59,7 @@
 
     
 </body>
+
+
 
 </html>

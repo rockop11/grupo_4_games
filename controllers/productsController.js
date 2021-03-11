@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { Recoverable } = require('repl');
+
 
 
 const productsController = {
@@ -21,13 +21,14 @@ const productsController = {
         let productosJSON = JSON.parse(producto);
 
         let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id)
-        res.render('products/productDetail',{productDetail})
+        res.render('products/productDetail', {productDetail})
     },
-
+    //VISTA DE CREAR PRODUCTO
     create: (req, res) => {
 		res.render('products/productCreate');
 	},
 
+    //FUNCIONALIDAD PARA CREAR PRODUCTO
     store: (req,res) => {
         let productos = path.join(__dirname, '../data/products.json');
         //NOS TRAEMOS EL JSON
@@ -38,12 +39,12 @@ const productsController = {
         let id= Math.max(...ids)+1; //filtra el mayor de los ids del array, se le suma 1 para el id del nuevo producto
         //Valores Nuevos de mi Obj Literal.
         productosJSON.push({
-            id: id,
+            id: parseInt(id),
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             imagen: req.files[0].filename,
-            precio: req.body.precio,
-            descuento: req.body.descuento,
+            precio: parseFloat(req.body.precio),
+            descuento: parseInt(req.body.descuento),
             interes: req.body.interes
         })  
         
@@ -57,7 +58,9 @@ const productsController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        res.render('products/productEdit', {productosJSON});
+        let productoAEditar = productosJSON.find(p=>p.id == req.params.id)
+        
+        res.render('products/productEdit', {old:productoAEditar});
     }, 
 
     //EDITAR PRODUCTO POR POST!
@@ -68,7 +71,7 @@ const productsController = {
         let id = req.params.id
         let productoAEditar = productosJSON.find(p=>p.id == id)
         let imagen
-        if( req.file !=undefined){
+        if(req.file !=undefined){
             imagen = req.file.filename
         } else {
             imagen = productoAEditar.imagen

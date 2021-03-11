@@ -7,23 +7,5 @@
   "precio": "110000",
   "descuento": "5",
   "interes": "juegos"
- },
- {
-  "id": 1,
-  "nombre": "Joystick PS 5",
-  "descripcion": "Joystick de playstation 5 wireless",
-  "imagen": "imagen-1615403077358.jpg",
-  "precio": "10000",
-  "descuento": "5",
-  "interes": "juegos"
- },
- {
-  "id": 2,
-  "nombre": "Santiago",
-  "descripcion": "Con este anillo aprendes crud en 5 minutos",
-  "imagen": "imagen-1615411133972.jpg",
-  "precio": "10000",
-  "descuento": "1",
-  "interes": "juegos"
  }
 ]
