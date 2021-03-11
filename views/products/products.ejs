@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {Solapa:"ZG - Carrito de Compras"}) %>
+<%- include("../partials/head", {Solapa:"ZG - Productos"}) %>
 
     <body>
 
         <%- include('../partials/header') %>
 
-            <h1>ACA TIENEN QUE ESTAR LOS PRODUCTOS!</h1>
+            <h1>PRODUCTOS</h1>
 
             <section class="container-products">
                 <% for(let i=0 ; i<productosJSON.length ; i++) { %>
@@ -18,13 +18,13 @@
 
                             <div class="products-gral">
                                 <i class="fas fa-truck"></i>
-                                <p class="precio">
-                                    <%= productosJSON[i].precio %>
+                                <p class="prod-precio">
+                                    $<%= productosJSON[i].precio %>
                                 </p>
-                                <p class="descuento">
+                                <p class="prod-descuento">
                                     <%= productosJSON[i].descuento %>%OFF
                                 </p>
-                                <h4 class="descripcion">
+                                <h4 class="prod-descripcion">
                                     <%= productosJSON[i].nombre %>
                                 </h4>
                             </div>

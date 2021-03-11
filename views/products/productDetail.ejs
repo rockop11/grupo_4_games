@@ -14,28 +14,27 @@
             <h1><%= productDetail.nombre %></h1>
             <img src="/img/fotosMulter/<%= productDetail.imagen %>"  alt="Imagen del producto">
         </div>
-
-        <div>
-            <h2>Descripción</h2>
-            <p> <%= productDetail.descripcion %> 
-            </p>
-        </div>
     
         <div class="barra-precio">
-            <h2 class="precio"><%= productDetail.precio %> </h2>
+            <h2>Descripción</h2>
+            <p> <%= productDetail.descripcion %> </p> 
+            <h2 class="precio">$<%= productDetail.precio %> </h2>
             <p class="descuento"><%= productDetail.descuento %>%OFF </p>
         </div>
         
         <p class="color">12 cuotas s/interés</p>
+        <div class="botones">
+            <!--BOTON COMPRAR-->
+            <button type="submit"class="boton-formulario"><p>Comprar </p><i class="fas fa-shopping-cart"></i></button>
 
-        <button type="submit"class="boton-formulario">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
+            <!--BOTON EDITAR-->
+            <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario"><p>Editar </p><i class="fas fa-edit"></i></button></a>
 
-        <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario">Editar Producto <i class="fas fa-shopping-cart"></i></button></a>
-
-    <form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST">
-        <button type="submit" class="boton-formulario">Borrar Producto <i class="fas fa-shopping-cart"></i></button>
-    </form>
-    
+            <form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST">
+                <!--BOTON BORRAR-->
+                <button type="submit" class="boton-formulario"><p>Borrar </p><i class="fas fa-trash-alt"></i></button>
+            </form>
+        </div>
     </main>
 
     <%- include('../partials/footer') %> 

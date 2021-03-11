@@ -73,9 +73,9 @@ div.form {
     display: flex;
     justify-content: space-between;
     height: 35px;
-    font-size: 11px;
+    
     background-color: #FFF;
-    padding: 12px;
+    
     align-items: center;
     border-radius: 8px 8px 8px 8px;
     color: #666;
@@ -92,7 +92,13 @@ div.form .input {
     padding: 2px;
     border-radius: 8px 8px 8px 8px;
     line-height: 17px;
-    font-size: 12px;
+    font-size: 15px;
+}
+
+div.inputs-header button[type="submit"] {
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 .fa-search {
@@ -120,7 +126,7 @@ div.form .input {
 article.prod-contenedor {
     box-shadow : 0px 0px 5px #e5e7e9;
     border-radius: 10px;
-    width: 45%;
+    width: 100%;
 }
 
 .img-products-gral {
@@ -131,7 +137,55 @@ article.prod-contenedor {
     width: 100%;
 }
 
+.products-gral {
+    border-top: 1px solid #ebebeb;
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
 
+.fa-truck { 
+    display: block; 
+    font-size: 16px; 
+    padding: 5px; 
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #44d62d; 
+    background-color: #FFF; 
+    border-radius: 50%; 
+    position: absolute; 
+    right: 20px; 
+    top: -15px;
+}
+
+.prod-descuento {
+    flex-grow: 7;
+    font-size: 16px;
+}
+
+.prod-precio {
+    flex-grow: 3;
+    font-size: 18px;
+    color: #323f48;
+}
+
+.prod-descuento,
+.fa-truck {
+    color: #44d62d;
+    border-radius: 50%;
+}
+
+.fa-truck {
+    padding-bottom: 15px;
+}
+
+.prod-descripcion {
+    display: none;
+}
+
+/*-------------------------------------------------------*/
 
 /* ESTILOS GENERALES LOGIN Y REGISTRO */
 
@@ -215,7 +269,6 @@ a button.boton-nc:hover {
 main div img{
     width: 50%;
     float: left;
-    
 }
 
 main article{
@@ -223,6 +276,8 @@ main article{
 }
 
 h1{
+    font-weight: lighter;
+    margin: 10px;
     text-align: center;
     color: black;
     
@@ -257,14 +312,16 @@ span{
 }
 
 .precio{
-    font-size: 36px;
+    font-size: 25px;
     font-weight: 400;
 }
 
 .descuento{
-    color:#44d62d ;
+    margin-top: 10px;
+    color: #44d62d;
     font-weight: 400;
-    padding: 40px 20px;
+    margin-left: 5px;
+    font-size: 14px;
 }
 
 .barra-precio{
@@ -272,16 +329,30 @@ span{
     flex-wrap: wrap;
 }
 
+.barra-precio h2, p {
+    padding-bottom: 10px;
+}
+
 .boton-formulario{
+    width: 45px;
     background-color: #44d62d;
     border: none;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-right: 5px;
+    font-size: 16px;
     color:#FFF;
     padding: 13px;
     border-radius: 5px;
     justify-content: center;
+}
 
+div.botones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+div.botones button p {
+    display: none;
 }
 
 
@@ -464,6 +535,7 @@ h4.footer-copy-header {
         justify-content: space-between;
         align-items: flex-start;
         flex-grow: 10;
+        margin-bottom: 35px;
     }
     main section article {
         width: 95%;
