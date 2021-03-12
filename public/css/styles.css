@@ -269,6 +269,7 @@ a button.boton-nc:hover {
 main div img{
     width: 50%;
     float: left;
+    box-shadow : 0px 0px 5px #e5e7e9;
 }
 
 main article{
@@ -277,7 +278,7 @@ main article{
 
 h1{
     font-weight: lighter;
-    margin: 10px;
+    margin: 15px 0px;
     text-align: center;
     color: black;
     
@@ -289,8 +290,8 @@ body p{
 
 .color{
     color: #000000;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     
 }
 
@@ -307,17 +308,13 @@ span{
 }
 
 .main-producto{
+    height: 350px;
     padding: 10px;
     background-color:  #ffffff;
 }
 
-.precio{
-    font-size: 25px;
-    font-weight: 400;
-}
-
 .descuento{
-    margin-top: 10px;
+    margin-top: 5px;
     color: #44d62d;
     font-weight: 400;
     margin-left: 5px;
@@ -327,6 +324,13 @@ span{
 .barra-precio{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 15px;
+
+}
+
+.barra-precio h2 {
+    font-size: 20px;
 }
 
 .barra-precio h2, p {
@@ -347,8 +351,8 @@ span{
 
 div.botones {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 15px;
+    padding-left: 7px;
+    margin-top: 10px;
 }
 
 div.botones button p {
