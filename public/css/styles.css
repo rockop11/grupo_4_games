@@ -650,5 +650,14 @@ h4.footer-copy-header {
         color: #39bb24;
     }
 
+    /*Botones del detalle de producto*/
+    .boton-formulario {
+        cursor: pointer;
+    }
+
+    div.botones button:hover {
+        background-color: #39bb24;
+    }
+    /*-----------------------------*/
 }
 

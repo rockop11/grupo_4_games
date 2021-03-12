@@ -67,3 +67,21 @@ Escribir o duplicar código innecesariamente. Dejar de lado al trello.
 Dejar cosas para ultimo momento, y tener que andar a las corridas. 
 
 
+
+
+### Retrospectiva del Sprint 4
+
+### Comenzar a hacer.
+Trabajar individualmente, ya que encontramos una zona de confort haciendo live coding.
+
+### Hacer más.
+distribuirnos mejor las tareas apenas empieza el sprint. y darle mas bola al trello.
+
+### Continuar Haciendo
+Seguir trabajando con las mismas ganas y compromiso como venimos hasta ahora, que nos viene dando resultado. apoyarnos mutuamente antes las frustraciones que genera a veces no poder terminar las tareas.
+
+### Hacer Menos
+Menos charla de cafe, y mas codigo, pero que lindo que es charlar jajajaja
+
+### Dejar de Hacer.
+pensar que no lo vamos a lograr cuando no nos salen las cosas como planeamos.
