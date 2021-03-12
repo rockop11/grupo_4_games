@@ -185,6 +185,8 @@ article.prod-contenedor {
     display: none;
 }
 
+.fa-shopping-cart
+
 /*-------------------------------------------------------*/
 
 /* ESTILOS GENERALES LOGIN Y REGISTRO */
@@ -317,7 +319,6 @@ span{
     margin-top: 5px;
     color: #44d62d;
     font-weight: 400;
-    margin-left: 5px;
     font-size: 14px;
 }
 
@@ -326,7 +327,6 @@ span{
     flex-wrap: wrap;
     flex-direction: column;
     padding-left: 15px;
-
 }
 
 .barra-precio h2 {
@@ -600,6 +600,29 @@ h4.footer-copy-header {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
+
+    /*--PAGINA PRODUCT/DETAIL--*/
+    .main-producto{
+        height: 450px;;
+    }
+
+    .barra-precio {
+        margin-top: 35px;
+    }
+
+    .barra-precio h2 {
+        font-size: 25px;;
+    }
+
+    .barra-precio p.color {
+        font-size: 17px;
+    }
+
+    div.botones {
+        padding-left: 15px;
+    }
+
+
 }
 
 @media (min-width: 1024px)  {
