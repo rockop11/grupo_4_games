@@ -10,8 +10,9 @@
     <main>
         <form class="form-user" action="/" method="GET">
             <div>
-                <h2>Regístrese</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eum iste adipisci mollitia odio magnam quisquam</p>
+                <h2>Regístrate</h2>
+                <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
+               
             </div>
             <div>
                 <label for="usuario">Ingrese el usuario:</label>
@@ -25,17 +26,17 @@
                 <button type="submit">Enviar</button>
                 <a href="#">¿Olvidó su contraseña?</a>
             </div>
-            <hr>
-            <div>
-                <h2>Nuevo usuario</h2>
-                <p>Crear una cuenta tiene muchos beneficios: Paga más rápido, puede guardar más de una dirección, seguimiento de pedidos y mucho más.</p>
-            </div>
-            <div>
-                <a href="#">
-                    <button class="boton-nc" type="submit">Crear una cuenta</button>
-                </a>
-            </div>
+
         </form>
+
+        <div class="form-user">
+            <h2>Nuevo usuario</h2>
+            <p>Crear una cuenta tiene muchos beneficios: Paga más rápido, puede guardar más de una dirección, seguimiento de pedidos y mucho más.</p>
+            <a href="/users/registro"><button class="boton-nc" type="submit">Crear una cuenta</button></a>
+        </div>
+        
+        
+
     </main>
 
     <%- include('../partials/footer') %> 
