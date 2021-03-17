@@ -18,7 +18,7 @@ const mainController = {
             search,
             toThousand,
         })
-    }
+    },
 }
 
 module.exports = mainController;

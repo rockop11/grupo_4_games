@@ -69,7 +69,7 @@ header p {
     font-size: 17px;
 }
 
-div.form {
+.form {
     display: flex;
     justify-content: space-between;
     height: 35px;
