@@ -10,11 +10,8 @@
             <h1>Resultado de busqueda</h1>
 
             <section class="container-products">
-                <div class="container products-wrapper">
-                    <div class="row">
-                        <div class="col-12">
                             <h2 class="products-title">Resultados de la búsqueda: <%= search %></h2>
-                        </div>
+                      
                         <% if (products.length) { %>
                          
                             <% for (product of products) { 
@@ -40,7 +37,7 @@
                                             </div>
                                         </a>
                                     </article>
-                                </section>
+                        </section>
                                           
                             <% } %>	
                         <% } else { %>
@@ -48,10 +45,7 @@
                                 <h2 class="products-title" style="color:#44d62d;">No hay productos que coincidan con esa búsqueda</h2>
                             </div>
                         <% } %>
-            
-                        
-                    </div>
-                </div>
+ 
             </section>
 
             <%- include('../partials/footer') %>
