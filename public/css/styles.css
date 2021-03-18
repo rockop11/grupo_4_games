@@ -190,7 +190,9 @@ article.prod-contenedor {
     display: none;
 }
 
-.fa-shopping-cart
+article.prod-contenedor a {
+    text-decoration: none;
+}
 
 /*-------------------------------------------------------*/
 

@@ -11,10 +11,10 @@
  {
   "id": 1,
   "nombre": "Joystick inalámbrico Sony PlayStation DualSense",
-  "descripcion": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento.  Diseño inteligente Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort.",
-  "imagen": "imagen-1615679185650.jpg",
+  "descripcion": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión,  comodidad y exactitud en cada movimiento. Diseño inteligente Gracias a su ergonomía especialmente pensada para la posición  de tu mano, podés pasar horas jugando con total confort.",
+  "imagen": "imagen-1616097331933.jpg",
   "precio": 9999,
-  "descuento": null,
+  "descuento": 5,
   "interes": "novedades"
  }
 ]
