@@ -1,10 +1,17 @@
-const path = require('path');
+const { validationResult} = require('express-validator');
 
 const usersController = {
-    registro: function(req, res) {
+    registro: (req, res) => {
         res.render('users/register');
     },
-    login: function(req, res) {
+
+    processRegister: (req,res)=> {
+       const resultValidation = validationResult(req);
+             res.send(resultValidation)
+
+    },
+
+    login: (req, res)=> {
         res.render('users/login');
     }
 }

@@ -8,7 +8,7 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="" class="form-user">
+        <form method="POST" action="/users/registro" enctype="multipart/form-data" class="form-user">
 
             <h2>CREAR CUENTA</h2>
 
@@ -25,6 +25,11 @@
             <div>
                 <label for="email">Ingrese su Email:</i></label>
                 <input id="email" type="email" name="email" placeholder="Email">
+            </div>
+
+            <div>
+                <label for="email">Ingrese la imagen </i></label>
+                <input id="email" type="file" name="imagen" placeholder="Agregar imagen">
             </div>
 
             <div>
