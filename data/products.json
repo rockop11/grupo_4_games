@@ -4,9 +4,9 @@
   "nombre": "Playstation 5",
   "descripcion": "Consola de video juegos playstation 5",
   "imagen": "imagen-1615401263000.jpg",
-  "precio": "110000",
-  "descuento": "5",
-  "interes": "juegos"
+  "precio": 110000,
+  "descuento": 5,
+  "categoria": "ofertas"
  },
  {
   "id": 1,
@@ -15,6 +15,24 @@
   "imagen": "imagen-1616097331933.jpg",
   "precio": 9999,
   "descuento": 5,
-  "interes": "novedades"
+  "categoria": "novedades"
+ },
+ {
+  "id": 2,
+  "nombre": "Red Dead Redemption II Xbox",
+  "descripcion": "Juego Red Dead Redemption II para xbox, Rockstar Games",
+  "imagen": "imagen-1616099612014.jpg",
+  "precio": 3500,
+  "descuento": 5,
+  "categoria": "ofertas"
+ },
+ {
+  "id": 3,
+  "nombre": "Xbox Series S",
+  "descripcion": "Consola de videojuegos de Microsoft Xbox Series S color Negro",
+  "imagen": "imagen-1616099779693.jpg",
+  "precio": 110000,
+  "descuento": null,
+  "categoria": "novedades"
  }
 ]
