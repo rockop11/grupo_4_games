@@ -16,7 +16,7 @@ const usersController = {
          });
        }
 
-       return res.send('todo ok')
+      
     },
 
     login: (req, res)=> {
