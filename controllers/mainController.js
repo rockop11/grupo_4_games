@@ -4,8 +4,12 @@ const fs = require('fs');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
+
     index: function(req, res) {
-        res.render('index');
+        let productos = path.join(__dirname, '../data/products.json');
+        let producto = fs.readFileSync(productos, 'utf-8');
+        let productosJSON = JSON.parse(producto);
+        res.render('index', {productosJSON});
     },
     search: (req,res)=>{
         let productos = path.join(__dirname, '../data/products.json');
