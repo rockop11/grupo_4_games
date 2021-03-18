@@ -14,32 +14,96 @@
 
             <div>
                 <label for="nombre">Ingrese su Nombre:</label>
-                <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo">
-            </div>
+                <input
+                 id="nombre" 
+                 type="text" 
+                 name="nombre" 
+                 placeholder="Nombre Completo" 
+                 class="<%= locals.errors && errors.nombre ?  'is-invalid' : null %>"
+                 value="<%= locals.oldData ? oldData.nombre : null %>">
 
+                 <% if (locals.errors && errors.nombre) { %>
+                    <div class="text-error">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
             <div>
                 <label for="usuario">Ingrese su Usuario:</i></label>
-                <input id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario">
+                <input 
+                id="usuario" 
+                type="text" 
+                name="usuario" 
+                placeholder="Nombre de Usuario"
+                class="<%= locals.errors && errors.usuario ?  'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.usuario : null %>">
+
+                <% if (locals.errors && errors.usuario) { %>
+                    <div class="text-error">
+                        <%= errors.usuario.msg %> 
+                    </div>
+                    <% } %>
             </div>
-            
+                    
             <div>
                 <label for="email">Ingrese su Email:</i></label>
-                <input id="email" type="email" name="email" placeholder="Email">
-            </div>
+                <input 
+                id="email" 
+                type="text" 
+                name="email" 
+                placeholder="Email"
+                class="<%= locals.errors && errors.email ?  'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.email : null %>">
 
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <%= errors.email.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
             <div>
                 <label for="email">Ingrese la imagen </i></label>
-                <input id="email" type="file" name="imagen" placeholder="Agregar imagen">
+                <input id="imagen" type="file" name="imagen" placeholder="Agregar imagen">
+
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="text-error">
+                        <%= errors.imagen.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>
                 <label for="contraseña">Ingrese su Contraseña</i></label>
-                <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+                <input 
+                id="contraseña" 
+                type="password" 
+                name="contraseña" 
+                placeholder="Contraseña"
+                class="<%= locals.errors && errors.contraseña ?  'is-invalid' : null %>">
+
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="text-error">
+                        <%= errors.contraseña.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>
-                <label for="repetir-contraseña">Repetir Contraseña</i></label>
-                <input id="repetir-contraseña" type="password" name="repetir-contraseña" placeholder="Repetir Contraseña">
+                <label for="repetirContraseña">Repetir Contraseña</i></label>
+                <input 
+                id="repetirContraseña" 
+                type="password" 
+                name="repetirContraseña" 
+                placeholder="Repetir Contraseña"
+                class="<%= locals.errors && errors.repetirContraseña ?  'is-invalid' : null %>">
+                
+                <% if (locals.errors && errors.repetirContraseña) { %>
+                    <div class="text-error">
+                        <%= errors.repetirContraseña.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>

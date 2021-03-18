@@ -253,6 +253,10 @@ main .form-user input {
     text-align: center;
 }
 
+.text-error{
+    color: red;
+}
+
 /*BOTON CREAR CUENTA DE LOGIN*/
 
 a button.boton-nc {

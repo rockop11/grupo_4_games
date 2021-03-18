@@ -7,8 +7,16 @@ const usersController = {
 
     processRegister: (req,res)=> {
        const resultValidation = validationResult(req);
-             res.send(resultValidation)
 
+
+       if (resultValidation.errors.length > 0){
+        return res.render('users/register', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+         });
+       }
+
+       return res.send('todo ok')
     },
 
     login: (req, res)=> {
