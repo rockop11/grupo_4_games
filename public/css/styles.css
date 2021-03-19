@@ -102,6 +102,7 @@ div.inputs-header button[type="submit"] {
 }
 
 input.input {
+    border: none;
     width: 195px;
     margin-left: 6px;
     font-size: 14px;
