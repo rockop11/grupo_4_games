@@ -45,7 +45,7 @@ const productsController = {
             imagen: req.files[0].filename,
             precio: parseFloat(req.body.precio),
             descuento: parseInt(req.body.descuento),
-            interes: req.body.interes
+            categoria: req.body.categoria
         })  
         
         

@@ -174,22 +174,22 @@
 
         <section class="ofertas">
             <h3 class="titulo-section">OFERTAS</h3>
-            <% for(let i=0 ; i<productosJSON.length ; i++) { %>
+            <% for(let i=0 ; i< ofertas.length ; i++) { %>
                 <article class="prod-contenedor">
-                    <a href="/products/detail/<%= productosJSON[i].id %>">
-                        <img src="/img/fotosMulter/<%= productosJSON[i].imagen %>" alt=""
+                    <a href="/products/detail/<%= ofertas[i].id %>">
+                        <img src="/img/fotosMulter/<%= ofertas[i].imagen %>" alt=""
                             class="img-producto">
 
                         <div class="producto">
                             <i class="fas fa-truck"></i>
                             <p class="precio">
-                                $<%= productosJSON[i].precio %>
+                                $<%= ofertas[i].precio %>
                             </p>
                             <p class="descuento">
-                                <%= productosJSON[i].descuento %>%OFF
+                                <%= ofertas[i].descuento %>%OFF
                             </p>
                             <h4 class="descripcion">
-                                <%= productosJSON[i].nombre %>
+                                <%= ofertas[i].nombre %>
                             </h4>
                         </div>
                     </a>
@@ -197,58 +197,35 @@
                 <% } %>
         </section>
 
-
-        <!--
-        <section class="">
-            
-
-            <article class="prod-contenedor">
-                <a href="/joystick_PS5"><img src="/img/ps5_joystick_01.jpg" alt="cafetera" class="img-producto"></a>
-                <div class="producto">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio">$5.000</p>
-                    <p class="descuento">20% OFF</p>
-                    <h4 class="descripcion">Joystick PS5</h4>
-                </div>
-            </article>
-
-            <article class="prod-contenedor">
-                <a href="/joystick_XBox"><img src="/img/xbox_joystick_01.jpg" alt="XBox joystick"
-                        class="img-producto"></a>
-                <div class="producto">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio">$5.300</p>
-                    <p class="descuento">30% off</p>
-                    <h4 class="descripcion">Joystick XBox X Series</h4>
-                </div>
-            </article>
-
-            <article class="prod-contenedor">
-                <a href="/Fifa_21"><img src="/img/JuegosCaja_02_fifa.jpg" alt="Fifa21" class="img-producto"></a>
-                <div class="producto">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio">$2.500</p>
-                    <p class="descuento">10% off</p>
-                    <h4 class="descripcion">Fifa 21</h4>
-                </div>
-            </article>
-
-            <article class="prod-contenedor">
-                <a href="/The_Last_Of_Us"><img src="/img/JuegosCaja_03_TheLastOfUs.jpg" alt="TheLastOfUs"
-                        class="img-producto"></a>
-                <div class="producto">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio">$3.200</p>
-                    <p class="descuento">5% off</p>
-                    <h4 class="descripcion">The last of us</h4>
-                </div>
-            </article>
-
-        </section>-->
-
         <img src="/img/banner-index.jpg" alt="" class="img-banner">
 
+
         <section class="novedades">
+            <h3 class="titulo-section">NOVEDADES</h3>
+            <% for(let i=0 ; i< novedades.length ; i++) { %>
+                <article class="prod-contenedor">
+                    <a href="/products/detail/<%= novedades[i].id %>">
+                        <img src="/img/fotosMulter/<%= novedades[i].imagen %>" alt=""
+                            class="img-producto">
+
+                        <div class="producto">
+                            <i class="fas fa-truck"></i>
+                            <p class="precio">
+                                $<%= novedades[i].precio %>
+                            </p>
+                            <p class="descuento">
+                                <%= novedades[i].descuento %>%OFF
+                            </p>
+                            <h4 class="descripcion">
+                                <%= novedades[i].nombre %>
+                            </h4>
+                        </div>
+                    </a>
+                </article>
+                <% } %>
+        </section>
+
+        <!--<section class="novedades">
             <h3 class="titulo-section">NOVEDADES</h3>
 
             <article class="prod-contenedor">
@@ -293,7 +270,7 @@
                 </div>
             </article>
 
-        </section>
+        </section>-->
 
     </main>
 

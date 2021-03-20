@@ -9,7 +9,9 @@ const mainController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        res.render('index', {productosJSON});
+        let ofertas = productosJSON.filter(product => product.categoria=='ofertas');
+		let novedades = productosJSON.filter(product => product.categoria=='novedades');
+        res.render('index', {productosJSON, ofertas, novedades});
     },
     search: (req,res)=>{
         let productos = path.join(__dirname, '../data/products.json');
