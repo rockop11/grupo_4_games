@@ -15,16 +15,15 @@
             <div>
                 <label for="nombre">Ingrese su Nombre:</label>
                 <input
-                 id="nombre" 
+                 id="name" 
                  type="text" 
-                 name="nombre" 
+                 name="name" 
                  placeholder="Nombre Completo" 
-                 class="<%= locals.errors && errors.nombre ?  'is-invalid' : null %>"
-                 value="<%= locals.oldData ? oldData.nombre : null %>">
+                 value="<%= locals.oldData ? oldData.name : null %>">
 
-                 <% if (locals.errors && errors.nombre) { %>
+                 <% if (locals.errors && errors.name) { %>
                     <div class="text-error">
-                        <%= errors.nombre.msg %> 
+                        <%= errors.name.msg %> 
                     </div>
                     <% } %>
             </div>
@@ -32,16 +31,15 @@
             <div>
                 <label for="usuario">Ingrese su Usuario:</i></label>
                 <input 
-                id="usuario" 
+                id="user" 
                 type="text" 
-                name="usuario" 
+                name="user" 
                 placeholder="Nombre de Usuario"
-                class="<%= locals.errors && errors.usuario ?  'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.usuario : null %>">
+                value="<%= locals.oldData ? oldData.user : null %>">
 
-                <% if (locals.errors && errors.usuario) { %>
+                <% if (locals.errors && errors.user) { %>
                     <div class="text-error">
-                        <%= errors.usuario.msg %> 
+                        <%= errors.user.msg %> 
                     </div>
                     <% } %>
             </div>
@@ -53,7 +51,6 @@
                 type="text" 
                 name="email" 
                 placeholder="Email"
-                class="<%= locals.errors && errors.email ?  'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.email : null %>">
 
                 <% if (locals.errors && errors.email) { %>
@@ -65,11 +62,11 @@
                     
             <div>
                 <label for="email">Ingrese la imagen </i></label>
-                <input id="imagen" type="file" name="imagen" placeholder="Agregar imagen">
+                <input id="image" type="file" name="image" placeholder="Agregar imagen">
 
-                <% if (locals.errors && errors.imagen) { %>
+                <% if (locals.errors && errors.image) { %>
                     <div class="text-error">
-                        <%= errors.imagen.msg %> 
+                        <%= errors.image.msg %> 
                     </div>
                     <% } %>
             </div>
@@ -79,13 +76,12 @@
                 <input 
                 id="contraseña" 
                 type="password" 
-                name="contraseña" 
-                placeholder="Contraseña"
-                class="<%= locals.errors && errors.contraseña ?  'is-invalid' : null %>">
+                name="password" 
+                placeholder="Contraseña">
 
-                <% if (locals.errors && errors.contraseña) { %>
+                <% if (locals.errors && errors.password) { %>
                     <div class="text-error">
-                        <%= errors.contraseña.msg %> 
+                        <%= errors.password.msg %> 
                     </div>
                     <% } %>
             </div>
@@ -93,15 +89,14 @@
             <div>
                 <label for="repetirContraseña">Repetir Contraseña</i></label>
                 <input 
-                id="repetirContraseña" 
+                id="repeatPassword" 
                 type="password" 
-                name="repetirContraseña" 
-                placeholder="Repetir Contraseña"
-                class="<%= locals.errors && errors.repetirContraseña ?  'is-invalid' : null %>">
+                name="repeatPassword" 
+                placeholder="Repetir Contraseña">
                 
-                <% if (locals.errors && errors.repetirContraseña) { %>
+                <% if (locals.errors && errors.repeatPassword) { %>
                     <div class="text-error">
-                        <%= errors.repetirContraseña.msg %> 
+                        <%= errors.repeatPassword.msg %> 
                     </div>
                     <% } %>
             </div>

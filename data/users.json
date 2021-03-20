@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "Santiago Ortigoza",
+  "user": "jimmy",
+  "email": "santiagoortigoza@hotmail.com",
+  "password": "$2a$10$eVIIJsXvk4ob1ctS0PIneeVhTb1.HmZNWterVyQTCOuXgBguY5AL.",
+  "repeatPassword": "$2a$10$SmwHnZ7GSb0L.ckX0fCXq.TJm9yKEFL.Qbj7qJmeUqv4Z3gaMcMJW",
+  "image": "image-1616277466831.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Rodrigo Ponce",
+  "user": "Rocko",
+  "email": "rockoponce1422@gmail.com",
+  "password": "$2a$10$AiyYWmvMY9vVMb2U8sHOeO5JxCi2606j7CjJTFOgTa4I9te.Liyd2",
+  "repeatPassword": "$2a$10$gGXpdESKCO6mJBMUyucAxeoLyMqNhHe7uT66lVup6Y9FQSPK1HOQ6",
+  "image": "image-1616278519629.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Juan Molina",
+  "user": "Juancete",
+  "email": "Juanmolina123@hotmail.com",
+  "password": "$2a$10$4VVsI47UKjSEc8OQEMoEVe2SZ9ehmCUyysks/YB9d3RxUD6Nra1Vq",
+  "repeatPassword": "$2a$10$ms/GqAlnfJUYxrm6T10zR.x5fRVSo.gBKGtbvO3Es/kiQ0JHQMsF6",
+  "image": "image-1616279886137.jpg"
+ },
+ {
+  "id": 4,
+  "name": "asdadad",
+  "user": "sadasdasd",
+  "email": "asdad@asd.com",
+  "password": "$2a$10$QdMjDW1CpKciN1pdt0r/juSYI/2Gkv0EHUCQVndlmfr0W0RYvd4dO",
+  "repeatPassword": "$2a$10$YDwWLSikkQnf4u8O6XFvpOh4xjdATfnJmgRpRMJyMDKDT/dNQjjUS",
+  "image": "image-1616280556934.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Jorge suarez",
+  "user": "Jsuarez",
+  "email": "jorgesuarez@gmail.com",
+  "password": "$2a$10$LlbKysfCJp1eEVkvq0XM8O2XGq9oBNwaXTk.7CUMzd7EzZ9tdOI.u",
+  "repeatPassword": "$2a$10$yxLzp75OYUgsalLCYoS06uKwU0Ebn8TJF4KVieWxzabhDE3LM.Ppe",
+  "image": "image-1616281310847.jpg"
+ }
+]

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rockop11/grupo_4_games#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-validator": "^6.10.0",
