@@ -52,5 +52,50 @@
   "password": "$2a$10$BB1Q.zqL0PKS7jyenPxHqu3SOC5a55504X1r28qJSNMSQqRa.1L/q",
   "repeatPassword": "$2a$10$cpiQwyxMSB3dZEYILxCs9erJ0rHykHBKMw7qVEC5j/AW8aUhcjwka",
   "image": "image-1616287040235.jpg"
+ },
+ {
+  "id": 7,
+  "name": "J",
+  "user": "M",
+  "email": "j@m.com",
+  "password": "$2a$10$b7wfYXit8sVWOiNd3Bmx4eOVeEXGoBGWxnzImAt19rNAg6k4sSZb.",
+  "repeatPassword": "$2a$10$WnU51IUPwEWRtUlt0mhM0u7lR/pGlT2NxHoaUnW4epele1hqC7p0u",
+  "image": "image-1616337095349.jpg"
+ },
+ {
+  "id": 8,
+  "name": "asdas",
+  "user": "jaksgda",
+  "email": "molina.juanignacio@gmail.com",
+  "password": "$2a$10$8oaCYsNcGUtmT8C3A7ZMOeiEPo1qwSjT4fX416ZwaLX6.i3iAwm2.",
+  "repeatPassword": "$2a$10$GQ.jCUqoHBWD89a1.kYNBOQ9WNuIkBY1UE4EGwlMXMrlR5ly4erty",
+  "image": "image-1616339281533.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Juan",
+  "user": "2",
+  "email": "j@2.com",
+  "password": "$2a$10$p2pzmL02jV3kbHhWdrWkFek6Rh14UGVwoJ9oB//xrQ5qqh8SMi7jy",
+  "repeatPassword": "$2a$10$hrkA4.TpxwOaMKCOkeZF1.0d/T2IXKkNMCeokaTJOgElG3ev/1/0.",
+  "image": "image-1616342090576.jpg"
+ },
+ {
+  "id": 10,
+  "name": "pepe",
+  "user": "argento",
+  "email": "pepe@gmail.com",
+  "password": "$2a$10$mqy.qlQW.O0VZFj61z.jCuZxdScry1WstB0Lshz9isjNlG83utqfO",
+  "repeatPassword": "$2a$10$5eujFrkzlgcMg60IbldloeWas6RXD20boamW6OZg7wQCQir.gecb.",
+  "image": "image-1616345150057.jpg"
+ },
+ {
+  "id": 11,
+  "name": "moni",
+  "user": "argento2",
+  "email": "moni@gmail.com",
+  "password": "$2a$10$F4qmXDSCLLYufpvv33DODeCG7TY1HYLqGx48e67quqpfBlgrdREUC",
+  "repeatPassword": "$2a$10$ZKIP6f91DIzl1hpvT3Moi.gt6UOA9qtV1RUxNODHQ.6zkB0kMqnw6",
+  "image": "image-1616345427883.jpg"
  }
 ]

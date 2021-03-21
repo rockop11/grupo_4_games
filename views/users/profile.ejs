@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("../partials/head", {Solapa:"ZG - Login"}) %>   
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <main>
+        <div class="container-products">
+            <h2>Hi <%= user.name %> </h2>
+            <img src="/img/usersImg/<%= user.image %>">
+            <br>
+            <br>
+            <div class="alert alert-success"> <%= user.email %> </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+
+</body>
+
+</html>

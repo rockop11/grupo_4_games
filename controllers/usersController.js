@@ -1,4 +1,4 @@
-const bcryptjs = require('bcryptjs')
+const bcryptjs = require('bcryptjs');
 const { validationResult} = require('express-validator');
 const User = require('../models/User')
 
@@ -51,20 +51,51 @@ const usersController = {
 
        let userToCreate = {
            ...req.body,
-           password: bcryptjs.hashSync(req.body.password, 10),
-           repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 10),
+           password: bcryptjs.hashSync(toString(req.body.password), 10),
+           repeatPassword: bcryptjs.hashSync(toString(req.body.repeatPassword), 10),
            image: req.file.filename
        }
 
       let userCreated = User.create(userToCreate);
 
-      return res.redirect('/')
-
+      return res.redirect('/');
     },
 
-    login: (req, res)=> {
-        res.render('users/login');
-    }
+    login: (req, res) => {
+        return res.render('users/login');
+    },
+
+    loginProcess: (req, res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if(userToLogin) {
+            let isOkThePassword = bcryptjs.compareSync(toString(req.body.password), userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('profile');
+            }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son invalidas'
+                    }
+                }
+            });
+        }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+            }
+        });
+    },
+    profile: (req, res) => {
+        return res.render('users/profile', {
+            user: req.session.userLogged
+        });
+    },
 }
 
 module.exports = usersController;
