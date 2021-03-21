@@ -43,5 +43,14 @@
   "password": "$2a$10$LlbKysfCJp1eEVkvq0XM8O2XGq9oBNwaXTk.7CUMzd7EzZ9tdOI.u",
   "repeatPassword": "$2a$10$yxLzp75OYUgsalLCYoS06uKwU0Ebn8TJF4KVieWxzabhDE3LM.Ppe",
   "image": "image-1616281310847.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Santiago argilla",
+  "user": "Santi",
+  "email": "santiagoargilla@hotmail.com",
+  "password": "$2a$10$BB1Q.zqL0PKS7jyenPxHqu3SOC5a55504X1r28qJSNMSQqRa.1L/q",
+  "repeatPassword": "$2a$10$cpiQwyxMSB3dZEYILxCs9erJ0rHykHBKMw7qVEC5j/AW8aUhcjwka",
+  "image": "image-1616287040235.jpg"
  }
 ]
