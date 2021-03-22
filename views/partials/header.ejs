@@ -32,9 +32,19 @@
         </ul>
 
         <ul class="right-navbar">
-            <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-            <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-            <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+            <% if (locals.isLogged) { %>
+                <li class="profile-navbar">
+                    <a class="profile-icon" href="#">
+                        <img src="/img/usersImg/<%= locals.userLogged.image %> " width="40" style="border-radius: 100%;">
+                        Hi <%= locals.userLogged.name %> 
+                    </a>
+                </li>
+                <li><a class="profile-logout" href="/users/logout">Logout</a></li>
+                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+            <% } else { %>
+                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
+                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
+            <% } %>
         </ul>
     </nav>
 </header>
