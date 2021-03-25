@@ -7,13 +7,12 @@
 
     <%- include('../partials/header') %> 
 
-    <main>
-        <div class="container-products">
-            <h2>Bienvenido <%= user.name %> </h2>
+    <main class="main-profile">
+        <div class="container-products div-profile">
+            <h2>Bienvenido <%= user.name %></h2>
+            <p class="p-profile"><%= user.email %></p>
             <img src="/img/usersImg/<%= user.image %>">
-            <br>
-            <br>
-            <div class="alert alert-success"> <%= user.email %> </div>
+            <a href="/">Ir a Inicio</a>
         </div>
     </main>
 

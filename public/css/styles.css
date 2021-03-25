@@ -260,6 +260,43 @@ main .form-user input {
     color: red;
 }
 
+/*------- ESTILOS PAG. PERFIL USUARIO -------*/
+
+div.div-profile {
+    justify-content: center;
+}
+
+div.div-profile h2 {
+    font-size: 22px;
+    margin: 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div.div-profile p {
+    margin-bottom: 15px;
+}
+
+div.div-profile img {
+    width: 90%;
+}
+
+div.div-profile a {
+    text-align: center;
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    background-color: #44d62d;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
+
 /*BOTON CREAR CUENTA DE LOGIN*/
 
 a button.boton-nc {
@@ -553,6 +590,7 @@ h4.footer-copy-header {
         flex-grow: 10;
         margin-bottom: 35px;
     }
+
     main section article {
         width: 95%;
     }
