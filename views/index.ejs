@@ -175,7 +175,7 @@
         <section class="ofertas">
             <h3 class="titulo-section">OFERTAS</h3>
 
-            <% if (ofertas) { %>
+            <% if (ofertas.length) { %>
 
                 <% for (oferta of ofertas) { 
                     let finalPrice = oferta.descuento ? (oferta.precio - oferta.precio * oferta.descuento / 100).toFixed(0) : oferta.precio; %>

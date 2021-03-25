@@ -22,8 +22,8 @@ const productsController = {
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
 
-        let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id)
-        res.render('products/productDetail', {productDetail})
+        let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
+        res.render('products/productDetail', {productDetail, toThousand})
     },
     //VISTA DE CREAR PRODUCTO
     create: (req, res) => {
