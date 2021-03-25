@@ -17,8 +17,6 @@
             <input class="input" type="text" name="keywords" placeholder="Buscar productos">
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
-        <!--<div class="input" type="text">Buscar productos, marcas y más</div>
-        <div class="submit"><i class="fa fa-search"></i></div>-->
     </form>
 
 
@@ -36,10 +34,10 @@
                 <li class="profile-navbar">
                     <a class="profile-icon" href="#">
                         <img src="/img/usersImg/<%= locals.userLogged.image %> " width="40" style="border-radius: 100%;">
-                        Hi <%= locals.userLogged.name %> 
+                        <%= locals.userLogged.name %> 
                     </a>
                 </li>
-                <li><a class="profile-logout" href="/users/logout">Logout</a></li>
+                <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
             <% } else { %>
                 <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
