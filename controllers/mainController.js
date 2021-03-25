@@ -11,7 +11,7 @@ const mainController = {
         let productosJSON = JSON.parse(producto);
         let ofertas = productosJSON.filter(product => product.categoria=='ofertas');
 		let novedades = productosJSON.filter(product => product.categoria=='novedades');
-        res.render('index', {productosJSON, ofertas, novedades});
+        res.render('index', {productosJSON, ofertas, novedades, toThousand});
     },
     search: (req,res)=>{
         let productos = path.join(__dirname, '../data/products.json');

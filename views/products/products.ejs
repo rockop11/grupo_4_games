@@ -19,7 +19,7 @@
                             <div class="products-gral">
                                 <i class="fas fa-truck"></i>
                                 <p class="prod-precio">
-                                    $<%= productosJSON[i].precio %>
+                                    $<%= toThousand(productosJSON[i].precio) %>
                                 </p>
                                 <p class="prod-descuento">
                                     <%= productosJSON[i].descuento %>%OFF

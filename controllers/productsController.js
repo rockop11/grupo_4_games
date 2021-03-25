@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 
 const productsController = {
@@ -8,7 +10,7 @@ const productsController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        res.render('products/products', {productosJSON});
+        res.render('products/products', {productosJSON, toThousand});
     },
 
     show: (req, res) => {
