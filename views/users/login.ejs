@@ -16,7 +16,7 @@
             </div>
             <div>
                 <label for="usuario">Ingrese el E-mail:</label>
-                <input id="usuario" type="text" name="email" placeholder="E-mail">
+                <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%= locals.oldData ? oldData.email : null %>>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-error">
                         <%= errors.email.msg %>
@@ -25,7 +25,7 @@
             </div>
             <div>
                 <label for="clave">Contraseña</label>
-                <input id="clave" type="password" name="clave" placeholder="Contraseña">
+                <input id="clave" type="password" name="password" placeholder="Contraseña">
             </div>
             <div>
                 <label>

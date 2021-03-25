@@ -51,8 +51,8 @@ const usersController = {
 
        let userToCreate = {
            ...req.body,
-           password: bcryptjs.hashSync(toString(req.body.password), 10),
-           repeatPassword: bcryptjs.hashSync(toString(req.body.repeatPassword), 10),
+           password: bcryptjs.hashSync(req.body.password, 10),
+           repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 10),
            image: req.file.filename
        }
 
@@ -69,7 +69,7 @@ const usersController = {
         let userToLogin = User.findByField('email', req.body.email);
 
         if(userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(toString(req.body.password), userToLogin.password);
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
@@ -79,23 +79,24 @@ const usersController = {
                 }
 
                 return res.redirect('profile');
-            }
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son invalidas'
+            }else{//si no coincide la contraseña se renderiza la vista de login con error
+                res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
+                    email:{
+                        msg:"Las credenciales son invalidas"
                     }
                 }
-            });
-        }
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este email en nuestra base de datos'
+            })}
+    
+            }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
+                res.render("./users/login",{titulo:"Ingresá" , errors:{
+                    email:{
+                        msg:"El usuario no se encuentra en la base de datos"
+                    }
                 }
+            })
             }
-        });
-    },
+    
+        },
 
     profile: (req, res) => {
         return res.render('users/profile', {
