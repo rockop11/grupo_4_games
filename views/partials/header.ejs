@@ -17,7 +17,7 @@
                         <li><a href="" class="consolas">Playstation</a></li>
                     </ul>
                 </li>
-                <li><a href="">Juegos</a></li>
+                <li><a href="/products">Productos</a></li>
             </ul>
         </div>
         
@@ -25,12 +25,12 @@
             <% if (locals.isLogged) { %>
                 <li class="profile-navbar">
                     <a class="profile-icon" href="#">
-                        <img src="/img/usersImg/<%= locals.userLogged.image %> " width="40" style="border-radius: 100%;">
-                        <p><%= locals.userLogged.name %></p> 
+                        <img src="/img/usersImg/<%= locals.userLogged.image %> " class="img-profile">
+                         
                     </a>
                 </li>
                 <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
-                <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
             <% } else { %>
                 <li><a href=""><i class="far fa-id-card" title="registrarse"></i></a></li>
                 <li><a href=""><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
@@ -38,7 +38,7 @@
 
             <form class="form" action='/search' method="GET">
                 <div class="inputs-header">
-                    <input class="input" type="text" name="keywords" placeholder="Buscar productos">
+                    <input class="input" type="text" name="keywords" placeholder="Buscar">
                     <button type="submit">Buscar</button>
                 </div>
             </form>

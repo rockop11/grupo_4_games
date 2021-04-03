@@ -20,6 +20,7 @@ body {
 
 div.top-header {
     display: flex;
+    justify-content: space-between;
 }
 
 .logo-burger {
@@ -43,11 +44,9 @@ div.top-header {
     line-height: 20px;
 }
 
-.main-navbar {
-    /* display: none; */
-}
-
 .main-navbar ul {
+    display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -57,22 +56,15 @@ div.top-header {
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
+    padding: 5px 2px;
+    font-size: 16px;
 }
 
-
-.form {
-    display: flex;
-    justify-content: space-between;
-    height: 35px;
-    background-color: #FFF;
-    align-items: center;
-    border-radius: 8px 8px 8px 8px;
-    color: #666;
-    max-width: 236px;
-    margin: 10px auto;
+/*BOTON BURGA PARA CUANDO SEPAMOS JSFRONT*/
+a.burger-button {
+    display: none;
 }
+
 
 li a.consolas {
     display: none;
@@ -82,33 +74,32 @@ li:hover a.consolas, li:active a.consolas {
     display: block;
 }
 
-div.form .input {
+img.img-profile {
+    width: 30px;
+    border-radius: 50%;
+}
+ 
+div.inputs-header .input {
+    height: 35px;
     background-color: #FFF;
     border-style: none;
-    color: #666;
-    padding: 2px;
-    border-radius: 8px 8px 8px 8px;
+    padding: 5px;
+    border-radius: 3px;
     line-height: 17px;
-    font-size: 15px;
-}
-
-div.inputs-header button[type="submit"] {
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-}
-
-input.input {
-    border: none;
-    width: 195px;
-    margin-left: 6px;
     font-size: 14px;
 }
 
-.fa-search {
-    margin-left: 7px;
-    font-size: 16px;
-    color: #44d62d;
+
+div.inputs-header button[type="submit"] {
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #323f48;
+    border: 1px solid #44d62d;
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 3px;
 }
 
 .fa-gamepad {
@@ -603,11 +594,8 @@ h4.footer-copy-header {
 }
 
 @media (min-width: 768px) {
+    /*NavBar*/
     .burger-button {
-        display: none;
-    }
-
-    i.fa-bars {
         display: none;
     }
 
@@ -616,7 +604,7 @@ h4.footer-copy-header {
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .main-navbar ul {
         display: flex;
         list-style: none;
@@ -636,10 +624,51 @@ h4.footer-copy-header {
         padding: 5px 0;
         font-size: 15px;
     }
+    
+    li a.consolas {
+        display: none;
+    }
+
+    li:hover a.consolas, li:active a.consolas {
+        display: block;
+    }
+
+    img.img-profile {
+        width: 30px;
+        border-radius: 50%;
+    }
+ 
+    div.inputs-header .input {
+        height: 35px;
+        background-color: #FFF;
+        border-style: none;
+        padding: 5px;
+        border-radius: 3px;
+        line-height: 17px;
+        font-size: 14px;
+    }
+
+
+    div.inputs-header button[type="submit"] {
+        height: 35px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        background-color: #323f48;
+        border: 1px solid #44d62d;
+        cursor: pointer;
+        padding: 0px 10px;
+        border-radius: 3px;
+    }
+    
+    i.fa-bars {
+        display: none;
+    }
 
     .main-navbar a:hover {
         color: #44d62d;
     }
+    /*NavBar*/
 
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;
