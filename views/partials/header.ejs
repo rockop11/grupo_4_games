@@ -1,31 +1,26 @@
 <header class="main-header">
-    <div class="top-header">
-        <div class="logo-burger">
-            <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
-            <a href="#" class="burger-button">
-                <i class = "fa fa-bars"></i>
-            </a>
+    <nav class="main-navbar">
+        <div class="top-header">
+            <div class="logo-burger">
+                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
+                <a href="#" class="burger-button">
+                    <i class = "fa fa-bars"></i>
+                </a>
+            </div>
+            
+            <ul class="left-navbar">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Novedades</a></li>
+                <li><a href="">Consolas</a>
+                    <ul>
+                        <li><a href="" class="consolas">Xbox</a></li>
+                        <li><a href="" class="consolas">Playstation</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Juegos</a></li>
+            </ul>
         </div>
         
-    </div>
-
-    <form class="form" action='/search' method="GET">
-        <div class="inputs-header">
-            <input class="input" type="text" name="keywords" placeholder="Buscar productos">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-    </form>
-
-
-    <nav class="main-navbar">
-        <ul class="left-navbar">
-            <li><a href="">Ofertas</a></li>
-            <li><a href="">Consolas</a></li>
-            <li><a href="">Juegos</a></li>
-            <li><a href="">Accesorios</a></li>
-            <li><a href="">Ayuda</a></li>
-        </ul>
-
         <ul class="right-navbar">
             <% if (locals.isLogged) { %>
                 <li class="profile-navbar">
@@ -37,9 +32,16 @@
                 <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
             <% } else { %>
-                <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-                <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href=""><i class="far fa-id-card" title="registrarse"></i></a></li>
+                <li><a href=""><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
             <% } %>
+
+            <form class="form" action='/search' method="GET">
+                <div class="inputs-header">
+                    <input class="input" type="text" name="keywords" placeholder="Buscar productos">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
         </ul>
     </nav>
 </header>
