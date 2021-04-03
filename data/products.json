@@ -34,5 +34,32 @@
   "precio": 110000,
   "descuento": null,
   "categoria": "novedades"
+ },
+ {
+  "id": 4,
+  "nombre": "Assassin's Creed: Valhalla PS4",
+  "descripcion": "Assassin's Creed Valhalla es un videojuego desarrollado por Ubisoft Montreal y publicado por Ubisoft. Es el decimosegundo en importancia y el vigesimosegundo lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed Odyssey.",
+  "precio": "$3999",
+  "descuento": "",
+  "interes": "novedades",
+  "imagen": "imagen-1617484467571.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "FIFA 2021 Xbox",
+  "descripcion": "FIFA 21 es un videojuego de fútbol del año 2020 disponible para Microsoft Windows, PlayStation 4, Xbox One y Nintendo Switch el 9 de octubre de 2020, y también es el primer videojuego de la serie FIFA para Google Stadia, PlayStation 5 y Xbox Series X|S. El juego es la 28.ª entrega de la serie de videojuegos de FIFA. ",
+  "precio": "$2999",
+  "descuento": "",
+  "interes": "novedades",
+  "imagen": "imagen-1617484664472.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "DiRT 5",
+  "descripcion": "Dirt 5 es un videojuego de carreras desarrollado y publicado por Codemasters. Es el decimocuarto juego de laserie Colin McRae Rally y el octavo juego en llevarse eltítulo de Dirt.",
+  "imagen": "imagen-1617485554035.jpg",
+  "precio": 2999,
+  "descuento": 10,
+  "categoria": "ofertas"
  }
 ]
