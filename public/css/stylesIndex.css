@@ -50,9 +50,29 @@ body {
     color: #ffffff;
 } 
 
-.fa-id-card:hover, .fa-sign-in-alt:hover, .fa-shopping-basket:hover {
+.fa-id-card:hover, .fa-sign-in-alt:hover, .fa-shopping-basket:hover, .fa-sign-out-alt:hover {
     color: #44d62d;
 }
+
+/*Header Logeado*/
+/*----------*/
+/*imagen de perfil*/
+
+.img-profile {
+    margin-right: 15px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+
+
+.fa-sign-out-alt {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
 
 /* ------------------------ MAIN --------------------------- */
 

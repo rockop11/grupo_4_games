@@ -27,13 +27,7 @@ body {
     width: 100px;
 }
 
-.copy-header {
-    font-weight: 400;
-    text-align: center;
-    padding: 25px 5px;
-    font-size: 30px;
-    color: #ffffff;
-}
+
 
 header p {
     text-align: center;
@@ -73,15 +67,12 @@ header p {
     display: flex;
     justify-content: space-between;
     height: 35px;
-    
     background-color: #FFF;
-    
     align-items: center;
     border-radius: 8px 8px 8px 8px;
     color: #666;
     max-width: 236px;
-    margin: auto;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 
 
@@ -408,6 +399,11 @@ div.botones button p {
     display: none;
 }
 
+.products-title {
+    font-size: 18px;
+    margin: 15px auto;
+}
+
 
 /* --- Carrito de Compras ---*/
 main {
@@ -563,6 +559,7 @@ article.footer-tres p {
 }
 
 p.blanco {
+    display: none;
     color: #ffffff;
     padding-top: 6px;
 }
@@ -698,6 +695,10 @@ h4.footer-copy-header {
 
     .footer-icons i:hover {
         color: #39bb24;
+    }
+
+    article p.blanco {
+        display: block;
     }
 
     /*Botones del detalle de producto*/
