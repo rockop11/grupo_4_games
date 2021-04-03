@@ -66,7 +66,7 @@
 
                 </ul>
 
-                <form class="d-flex">
+                <form class="d-flex" action='/search' method="GET">
                     <% if (locals.isLogged) { %>
 
                         <a href="/users/profile"><img src="/img/usersImg/<%= locals.userLogged.image %> " class="img-profile" alt="" title="Ir al perfil"></a>
@@ -84,7 +84,7 @@
                     <% } %>
                     
 
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <input class="form-control me-2" type="search" name="keywords" placeholder="Buscar" aria-label="Search">
 
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
 
