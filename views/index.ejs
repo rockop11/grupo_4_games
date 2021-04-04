@@ -57,11 +57,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Ofertas</a>
+                        <a class="nav-link active" aria-current="page" href="#seccion-ofertas">Ofertas</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Novedades</a>
+                        <a class="nav-link" href="#seccion-novedades">Novedades</a>
                     </li>
 
                 </ul>
@@ -189,7 +189,7 @@
             <article class="xbox"><img src="/img/xbox_logo_2.png" alt="logo XBox"></article>
         </div>
 
-        <section class="ofertas">
+        <section class="ofertas" id="seccion-ofertas">
             <h3 class="titulo-section">OFERTAS</h3>
 
             <% if (ofertas.length) { %>
@@ -221,7 +221,7 @@
         <img src="/img/banner-index.jpg" alt="" class="img-banner">
 
 
-        <section class="novedades">
+        <section class="novedades" id="seccion-novedades">
             <h3 class="titulo-section">NOVEDADES</h3>
             <% if(novedades.length) { %>
                 <% for (novedad of novedades) { let finalPrice=novedad.descuento ? (novedad.precio - novedad.precio *
