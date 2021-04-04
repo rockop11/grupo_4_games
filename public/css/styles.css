@@ -119,6 +119,11 @@ ul.right-navbar {
     margin-top: 8px;
 }
 
+/*Navbar que desaparece en 360 para que solo queden iconos*/
+ul.navbar-desktop {
+    display: none;
+}
+
 /*icono registro y login del header 360px*/
 .fa-id-card, .fa-sign-in-alt {
     font-size: 20px;
@@ -623,14 +628,6 @@ h4.footer-copy-header {
         justify-content: space-between;
         align-items: center;
     }
-
-    .main-navbar ul {
-        display: flex;
-        list-style: none;
-        margin-left: 10px;
-        padding: 0;
-        align-items: center;
-    }
     
     .main-navbar li {
         margin: 0 5px;
@@ -730,6 +727,27 @@ h4.footer-copy-header {
 }
 
 @media (min-width: 1024px)  {
+
+    /*oculta los iconos navbar 360 y 768*/
+    ul.navbar-icons {
+        display: none;
+    }
+
+    /*muestra navbar 1024*/
+    ul.navbar-desktop {
+        display: flex;
+    }
+
+    .navbar-desktop li ul.desplegable {
+        display: none;
+    }
+
+    .navbar-desktop li:hover ul.desplegable {
+        display: block;
+    }
+    
+
+
     article.prod-contenedor {
         width: 22%;
     }
