@@ -9,15 +9,9 @@
             </div>
             
             <ul class="left-navbar">
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Novedades</a></li>
-                <li><a href="">Consolas</a>
-                    <ul>
-                        <li><a href="" class="consolas">Xbox</a></li>
-                        <li><a href="" class="consolas">Playstation</a></li>
-                    </ul>
-                </li>
-                <li><a href="/products">Productos</a></li>
+                <li><a href="/"><i class="fab fa-playstation"></i></a></li>
+                <li><a href="/"><i class="fab fa-xbox"></i></a></li>
+                <li><a href="/products"><i class="fas fa-gift"></i></a></li>
             </ul>
         </div>
         
@@ -32,8 +26,8 @@
                 <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
             <% } else { %>
-                <li><a href=""><i class="far fa-id-card" title="registrarse"></i></a></li>
-                <li><a href=""><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
+                <li><a href="/users/registro"><i class="far fa-id-card" title="registrarse"></i></a></li>
+                <li><a href="/users/login"><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
             <% } %>
 
             <form class="form" action='/search' method="GET">

@@ -106,6 +106,25 @@ div.inputs-header button[type="submit"] {
     color: #44d62d;
 }
 
+.fa-playstation, .fa-xbox, .fa-gift {
+    font-size: 30px;
+}
+
+ul.left-navbar li {
+    margin-right: 25px;
+}
+
+ul.right-navbar {
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+/*icono registro y login del header 360px*/
+.fa-id-card, .fa-sign-in-alt {
+    font-size: 25px;
+}
+
+
 .fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
 }
