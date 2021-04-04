@@ -107,11 +107,11 @@ div.inputs-header button[type="submit"] {
 }
 
 .fa-playstation, .fa-xbox, .fa-gift {
-    font-size: 30px;
+    font-size: 23px;
 }
 
 ul.left-navbar li {
-    margin-right: 25px;
+    margin-left: 10px;
 }
 
 ul.right-navbar {
