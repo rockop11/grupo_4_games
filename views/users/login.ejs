@@ -5,22 +5,33 @@
 
 <body>
 
-    <%- include('../partials/header') %> 
+    <%- include('../partials/headerRegister') %> 
 
     <main>
-        <form class="form-user" action="/" method="GET">
+        <form class="form-user" action="/users/login" method="POST">
             <div>
-                <h2>Regístrate</h2>
+                <h2>Iniciar sesión</h2>
                 <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
                
             </div>
             <div>
-                <label for="usuario">Ingrese el usuario:</label>
-                <input id="usuario" type="text" name="usuario" placeholder="Usuario">
+                <label for="usuario">Ingrese el E-mail:</label>
+                <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%= locals.oldData ? oldData.email : null %>>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
             <div>
                 <label for="clave">Contraseña</label>
-                <input id="clave" type="password" name="clave" placeholder="Contraseña">
+                <input id="clave" type="password" name="password" placeholder="Contraseña">
+            </div>
+            <div>
+                <label>
+                    <p>Recordar mi usuario</p>
+                    <input type="checkbox" name="remember_user">
+                </label>
             </div>
             <div>
                 <button type="submit">Enviar</button>

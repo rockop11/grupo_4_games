@@ -5,36 +5,100 @@
 
 <body>
 
-    <%- include('../partials/header') %> 
+    <%- include('../partials/headerRegister') %> 
 
     <main>
-        <form action="" class="form-user">
+        <form method="POST" action="/users/registro" enctype="multipart/form-data" class="form-user">
 
-            <h2>CREAR CUENTA</h2>
+            <h2>Crear cuenta</h2>
 
             <div>
                 <label for="nombre">Ingrese su Nombre:</label>
-                <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo">
-            </div>
+                <input
+                 id="name" 
+                 type="text" 
+                 name="name" 
+                 placeholder="Nombre Completo" 
+                 value="<%= locals.oldData ? oldData.name : null %>">
 
+                 <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <%= errors.name.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
             <div>
                 <label for="usuario">Ingrese su Usuario:</i></label>
-                <input id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario">
+                <input 
+                id="user" 
+                type="text" 
+                name="user" 
+                placeholder="Nombre de Usuario"
+                value="<%= locals.oldData ? oldData.user : null %>">
+
+                <% if (locals.errors && errors.user) { %>
+                    <div class="text-error">
+                        <%= errors.user.msg %> 
+                    </div>
+                    <% } %>
             </div>
-            
+                    
             <div>
                 <label for="email">Ingrese su Email:</i></label>
-                <input id="email" type="email" name="email" placeholder="Email">
+                <input 
+                id="email" 
+                type="text" 
+                name="email" 
+                placeholder="Email"
+                value="<%= locals.oldData ? oldData.email : null %>">
+
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <%= errors.email.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
+            <div>
+                <label for="email">Ingrese la imagen </i></label>
+                <input id="image" type="file" name="image" placeholder="Agregar imagen">
+
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-error">
+                        <%= errors.image.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>
                 <label for="contraseña">Ingrese su Contraseña</i></label>
-                <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+                <input 
+                id="contraseña" 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña">
+
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-error">
+                        <%= errors.password.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>
-                <label for="repetir-contraseña">Repetir Contraseña</i></label>
-                <input id="repetir-contraseña" type="password" name="repetir-contraseña" placeholder="Repetir Contraseña">
+                <label for="repetirContraseña">Repetir Contraseña</i></label>
+                <input 
+                id="repeatPassword" 
+                type="password" 
+                name="repeatPassword" 
+                placeholder="Repetir Contraseña">
+                
+                <% if (locals.errors && errors.repeatPassword) { %>
+                    <div class="text-error">
+                        <%= errors.repeatPassword.msg %> 
+                    </div>
+                    <% } %>
             </div>
 
             <div>

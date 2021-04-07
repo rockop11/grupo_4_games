@@ -1,40 +1,55 @@
 <header class="main-header">
-    <div class="top-header">
-        <div class="logo-burger">
-            <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
-            <a href="#" class="burger-button">
-                <i class = "fa fa-bars"></i>
-            </a>
-        </div>
-        <h2 class="copy-header">
-            <i class="fas fa-gamepad"></i>
-            La mejor opción para los gamers
-        </h2>
-    </div>
-
-    <div class="form" action='#' method="GET">
-        <div class="inputs-header">
-            <input class="input" type="text" name="" id="">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-        <!--<div class="input" type="text">Buscar productos, marcas y más</div>
-        <div class="submit"><i class="fa fa-search"></i></div>-->
-    </div>
-
-
     <nav class="main-navbar">
-        <ul class="left-navbar">
-            <li><a href="">Ofertas</a></li>
-            <li><a href="">Consolas</a></li>
-            <li><a href="">Juegos</a></li>
-            <li><a href="">Accesorios</a></li>
-            <li><a href="">Ayuda</a></li>
-        </ul>
+        <div class="top-header">
+            <div class="logo-burger">
+                <a href="/"><img src="/img/ZonaGamer_logo.png" class="logo"></a>
+                <a href="#" class="burger-button">
+                    <i class = "fa fa-bars"></i>
+                </a>
+            </div>
 
+            <ul class="left-navbar navbar-desktop">
+                <li><a href="/products">Productos</a></li>
+                <li>
+                    <a href="">Consolas <i class="fas fa-arrow-down"></i></a>
+                    <ul class="desplegable">
+                        <li><a href="/">Play Station</a></li>
+                        <li><a href="/">Xbox</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Novedades</a></li>
+                
+            </ul>
+            
+            <ul class="left-navbar navbar-icons">
+                <li><a href="/"><i class="fab fa-playstation"></i></a></li>
+                <li><a href="/"><i class="fab fa-xbox"></i></a></li>
+                <li><a href="/products"><i class="fas fa-gift"></i></a></li>
+            </ul>
+        </div>
+        
         <ul class="right-navbar">
-            <li><a href="">Creá tu cuenta  <i class="far fa-id-card"></i></a></li>
-            <li><a href="">Ingresá  <i class="fas fa-sign-in-alt"></i></a></li>
-            <li><a href="">Mis compras  <i class="fas fa-shopping-basket"></i></a></li>
+            <% if (locals.isLogged) { %>
+                <li class="profile-navbar">
+                    <a class="profile-icon" href="/users/profile">
+                        <img src="/img/usersImg/<%= locals.userLogged.image %> " class="img-profile">
+                         
+                    </a>
+                </li>
+                <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+            <% } else { %>
+                <li><a href="/users/registro"><i class="far fa-id-card" title="registrarse"></i></a></li>
+                <li><a href="/users/login"><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
+            <% } %>
+
+            <form class="form" action='/search' method="GET">
+                <div class="inputs-header">
+                    <input class="input" type="text" name="keywords" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
         </ul>
     </nav>
 </header>

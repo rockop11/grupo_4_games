@@ -14,30 +14,23 @@ body {
 
 .main-header {
     background-color: #323f48;
-    padding: 20px;
-    border-bottom: solid 3px #44d62d;
+    padding: 5px 10px;
+    border-bottom: solid 1px #44d62d;
+}
+
+div.top-header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo-burger {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    width: 100px;
-}
-
-.copy-header {
-    font-weight: 400;
-    text-align: center;
-    padding: 25px 5px;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-header p {
-    text-align: center;
-    margin-bottom: 10px;
+    width: 70px;
 }
 
 .fa-bars {
@@ -51,11 +44,9 @@ header p {
     line-height: 20px;
 }
 
-.main-navbar {
-    display: none;
-}
-
 .main-navbar ul {
+    display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,52 +56,79 @@ header p {
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
+    padding: 5px 2px;
+    font-size: 16px;
 }
 
-div.form {
-    display: flex;
-    justify-content: space-between;
+/*BOTON BURGA PARA CUANDO SEPAMOS JSFRONT*/
+a.burger-button {
+    display: none;
+}
+
+
+li a.consolas {
+    display: none;
+}
+
+li:hover a.consolas, li:active a.consolas {
+    display: block;
+}
+
+img.img-profile {
+    width: 30px;
+    border-radius: 50%;
+}
+ 
+div.inputs-header .input {
     height: 35px;
-    
-    background-color: #FFF;
-    
-    align-items: center;
-    border-radius: 8px 8px 8px 8px;
-    color: #666;
-    max-width: 236px;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-
-div.form .input {
     background-color: #FFF;
     border-style: none;
-    color: #666;
-    padding: 2px;
-    border-radius: 8px 8px 8px 8px;
+    padding: 5px;
+    border-radius: 3px;
     line-height: 17px;
-    font-size: 15px;
+    font-size: 14px;
 }
+
 
 div.inputs-header button[type="submit"] {
+    height: 35px;
     border: none;
-    background-color: #ffffff;
     cursor: pointer;
-}
-
-.fa-search {
-    margin-left: 7px;
-    font-size: 15px;
-    color: #44d62d;
-    padding-top: 3px;
+    color: white;
+    background-color: #323f48;
+    border: 1px solid #44d62d;
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 3px;
 }
 
 .fa-gamepad {
     color: #44d62d;
 }
+
+.fa-playstation, .fa-xbox, .fa-gift {
+    font-size: 23px;
+}
+
+ul.left-navbar li {
+    margin-left: 10px;
+}
+
+ul.right-navbar {
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+/*Navbar que desaparece en 360 para que solo queden iconos*/
+ul.navbar-desktop {
+    display: none;
+}
+
+/*icono registro y login del header 360px*/
+.fa-id-card, .fa-sign-in-alt {
+    font-size: 20px;
+}
+
 
 .fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
@@ -185,7 +203,9 @@ article.prod-contenedor {
     display: none;
 }
 
-.fa-shopping-cart
+article.prod-contenedor a {
+    text-decoration: none;
+}
 
 /*-------------------------------------------------------*/
 
@@ -247,6 +267,47 @@ main .form-user input {
     color:  #44d62d;
     text-align: center;
 }
+
+.text-error{
+    color: red;
+}
+
+/*------- ESTILOS PAG. PERFIL USUARIO -------*/
+
+div.div-profile {
+    justify-content: center;
+}
+
+div.div-profile h2 {
+    font-size: 22px;
+    margin: 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div.div-profile p {
+    margin-bottom: 15px;
+}
+
+div.div-profile img {
+    width: 90%;
+}
+
+div.div-profile a {
+    text-align: center;
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    background-color: #44d62d;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
 
 /*BOTON CREAR CUENTA DE LOGIN*/
 
@@ -357,6 +418,11 @@ div.botones {
 
 div.botones button p {
     display: none;
+}
+
+.products-title {
+    font-size: 18px;
+    margin: 15px auto;
 }
 
 
@@ -514,6 +580,7 @@ article.footer-tres p {
 }
 
 p.blanco {
+    display: none;
     color: #ffffff;
     padding-top: 6px;
 }
@@ -527,9 +594,9 @@ h4.footer-copy-header {
 /* ---------------- MEDIA QUERIES ---------------- */
 
 @media (min-width: 340px) {
-    .main-navbar {
-        display: none;
-    }
+    /* .main-navbar {
+        display: block;
+    } */
 
     /* ESTILOS PARA LOS PRODUCTOS GRAL */
     .container-products {
@@ -541,18 +608,17 @@ h4.footer-copy-header {
         flex-grow: 10;
         margin-bottom: 35px;
     }
+
     main section article {
         width: 95%;
     }
     .descripcion {
         display: none;
     }
-    .main-navbar {
-        display: none;
-    }
 }
 
 @media (min-width: 768px) {
+    /*NavBar*/
     .burger-button {
         display: none;
     }
@@ -560,13 +626,7 @@ h4.footer-copy-header {
     .main-navbar {
         display: flex;
         justify-content: space-between;
-    }
-    
-    .main-navbar ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        align-items: center;
     }
     
     .main-navbar li {
@@ -580,10 +640,51 @@ h4.footer-copy-header {
         padding: 5px 0;
         font-size: 15px;
     }
+    
+    li a.consolas {
+        display: none;
+    }
+
+    li:hover a.consolas, li:active a.consolas {
+        display: block;
+    }
+
+    img.img-profile {
+        width: 30px;
+        border-radius: 50%;
+    }
+ 
+    div.inputs-header .input {
+        height: 35px;
+        background-color: #FFF;
+        border-style: none;
+        padding: 5px;
+        border-radius: 3px;
+        line-height: 17px;
+        font-size: 14px;
+    }
+
+
+    div.inputs-header button[type="submit"] {
+        height: 35px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        background-color: #323f48;
+        border: 1px solid #44d62d;
+        cursor: pointer;
+        padding: 0px 10px;
+        border-radius: 3px;
+    }
+    
+    i.fa-bars {
+        display: none;
+    }
 
     .main-navbar a:hover {
         color: #44d62d;
     }
+    /*NavBar*/
 
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;
@@ -626,6 +727,50 @@ h4.footer-copy-header {
 }
 
 @media (min-width: 1024px)  {
+
+    /*oculta los iconos navbar 360 y 768*/
+    ul.navbar-icons {
+        display: none;
+    }
+
+    /*muestra navbar 1024*/
+    ul.navbar-desktop {
+        display: flex;
+    }
+
+    li ul.desplegable {
+        border: 1px solid black;
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+
+    ul.desplegable li {
+        margin: 0;
+    }
+
+    ul.desplegable li a {
+        color: black;
+        padding: 10px;
+        width: 100%;
+    }
+
+    ul.desplegable li a:hover {
+        color: #44d62d;
+        background-color: #ebecee;
+        border-radius: 4px;
+    }
+
+    .navbar-desktop li ul.desplegable {
+        display: none;
+    }
+
+    .navbar-desktop li:hover ul.desplegable {
+        display: block;
+    }
+    
+
+
     article.prod-contenedor {
         width: 22%;
     }
@@ -648,6 +793,10 @@ h4.footer-copy-header {
 
     .footer-icons i:hover {
         color: #39bb24;
+    }
+
+    article p.blanco {
+        display: block;
     }
 
     /*Botones del detalle de producto*/

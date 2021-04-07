@@ -1,1 +1,29 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "moni",
+  "user": "moni",
+  "email": "m@a.com",
+  "password": "$2a$10$LA./MxfNDVEovGahnhKJleOORZTKp/xXFZ23SRHsb48pB2S8pB9sW",
+  "repeatPassword": "$2a$10$41K9jFbDKD1xDb6baVg8iu9eGtmrvZafNuGiPuGCuIBtKH2dLEiOe",
+  "image": "image-1616705638904.png"
+ },
+ {
+  "id": 2,
+  "name": "ultimo",
+  "user": "argento",
+  "email": "j@m.com",
+  "password": "$2a$10$qODmNcyQqgVS.lDJaiqd4.44QWzdVX16qAB8ePNlri098I3WodhKK",
+  "repeatPassword": "$2a$10$bq2ARA/Jan7g0W5YaGcaxeNh7dYpPa39RFZyVpt/VTrLCmMhG68xa",
+  "image": "image-1616705854245.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Rocko Ponce",
+  "user": "rockop11",
+  "email": "rocko@dh.com",
+  "password": "$2a$10$2spyD5SaXDyvaAS6jiIbIeXFpgJnWenN2IM8eCS7/3ZnxJzzlPcii",
+  "repeatPassword": "$2a$10$lN5Q.4N4tfCz.Q80Y0mfy.tIxbbNDoNWZGRjdLG3pbTFyzqCL0lr6",
+  "image": "image-1616729820023.jpg"
+ }
+]

@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 
 const productsController = {
@@ -8,7 +10,7 @@ const productsController = {
         let productos = path.join(__dirname, '../data/products.json');
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
-        res.render('products/products', {productosJSON});
+        res.render('products/products', {productosJSON, toThousand});
     },
 
     show: (req, res) => {
@@ -20,8 +22,8 @@ const productsController = {
         let producto = fs.readFileSync(productos, 'utf-8');
         let productosJSON = JSON.parse(producto);
 
-        let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id)
-        res.render('products/productDetail', {productDetail})
+        let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
+        res.render('products/productDetail', {productDetail, toThousand})
     },
     //VISTA DE CREAR PRODUCTO
     create: (req, res) => {
@@ -45,7 +47,7 @@ const productsController = {
             imagen: req.files[0].filename,
             precio: parseFloat(req.body.precio),
             descuento: parseInt(req.body.descuento),
-            interes: req.body.interes
+            categoria: req.body.categoria
         })  
         
         
