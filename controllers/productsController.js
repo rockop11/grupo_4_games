@@ -42,12 +42,14 @@ const productsController = {
         //Valores Nuevos de mi Obj Literal.
         productosJSON.push({
             id: parseInt(id),
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
+            name: req.body.name,
+            description: req.body.description,
             imagen: req.files[0].filename,
-            precio: parseFloat(req.body.precio),
-            descuento: parseInt(req.body.descuento),
-            categoria: req.body.categoria
+            price: parseFloat(req.body.price),
+            discount: parseInt(req.body.discount),
+            category: req.body.category,
+            console: req.body.console,
+            productType: req.body.productType
         })  
         
         

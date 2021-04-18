@@ -14,7 +14,7 @@
                 <% if (productosJSON.length) { %>
                  
                 <% for (product of productosJSON) { 
-                    let finalPrice = product.descuento ? (product.precio - product.precio * product.descuento / 100).toFixed(0) : product.precio; 
+                    let finalPrice = product.discount ? (product.price - product.price * product.discount / 100).toFixed(0) : product.price; 
                 %>
                     <article class="prod-contenedor">
                         <a href="/products/detail/<%= product.id %>">
@@ -27,10 +27,10 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="prod-descuento">
-                                    <%= product.descuento %>%OFF
+                                    <%= product.discount %>%OFF
                                 </p>
                                 <h4 class="prod-descripcion">
-                                    <%= product.nombre %>
+                                    <%= product.name %>
                                 </h4>
                             </div>
                         </a>

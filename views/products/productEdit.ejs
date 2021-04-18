@@ -10,16 +10,16 @@
     <main>
         <form action="?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>EDITAR PRODUCTO:<%= old.nombre %></h2>
+            <h2>EDITAR PRODUCTO:<%= old.name %></h2>
 
             <div>
-                <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" name="nombre" value="<%= old.nombre %>">
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="name" value="<%= old.name %>">
             </div>
 
             <div>
                 <label for="description">Descripcion</label>
-                <input id="description" type="text" name="descripcion" value="<%= old.descripcion %>">
+                <input id="description" type="text" name="description" value="<%= old.description %>">
             </div>
             
             
@@ -31,12 +31,12 @@
 
             <div>
                 <label for="price">Precio</label>
-                <input id="price" type="text" name="precio" value="$<%= old.precio %>">
+                <input id="price" type="text" name="price" value="$<%= old.price %>">
             </div>
             
             <div>
-                <label for="descuento">Descuento</label>
-                <input id="descuento" type="number" name="descuento" placeholder="descuento" value="<%= old.descuento %>">
+                <label for="discount">Descuento</label>
+                <input id="discount" type="number" name="discount" placeholder="descuento" value="<%= old.discount %>">
             </div>
 
             <div>

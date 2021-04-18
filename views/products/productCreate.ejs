@@ -13,13 +13,13 @@
             <h2>AGREGAR PRODUCTO</h2>
 
             <div>
-                <label for="nombre">Nombre de producto:</label>
-                <input id="nombre" type="text" name="nombre" placeholder="Nombre Producto">
+                <label for="name">Nombre de producto:</label>
+                <input id="nombre" type="text" name="name" placeholder="Nombre Producto">
             </div>
 
             <div>
                 <label for="description">Descripción:</label>
-                <input id="description" type="text" name="descripcion" placeholder="Descripción">
+                <input id="description" type="text" name="description" placeholder="Descripción">
             </div>
             
             
@@ -31,19 +31,36 @@
 
             <div>
                 <label for="price">Precio:</label>
-                <input id="price" type="number" name="precio" placeholder="Precio">
+                <input id="price" type="number" name="price" placeholder="Precio">
             </div>
 
             <div>
-                <label for="descuento">Descuento:</label>
-                <input id="descuento" type="number" name="descuento" placeholder="Descuento">
+                <label for="discount">Descuento:</label>
+                <input id="descuento" type="number" name="discount" placeholder="Descuento">
             </div>
 
             <div>
                 <label>Categorías de interés:</label>
-                    <select name="categoria">
-                        <option name="novedades" value="novedades" selected>Novedades</option>
-                        <option name="ofertas" value="ofertas">Ofertas</option>
+                    <select name="category">
+                        <option name="news" value="novedades" selected>Novedades</option>
+                        <option name="offers" value="ofertas">Ofertas</option>
+                    </select>
+            </div>
+            
+            <div>
+                <label>Consolas:</label>
+                    <select name="console">
+                        <option name="PlayStation" value="PlayStation" selected>PlayStation</option>
+                        <option name="xBox" value="xBox">xBox</option>
+                    </select>
+            </div>
+            
+            <div>
+                <label>Tipo de producto:</label>
+                    <select name="productType">
+                        <option name="console" value="consola" selected>Consola</option>
+                        <option name="accesory" value="accesorio">Accesorio</option>
+                        <option name="game" value="juego">Juego</option>
                     </select>
             </div>
 

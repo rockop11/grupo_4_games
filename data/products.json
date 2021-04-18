@@ -1,65 +1,65 @@
 [
  {
   "id": 0,
-  "nombre": "Playstation 5",
-  "descripcion": "Consola de video juegos playstation 5",
+  "name": "Playstation 5",
+  "description": "Consola de video juegos playstation 5",
   "imagen": "imagen-1615401263000.jpg",
-  "precio": 110000,
-  "descuento": 5,
-  "categoria": "ofertas"
+  "price": 110000,
+  "discount": 5,
+  "category": "ofertas"
  },
  {
   "id": 1,
-  "nombre": "Joystick inalámbrico Sony PlayStation DualSense",
-  "descripcion": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión,  comodidad y exactitud en cada movimiento. Diseño inteligente Gracias a su ergonomía especialmente pensada para la posición  de tu mano, podés pasar horas jugando con total confort.",
+  "name": "Joystick inalámbrico Sony PlayStation DualSense",
+  "description": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión,  comodidad y exactitud en cada movimiento. Diseño inteligente Gracias a su ergonomía especialmente pensada para la posición  de tu mano, podés pasar horas jugando con total confort.",
   "imagen": "imagen-1616097331933.jpg",
-  "precio": 9999,
-  "descuento": 5,
-  "categoria": "novedades"
+  "price": 9999,
+  "discount": 5,
+  "category": "novedades"
  },
  {
   "id": 2,
-  "nombre": "Red Dead Redemption II Xbox",
-  "descripcion": "Juego Red Dead Redemption II para xbox, Rockstar Games",
+  "name": "Red Dead Redemption II Xbox",
+  "description": "Juego Red Dead Redemption II para xbox, Rockstar Games",
   "imagen": "imagen-1616099612014.jpg",
-  "precio": 3500,
-  "descuento": 5,
-  "categoria": "ofertas"
+  "price": 3500,
+  "discount": 5,
+  "category": "ofertas"
  },
  {
   "id": 3,
-  "nombre": "Xbox Series S",
-  "descripcion": "Consola de videojuegos de Microsoft Xbox Series S color Negro",
+  "name": "Xbox Series S",
+  "description": "Consola de videojuegos de Microsoft Xbox Series S color Negro",
   "imagen": "imagen-1616099779693.jpg",
-  "precio": 110000,
-  "descuento": null,
-  "categoria": "novedades"
+  "price": 110000,
+  "discount": null,
+  "category": "novedades"
  },
  {
   "id": 4,
-  "nombre": "Assassin's Creed: Valhalla PS4",
-  "descripcion": "Assassin's Creed Valhalla es un videojuego desarrollado por Ubisoft Montreal y publicado por Ubisoft. Es el decimosegundo en importancia y el vigesimosegundo lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed Odyssey.",
-  "precio": "$3999",
-  "descuento": "",
+  "name": "Assassin's Creed: Valhalla PS4",
+  "description": "Assassin's Creed Valhalla es un videojuego desarrollado por Ubisoft Montreal y publicado por Ubisoft. Es el decimosegundo en importancia y el vigesimosegundo lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed Odyssey.",
+  "price": "$3999",
+  "discount": "",
   "interes": "novedades",
   "imagen": "imagen-1617484467571.jpg"
  },
  {
   "id": 5,
-  "nombre": "FIFA 2021 Xbox",
-  "descripcion": "FIFA 21 es un videojuego de fútbol del año 2020 disponible para Microsoft Windows, PlayStation 4, Xbox One y Nintendo Switch el 9 de octubre de 2020, y también es el primer videojuego de la serie FIFA para Google Stadia, PlayStation 5 y Xbox Series X|S. El juego es la 28.ª entrega de la serie de videojuegos de FIFA. ",
-  "precio": "$2999",
-  "descuento": "",
+  "name": "FIFA 2021 Xbox",
+  "description": "FIFA 21 es un videojuego de fútbol del año 2020 disponible para Microsoft Windows, PlayStation 4, Xbox One y Nintendo Switch el 9 de octubre de 2020, y también es el primer videojuego de la serie FIFA para Google Stadia, PlayStation 5 y Xbox Series X|S. El juego es la 28.ª entrega de la serie de videojuegos de FIFA. ",
+  "price": "$2999",
+  "discount": "",
   "interes": "novedades",
   "imagen": "imagen-1617484664472.jpg"
  },
  {
   "id": 6,
-  "nombre": "DiRT 5",
-  "descripcion": "Dirt 5 es un videojuego de carreras desarrollado y publicado por Codemasters. Es el decimocuarto juego de laserie Colin McRae Rally y el octavo juego en llevarse eltítulo de Dirt.",
+  "name": "DiRT 5",
+  "description": "Dirt 5 es un videojuego de carreras desarrollado y publicado por Codemasters. Es el decimocuarto juego de laserie Colin McRae Rally y el octavo juego en llevarse eltítulo de Dirt.",
   "imagen": "imagen-1617485554035.jpg",
-  "precio": 2999,
-  "descuento": 10,
-  "categoria": "ofertas"
+  "price": 2999,
+  "discount": 10,
+  "category": "ofertas"
  }
 ]
