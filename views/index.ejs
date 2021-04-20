@@ -195,7 +195,7 @@
             <% if (ofertas.length) { %>
 
                 <% for (oferta of ofertas) { 
-                    let finalPrice = oferta.descuento ? (oferta.precio - oferta.precio * oferta.descuento / 100).toFixed(0) : oferta.precio; %>
+                    let finalPrice = oferta.discount ? (oferta.price - oferta.price * oferta.discount / 100).toFixed(0) : oferta.price; %>
                     <article class="prod-contenedor">
                         <a href="/products/detail/<%= oferta.id %>">
                             <img src="/img/fotosMulter/<%= oferta.imagen %>" alt="" class="img-producto">
@@ -206,10 +206,10 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="descuento">
-                                    <%= oferta.descuento %>%OFF
+                                    <%= oferta.discount %>%OFF
                                 </p>
                                 <h4 class="descripcion">
-                                    <%= oferta.nombre %>
+                                    <%= oferta.name %>
                                 </h4>
                             </div>
                         </a>
@@ -224,8 +224,8 @@
         <section class="novedades" id="seccion-novedades">
             <h3 class="titulo-section">NOVEDADES</h3>
             <% if(novedades.length) { %>
-                <% for (novedad of novedades) { let finalPrice=novedad.descuento ? (novedad.precio - novedad.precio *
-                    novedad.descuento / 100).toFixed(0) : novedad.precio; %>
+                <% for (novedad of novedades) { let finalPrice=novedad.discount ? (novedad.price - novedad.price *
+                    novedad.discount / 100).toFixed(0) : novedad.price; %>
                     <article class="prod-contenedor">
                         <a href="/products/detail/<%= novedad.id %>">
                             <img src="/img/fotosMulter/<%= novedad.imagen %>" alt="" class="img-producto">
@@ -236,10 +236,10 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="descuento">
-                                    <%= novedad.descuento %>%OFF
+                                    <%= novedad.discount %>%OFF
                                 </p>
                                 <h4 class="descripcion">
-                                    <%= novedad.nombre %>
+                                    <%= novedad.name %>
                                 </h4>
                             </div>
                         </a>
@@ -247,6 +247,8 @@
                 <% } %>
             <% } %>
         </section>
+
+        
 
     </main>
 
