@@ -14,6 +14,16 @@ module.exports = (sequelize, dataTypes) =>{
     };
 
     const Console = sequelize.define(alias,cols,options);
+
+    Console.associate = function(models){
+
+        Console.hasMany(models.Products,{
+            as:'products',
+            foreignKey: 'console_id'
+        })
+
+    }
+
     return Console;
 
 }
