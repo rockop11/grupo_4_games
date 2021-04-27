@@ -11,9 +11,9 @@
 
             <section class="container-products">
 
-                <% if (productosJSON.length) { %>
+                <% if (products.length) { %>
                  
-                <% for (product of productosJSON) { 
+                <% for (product of products) { 
                     let finalPrice = product.discount ? (product.price - product.price * product.discount / 100).toFixed(0) : product.price; 
                 %>
                     <article class="prod-contenedor">

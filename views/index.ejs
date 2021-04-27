@@ -84,7 +84,7 @@
                     <% } %>
                     
 
-                    <input class="form-control me-2" type="search" name="keywords" placeholder="Buscar" aria-label="Search">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Buscar" aria-label="Search">
 
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
 
@@ -192,13 +192,16 @@
         <section class="ofertas" id="seccion-ofertas">
             <h3 class="titulo-section">OFERTAS</h3>
 
-            <% if (ofertas.length) { %>
+            <!-- creamos un FOR para recorrer la DB de productos -->
+            <% for (let i=0 ; i<products.length; i++) { %> 
 
-                <% for (oferta of ofertas) { 
-                    let finalPrice = oferta.discount ? (oferta.price - oferta.price * oferta.discount / 100).toFixed(0) : oferta.price; %>
+                    <!-- creamos un IF para cumplir que sea OFERTA -->
+                    <% if (products[i].category_id == 1) { 
+                        let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100).toFixed(0) : products[i].price; %>
+                        
                     <article class="prod-contenedor">
-                        <a href="/products/detail/<%= oferta.id %>">
-                            <img src="/img/fotosMulter/<%= oferta.imagen %>" alt="" class="img-producto">
+                        <a href="/products/detail/<%= products[i].id %>">
+                            <img src="/img/fotosMulter/<%= products[i].image %>" alt="" class="img-producto">
 
                             <div class="producto">
                                 <i class="fas fa-truck"></i>
@@ -206,16 +209,18 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="descuento">
-                                    <%= oferta.discount %>%OFF
+                                    <%= products[i].discount %>%OFF
                                 </p>
                                 <h4 class="descripcion">
-                                    <%= oferta.name %>
+                                    <%= products[i].name %>
                                 </h4>
                             </div>
                         </a>
                     </article>
-                    <% } %>
-                        <% } %>
+                <% } %>
+
+            <% } %>
+
         </section>
 
         <img src="/img/banner-index.jpg" alt="" class="img-banner">
@@ -223,12 +228,15 @@
 
         <section class="novedades" id="seccion-novedades">
             <h3 class="titulo-section">NOVEDADES</h3>
-            <% if(novedades.length) { %>
-                <% for (novedad of novedades) { let finalPrice=novedad.discount ? (novedad.price - novedad.price *
-                    novedad.discount / 100).toFixed(0) : novedad.price; %>
+
+            
+            <% for (let i=0 ; i<products.length; i++) { %> 
+                    <% if (products[i].category_id == 2) { 
+                        let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100).toFixed(0) : products[i].price; %>
+                        
                     <article class="prod-contenedor">
-                        <a href="/products/detail/<%= novedad.id %>">
-                            <img src="/img/fotosMulter/<%= novedad.imagen %>" alt="" class="img-producto">
+                        <a href="/products/detail/<%= products[i].id %>">
+                            <img src="/img/fotosMulter/<%= products[i].image %>" alt="" class="img-producto">
 
                             <div class="producto">
                                 <i class="fas fa-truck"></i>
@@ -236,16 +244,18 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="descuento">
-                                    <%= novedad.discount %>%OFF
+                                    <%= products[i].discount %>%OFF
                                 </p>
                                 <h4 class="descripcion">
-                                    <%= novedad.name %>
+                                    <%= products[i].name %>
                                 </h4>
                             </div>
                         </a>
                     </article>
                 <% } %>
+
             <% } %>
+            
         </section>
 
         
