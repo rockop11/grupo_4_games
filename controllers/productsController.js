@@ -5,8 +5,6 @@ const sequelize = db.sequelize;
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-
-
 const productsController = {
     //Muestra todos los productos en LH:3000/products
     index: (req, res) => {
@@ -16,14 +14,6 @@ const productsController = {
             res.render('products/products', {products:response, toThousand})
         });
     },
-
-    //METODO INDEX PARA USO CON JSON!
-    // index: (req, res) => {
-    //     let productos = path.join(__dirname, '../data/products.json');
-    //     let producto = fs.readFileSync(productos, 'utf-8');
-    //     let productosJSON = JSON.parse(producto);
-    //     res.render('products/products', {productosJSON, toThousand});
-    // },
 
     show: (req, res) => {
         res.render('products/productCart');
@@ -37,50 +27,29 @@ const productsController = {
         })
     },
 
-    // detail: (req, res) => {
-    //     let productos = path.join(__dirname, '../data/products.json');
-    //     let producto = fs.readFileSync(productos, 'utf-8');
-    //     let productosJSON = JSON.parse(producto);
-
-    //     let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
-    //     res.render('products/productDetail', {productDetail, toThousand})
-    // },
-
     //VISTA DE CREAR PRODUCTO
-    create: (req, res) => {
-        res.render('products/productCreate');
+    create: async function (req, res) {
+
+        let productType = await db.ProductType.findAll();
+        let category = await db.Category.findAll();
+        let console = await db.Console.findAll();
+
+        res.render('products/productCreate',{productType, category, console});
     },
 
-    //METODO CREATE CON JSON
-    // create: (req, res) => {
-	// 	res.render('products/productCreate');
-	// },
+    store: async function (req,res) {
+        await db.Products.create({
+                name: req.body.name,
+                description: req.body.description,
+                image: req.files[0].filename,
+                price: req.body.price,
+                discount: req.body.discount,
+                product_type_id: req.body.product_type_id,
+                category_id: req.body.category_id,
+                console_id: req.body.console_id,
+        })
 
-    //FUNCIONALIDAD PARA CREAR PRODUCTO
-    store: (req,res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        //NOS TRAEMOS EL JSON
-        let producto = fs.readFileSync(productos, 'utf-8');
-        //MANIPULO EL JSON Y LO CONVIERTO EN OBJ. LIT.
-        let productosJSON = JSON.parse(producto);
-        let ids = productosJSON.map(p=>p.id); //guardar en un array todos los ids
-        let id= Math.max(...ids)+1; //filtra el mayor de los ids del array, se le suma 1 para el id del nuevo producto
-        //Valores Nuevos de mi Obj Literal.
-        productosJSON.push({
-            id: parseInt(id),
-            name: req.body.name,
-            description: req.body.description,
-            imagen: req.files[0].filename,
-            price: parseFloat(req.body.price),
-            discount: parseInt(req.body.discount),
-            category: req.body.category,
-            console: req.body.console,
-            productType: req.body.productType
-        })  
-        
-        
-        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productosJSON, null, ' '));
-        res.redirect('/products')  
+        res.redirect('/products');
     },
 
     //VISTA DE EDITAR PRODUCTO
@@ -134,3 +103,60 @@ const productsController = {
 }
 
 module.exports = productsController;
+
+
+//METODOS CON JSON
+
+//METODO INDEX PARA USO CON JSON!
+    // index: (req, res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+    //     res.render('products/products', {productosJSON, toThousand});
+    // },
+
+
+// detail: (req, res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+
+    //     let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
+    //     res.render('products/productDetail', {productDetail, toThousand})
+    // },
+
+
+
+      //METODO CREATE CON JSON
+    // create: (req, res) => {
+	// 	res.render('products/productCreate');
+	// },
+
+
+
+    //FUNCIONALIDAD PARA CREAR PRODUCTO
+    // store: (req,res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     //NOS TRAEMOS EL JSON
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     //MANIPULO EL JSON Y LO CONVIERTO EN OBJ. LIT.
+    //     let productosJSON = JSON.parse(producto);
+    //     let ids = productosJSON.map(p=>p.id); //guardar en un array todos los ids
+    //     let id= Math.max(...ids)+1; //filtra el mayor de los ids del array, se le suma 1 para el id del nuevo producto
+    //     //Valores Nuevos de mi Obj Literal.
+    //     productosJSON.push({
+    //         id: parseInt(id),
+    //         name: req.body.name,
+    //         description: req.body.description,
+    //         imagen: req.files[0].filename,
+    //         price: parseFloat(req.body.price),
+    //         discount: parseInt(req.body.discount),
+    //         category: req.body.category,
+    //         console: req.body.console,
+    //         productType: req.body.productType
+    //     })  
+        
+        
+    //     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productosJSON, null, ' '));
+    //     res.redirect('/products')  
+    // },

@@ -25,7 +25,7 @@
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="imagen" accept=".jpg, .png" multiple>
+                <input type="file" name="image" accept=".jpg, .png" multiple>
             </div>
             
 
@@ -40,29 +40,30 @@
             </div>
 
             <div>
-                <label>Categorías de interés:</label>
-                    <select name="category">
-                        <option name="news" value="novedades">Novedades</option>
-                        <option name="offers" value="ofertas">Ofertas</option>
-                        <option name="general" value="general" selected>General</option>
-                    </select>
+                <label>Categoria</label>
+                <select name="category_id" id="" required>
+                    <% category.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                </select>
             </div>
-            
+
             <div>
-                <label>Consolas:</label>
-                    <select name="console">
-                        <option name="PlayStation" value="PlayStation" selected>PlayStation</option>
-                        <option name="xBox" value="xBox">xBox</option>
-                    </select>
+                <label>Consola:</label>
+                <select name="console_id" id="" required>
+                    <% console.forEach(console => { %>
+                    <option value="<%= console.id %>"><%= console.name %></option>
+                    <% }); %>
+                </select>
             </div>
-            
+
             <div>
-                <label>Tipo de producto:</label>
-                    <select name="productType">
-                        <option name="console" value="consola" selected>Consola</option>
-                        <option name="accesory" value="accesorio">Accesorio</option>
-                        <option name="game" value="juego">Juego</option>
-                    </select>
+                <label>Tipo de producto</label>
+                <select name="product_type_id" id="" required>
+                    <% productType.forEach(productType => { %>
+                    <option value="<%= productType.id %>"><%= productType.name %></option>
+                    <% }); %>
+                </select>
             </div>
 
             <div>

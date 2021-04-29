@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) =>{
         name: dataTypes.STRING(100),
     };
     let options = {
-        tableName: 'productType',
+        tableName: 'product_Type',
         timestamps: false
     };
 
