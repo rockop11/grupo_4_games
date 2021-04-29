@@ -16,6 +16,8 @@ const productsController = {
             res.render('products/products', {products:response, toThousand})
         });
     },
+
+    //METODO INDEX PARA USO CON JSON!
     // index: (req, res) => {
     //     let productos = path.join(__dirname, '../data/products.json');
     //     let producto = fs.readFileSync(productos, 'utf-8');
@@ -28,13 +30,21 @@ const productsController = {
     },
 
     detail: (req, res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-
-        let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
-        res.render('products/productDetail', {productDetail, toThousand})
+        db.Products.findByPk(req.params.id)
+        .then(response => {
+            res.render('products/productDetail', {productDetail:response, toThousand})
+        })
     },
+
+    // detail: (req, res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+
+    //     let productDetail = productosJSON.find(productDetail=>productDetail.id==req.params.id);
+    //     res.render('products/productDetail', {productDetail, toThousand})
+    // },
+
     //VISTA DE CREAR PRODUCTO
     create: (req, res) => {
 		res.render('products/productCreate');
