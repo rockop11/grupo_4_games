@@ -1,17 +1,27 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 
 const productsController = {
+    //Muestra todos los productos en LH:3000/products
     index: (req, res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-        res.render('products/products', {productosJSON, toThousand});
+        //llamamos a la DB y mostramos todos los prods.
+        db.Products.findAll()
+        .then(response => {
+            res.render('products/products', {products:response, toThousand})
+        });
     },
+    // index: (req, res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+    //     res.render('products/products', {productosJSON, toThousand});
+    // },
 
     show: (req, res) => {
         res.render('products/productCart');
