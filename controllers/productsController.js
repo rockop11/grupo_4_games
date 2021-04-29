@@ -30,6 +30,7 @@ const productsController = {
     },
 
     detail: (req, res) => {
+        //entramos al producto mediante req.params.id
         db.Products.findByPk(req.params.id)
         .then(response => {
             res.render('products/productDetail', {productDetail:response, toThousand})
