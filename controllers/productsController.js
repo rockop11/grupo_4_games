@@ -48,8 +48,13 @@ const productsController = {
 
     //VISTA DE CREAR PRODUCTO
     create: (req, res) => {
-		res.render('products/productCreate');
-	},
+        res.render('products/productCreate');
+    },
+
+    //METODO CREATE CON JSON
+    // create: (req, res) => {
+	// 	res.render('products/productCreate');
+	// },
 
     //FUNCIONALIDAD PARA CREAR PRODUCTO
     store: (req,res) => {
