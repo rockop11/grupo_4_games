@@ -10,7 +10,7 @@
 
     <main class="main-producto">
 
-        <% let finalPrice = productDetail.descuento ? (productDetail.price - productDetail.price * productDetail.discount / 100).toFixed(0) : productDetail.price; %>
+        <% let finalPrice = productDetail.discount ? (productDetail.price - productDetail.price * productDetail.discount / 100).toFixed(0) : productDetail.price; %>
    
         <div class="producto">
             <h1><%= productDetail.name %></h1>
@@ -19,7 +19,7 @@
     
         <div class="barra-precio">
             <h2>Descripción</h2>
-            <p> <%= productDetail.discount %> </p>    
+            <p> <%= productDetail.description %> </p>    
             <h2 class="precio">$<%= toThousand(finalPrice) %> </h2>
             <p class="descuento"><%= productDetail.discount %>%OFF </p>
             <p class="color">12 cuotas s/interés</p>
