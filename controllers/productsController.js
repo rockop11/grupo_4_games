@@ -38,10 +38,16 @@ const productsController = {
     },
 
     store: async function (req,res) {
+        let image
+        if(!req.file){
+            image="default-image.jpg";
+        }else{
+            image=req.files[0].filename;
+        };
         await db.Products.create({
                 name: req.body.name,
                 description: req.body.description,
-                image: req.files[0].filename,
+                image: image,
                 price: req.body.price,
                 discount: req.body.discount,
                 product_type_id: req.body.product_type_id,
@@ -53,14 +59,16 @@ const productsController = {
     },
 
     //VISTA DE EDITAR PRODUCTO
-    edit: (req,res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-        let productoAEditar = productosJSON.find(p=>p.id == req.params.id)
-        
-        res.render('products/productEdit', {old:productoAEditar});
-    }, 
+    edit: async function (req, res) {
+
+        let productType = await db.ProductType.findAll();
+        let category = await db.Category.findAll();
+        let console = await db.Console.findAll();
+
+        let product = await db.Products.findByPk(req.params.id)
+
+        res.render('products/productEdit', {old:product, console, category, productType});
+    },
 
     //EDITAR PRODUCTO POR POST!
     update: (req,res) => {
@@ -160,3 +168,13 @@ module.exports = productsController;
     //     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productosJSON, null, ' '));
     //     res.redirect('/products')  
     // },
+
+
+    // edit: (req,res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+    //     let productoAEditar = productosJSON.find(p=>p.id == req.params.id)
+        
+    //     res.render('products/productEdit', {old:productoAEditar});
+    // }, 
