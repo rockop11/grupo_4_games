@@ -25,5 +25,14 @@
   "password": "$2a$10$2spyD5SaXDyvaAS6jiIbIeXFpgJnWenN2IM8eCS7/3ZnxJzzlPcii",
   "repeatPassword": "$2a$10$lN5Q.4N4tfCz.Q80Y0mfy.tIxbbNDoNWZGRjdLG3pbTFyzqCL0lr6",
   "image": "image-1616729820023.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Santiago Ortigoza",
+  "user": "jimmy",
+  "email": "santiagoortigoza@hotmail.com",
+  "password": "$2a$10$Si5pyvw2/TKM6PEIxPVfVeocmbtXjqSTiTbneN9MJw1ZpAJ5XYmWq",
+  "repeatPassword": "$2a$10$0wGlK9Pqo0fCfqS1./vYYOBZ.ReLb/KpYXrVvGxu8KZ5Em1Ss6GuK",
+  "image": "image-1619728262956.png"
  }
 ]

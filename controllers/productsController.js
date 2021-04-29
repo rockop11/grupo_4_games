@@ -38,16 +38,16 @@ const productsController = {
     },
 
     store: async function (req,res) {
-        let image
-        if(!req.file){
-            image="default-image.jpg";
-        }else{
-            image=req.files[0].filename;
-        };
+        // let image
+        // if(!req.file){
+        //     image="default-image.jpg";
+        // }else{
+        //     image=req.files[0].filename;
+        // };
         await db.Products.create({
                 name: req.body.name,
                 description: req.body.description,
-                image: image,
+                image: req.files[0].filename,
                 price: req.body.price,
                 discount: req.body.discount,
                 product_type_id: req.body.product_type_id,
@@ -71,42 +71,28 @@ const productsController = {
     },
 
     //EDITAR PRODUCTO POR POST!
-    update: (req,res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-        let id = req.params.id
-        let productoAEditar = productosJSON.find(p=>p.id == id)
-        let imagen
-        if(req.file !=undefined){
-            imagen = req.file.filename
-        } else {
-            imagen = productoAEditar.imagen
-        }
-        productoAEditar = {
-            id: productoAEditar.id,
-            ...req.body,
-            imagen: imagen
-        }
-        let nuevoProducto = productosJSON.map(p => {
-            if(p.id == productoAEditar.id){
-                return p = {...productoAEditar}  
+    update: async function(req,res) {
+
+        await db.Products.update(
+            {...req.body},
+            {
+                where: {
+                    id: req.params.id
+                }
             }
-            return p
-        })
-        fs.writeFileSync(productos, JSON.stringify(nuevoProducto, null, ' '));
-        res.redirect('/products');
-    }, 
+        )
+        res.redirect('/products')
+    },
+    
+    delete: async function (req,res){
+        let product = await db.Products.findByPk(req.params.id)
 
-    delete: (req,res) => {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
+        await product.destroy()
 
-        let finalProducts = productosJSON.filter(finalProducts=>finalProducts.id!=req.params.id)
-        fs.writeFileSync(productos, JSON.stringify(finalProducts, null, ' '));
-        res.redirect('/products');
+        res.redirect('/products')
     }
+
+   
 
 }
 
@@ -178,3 +164,40 @@ module.exports = productsController;
         
     //     res.render('products/productEdit', {old:productoAEditar});
     // }, 
+
+    // update: (req,res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+    //     let id = req.params.id
+    //     let productoAEditar = productosJSON.find(p=>p.id == id)
+    //     let imagen
+    //     if(req.file !=undefined){
+    //         imagen = req.file.filename
+    //     } else {
+    //         imagen = productoAEditar.imagen
+    //     }
+    //     productoAEditar = {
+    //         id: productoAEditar.id,
+    //         ...req.body,
+    //         imagen: imagen
+    //     }
+    //     let nuevoProducto = productosJSON.map(p => {
+    //         if(p.id == productoAEditar.id){
+    //             return p = {...productoAEditar}  
+    //         }
+    //         return p
+    //     })
+    //     fs.writeFileSync(productos, JSON.stringify(nuevoProducto, null, ' '));
+    //     res.redirect('/products');
+    // }, 
+
+     // delete: (req,res) => {
+    //     let productos = path.join(__dirname, '../data/products.json');
+    //     let producto = fs.readFileSync(productos, 'utf-8');
+    //     let productosJSON = JSON.parse(producto);
+
+    //     let finalProducts = productosJSON.filter(finalProducts=>finalProducts.id!=req.params.id)
+    //     fs.writeFileSync(productos, JSON.stringify(finalProducts, null, ' '));
+    //     res.redirect('/products');
+    // }
