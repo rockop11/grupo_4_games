@@ -78,6 +78,10 @@ img.img-profile {
     width: 30px;
     border-radius: 50%;
 }
+
+div.inputs-header {
+    display: flex;
+}
  
 div.inputs-header .input {
     height: 35px;
@@ -704,7 +708,7 @@ h4.footer-copy-header {
 
     /*--PAGINA PRODUCT/DETAIL--*/
     .main-producto{
-        height: 450px;;
+        height: 653px;
     }
 
     .barra-precio {

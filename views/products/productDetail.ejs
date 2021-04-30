@@ -26,8 +26,8 @@
         </div>
         
         <!-- SI ESTA LOGEADO SE MUESTA COMPRAR Y BORRAR -->
-        <% if(locals.isLogged) { %>
-            <div class="botones">
+        <div class="botones">
+                <% if(locals.isLogged) { %>
                 <!--BOTON EDITAR-->
                 <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario"><p>Editar </p><i class="fas fa-edit"></i></button></a>
 
@@ -35,12 +35,11 @@
                     <!--BOTON BORRAR-->
                     <button type="submit" class="boton-formulario"><p>Borrar </p><i class="fas fa-trash-alt"></i></button>
                 </form>
-                <% } else { %>
-                    <!-- SI NO ESTA LOGEADO SOLO MUESTRA COMPRAR -->
-                    <!--BOTON COMPRAR-->
-                <button type="submit"class="boton-formulario"><p>Comprar </p><i class="fas fa-shopping-cart"></i></button>
+                <% } %>
+                     <!-- SI NO ESTA LOGEADO SOLO MUESTRA COMPRAR -->
+                     <!--BOTON COMPRAR-->
+                    <button type="submit"class="boton-formulario"><p>Comprar </p><i class="fas fa-shopping-cart"></i></button>
             </div>
-        <% } %>    
 
     
     </main>
