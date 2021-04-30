@@ -103,6 +103,10 @@ body {
     justify-content: center;
 }
 
+.duos .plays a, .duos .xbox a {
+    margin-top: 350px;
+}
+
 .duos img {
     width: 70px;
     margin: auto;
@@ -361,8 +365,12 @@ p.blanco {
         font-size: 15px;
     }
 
-    .main-navbar a:hover {
-        color: #44d62d;
+    .duos {
+        height: 436px;
+    }
+
+    .duos .plays a, .duos .xbox a {
+        margin-top: 190px;
     }
 
     main section article.prod-contenedor {
@@ -393,6 +401,10 @@ p.blanco {
 
     .duos {
         height: 800px;
+    }
+
+    .duos .plays a, .duos .xbox a {
+        margin-top: 340px;
     }
 
     /*Estilos provisorios Header Desktop*/
