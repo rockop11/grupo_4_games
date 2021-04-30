@@ -91,6 +91,7 @@ div.inputs-header .input {
     border-radius: 3px;
     line-height: 17px;
     font-size: 14px;
+    margin-right: 5px;
 }
 
 
@@ -134,7 +135,7 @@ ul.navbar-desktop {
 }
 
 
-.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
+.fa-id-card, .fa-sign-in-alt {
     color: #44d62d;
 }
 
@@ -375,7 +376,7 @@ span{
 }
 
 .main-producto{
-    height: 350px;
+    height: 410px;
     padding: 10px;
     background-color:  #ffffff;
 }
@@ -659,6 +660,7 @@ h4.footer-copy-header {
     }
  
     div.inputs-header .input {
+        margin-right: 7px;
         height: 35px;
         background-color: #FFF;
         border-style: none;
@@ -689,6 +691,10 @@ h4.footer-copy-header {
         color: #44d62d;
     }
     /*NavBar*/
+
+    article.prod-contenedor {
+        width: 46%;
+    }
 
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;

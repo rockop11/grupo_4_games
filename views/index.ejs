@@ -185,9 +185,44 @@
         </div>
 
         <div class="duos">
-            <article class="plays"><img src="/img/PS5_logo.png" alt="logo Play"></article>
-            <article class="xbox"><img src="/img/xbox_logo_2.png" alt="logo XBox"></article>
+            <article class="plays" id="ps"><img src="/img/PS5_logo.png" alt="logo Play"></article>
+            <article class="xbox" id="xb"><img src="/img/xbox_logo_2.png" alt="logo XBox"></article>
         </div>
+
+        <section class="novedades" id="seccion-novedades">
+            <h3 class="titulo-section">NOVEDADES</h3>
+
+            
+            <% for (let i=0 ; i<products.length; i++) { %> 
+                    <% if (products[i].category_id == 2) { 
+                        let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100).toFixed(0) : products[i].price; %>
+                        
+                    <article class="prod-contenedor">
+                        <a href="/products/detail/<%= products[i].id %>">
+                            <img src="/img/fotosMulter/<%= products[i].image %>" alt="" class="img-producto">
+
+                            <div class="producto">
+                                <i class="fas fa-truck"></i>
+                                <p class="precio">
+                                    $<%= toThousand(finalPrice) %>
+                                </p>
+                                <p class="descuento">
+                                    <%= products[i].discount %>%OFF
+                                </p>
+                                <h4 class="descripcion">
+                                    <%= products[i].name %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                <% } %>
+
+            <% } %>
+            
+        </section>
+
+        <img src="/img/banner-index.jpg" alt="" class="img-banner">
+
 
         <section class="ofertas" id="seccion-ofertas">
             <h3 class="titulo-section">OFERTAS</h3>
@@ -223,48 +258,11 @@
 
         </section>
 
-        <img src="/img/banner-index.jpg" alt="" class="img-banner">
-
-
-        <section class="novedades" id="seccion-novedades">
-            <h3 class="titulo-section">NOVEDADES</h3>
-
-            
-            <% for (let i=0 ; i<products.length; i++) { %> 
-                    <% if (products[i].category_id == 2) { 
-                        let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100).toFixed(0) : products[i].price; %>
-                        
-                    <article class="prod-contenedor">
-                        <a href="/products/detail/<%= products[i].id %>">
-                            <img src="/img/fotosMulter/<%= products[i].image %>" alt="" class="img-producto">
-
-                            <div class="producto">
-                                <i class="fas fa-truck"></i>
-                                <p class="precio">
-                                    $<%= toThousand(finalPrice) %>
-                                </p>
-                                <p class="descuento">
-                                    <%= products[i].discount %>%OFF
-                                </p>
-                                <h4 class="descripcion">
-                                    <%= products[i].name %>
-                                </h4>
-                            </div>
-                        </a>
-                    </article>
-                <% } %>
-
-            <% } %>
-            
-        </section>
-
-        
-
     </main>
 
     <%- include('./partials/footer') %>
 
-
+    <script src="/js/menuDuos.js"></script>
 </body>
 
 </html>
