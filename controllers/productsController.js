@@ -73,8 +73,16 @@ const productsController = {
     //EDITAR PRODUCTO POR POST!
     update: async function(req,res) {
 
-        await db.Products.update(
-            {...req.body},
+        await db.Products.update({
+            name: req.body.name,
+                description: req.body.description,
+                image: req.files[0].filename,
+                price: req.body.price,
+                discount: req.body.discount,
+                product_type_id: req.body.product_type_id,
+                category_id: req.body.category_id,
+                console_id: req.body.console_id,
+        },
             {
                 where: {
                     id: req.params.id
