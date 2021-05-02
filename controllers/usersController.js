@@ -1,9 +1,8 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-// const User = require('../models/User')
-// const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
+const { Op } = require("sequelize");
 const sequelize = db.sequelize;
 
 
@@ -40,81 +39,44 @@ const usersController = {
        },
 
 
-
-    //    let emailInDB = User.findByField('email', req.body.email);
-
-    //    if(emailInDB){
-    //     return res.render('users/register', {
-    //         errors: {
-    //             email: {
-    //                 msg: 'Este email ya se encuentra registrado'
-    //             }
-    //         },
-
-    //         oldData: req.body
-    //      });
-    //    }
-     
-
-    //    let userToCreate = {
-    //        ...req.body,
-    //        password: bcryptjs.hashSync(req.body.password, 10),
-    //        repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 10),
-    //        image: req.file.filename
-    //    }
-
-    //   let userCreated = db.Users.create(userToCreate);
-
-    //   return res.redirect('/');
-
-
     login: (req, res) => {
         return res.render('users/login');
     },
 
-    //RETOMAR DESDE ACA!
-
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-        // let userToLogin = db.Users.findOne({
-        //     where: {
-        //         email: req.body.email}
-        //     }).then(function(response){
-
-        //     })
-
-
-
-
-
-        if(userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkThePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-                if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60 })
-                }
-
-                return res.redirect('profile');
-            }else{//si no coincide la contraseña se renderiza la vista de login con error
-                res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
-                    email:{
-                        msg:"Las credenciales son invalidas"
-                    }
-                }
-            })}
-    
-            }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
-                res.render("./users/login",{titulo:"Ingresá" , errors:{
-                    email:{
-                        msg:"El usuario no se encuentra en la base de datos"
-                    }
-                }
-            })
+    loginProcess: async (req, res) => {
+        
+        let userToLogin = await db.Users.findOne({
+            where: {
+                email: {[Op.like]:req.body.email}
             }
-    
+            })
+                if(userToLogin) {
+                    let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                    if (isOkThePassword) {
+                        delete userToLogin.password;
+                        req.session.userLogged = userToLogin;
+        
+                        if(req.body.remember_user){
+                            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60 })
+                        }
+        
+                        return res.redirect('profile');
+                    }else{//si no coincide la contraseña se renderiza la vista de login con error
+                        res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
+                            email:{
+                                msg:"Las credenciales son invalidas"
+                            }
+                        }
+                    })}
+            
+                    }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
+                        res.render("./users/login",{titulo:"Ingresá" , errors:{
+                            email:{
+                                msg:"El usuario no se encuentra en la base de datos"
+                            }
+                        }
+                    })
+                    }
         },
 
     profile: (req, res) => {
