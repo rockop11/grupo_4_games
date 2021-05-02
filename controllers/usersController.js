@@ -57,7 +57,7 @@ const usersController = {
                         req.session.userLogged = userToLogin;
         
                         if(req.body.remember_user){
-                            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60 })
+                            res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 })
                         }
         
                         return res.redirect('profile');
@@ -76,13 +76,23 @@ const usersController = {
                             }
                         }
                     })
-                    }
+                }
         },
 
     profile: (req, res) => {
         return res.render('users/profile', {
             user: req.session.userLogged
         });
+    },
+
+    edit: (req, res) => {
+        res.render('users/userEdit', {
+            user: req.session.userLogged
+        })
+    },
+
+    update: (req, res) => {
+        
     },
 
     logout: (req, res) => {

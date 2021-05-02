@@ -8,18 +8,18 @@
     <%- include('../partials/headerRegister') %> 
 
     <main>
-        <form method="POST" action="/users/registro" enctype="multipart/form-data" class="form-user">
+        <form method="POST" action="/users/edit?_method=PUT" enctype="multipart/form-data" class="form-user">
 
-            <h2>Crear cuenta</h2>
+            <h2>Editar Cuenta</h2>
 
             <div>
-                <label for="fullName">Ingrese su Nombre y Apellido:</label>
+                <label for="fullName">Edite su Nombre y Apellido:</label>
                 <input
                  id="fullName" 
                  type="text" 
                  name="fullName" 
                  placeholder="Nombre Completo" 
-                 value="<%= locals.oldData ? oldData.fullName : null %>">
+                 value="<%= locals.oldData ? oldData.fullName : user.fullName %>">
 
                  <% if (locals.errors && errors.fullName) { %>
                     <div class="text-error">
@@ -30,7 +30,7 @@
                     
                     
             <div>
-                <label for="email">Ingrese su Email:</i></label>
+                <label for="email">Edite su Email:</i></label>
                 <input 
                 id="email" 
                 type="text" 
@@ -46,7 +46,7 @@
             </div>
                     
             <div>
-                <label for="email">Ingrese la imagen </i></label>
+                <label for="email">Edite la imagen </i></label>
                 <input id="image" type="file" name="image" placeholder="Agregar imagen">
 
                 <% if (locals.errors && errors.image) { %>
@@ -57,7 +57,7 @@
             </div>
 
             <div>
-                <label for="contraseña">Ingrese su Contraseña</i></label>
+                <label for="contraseña">Edite su Contraseña</i></label>
                 <input 
                 id="contraseña" 
                 type="password" 
@@ -87,57 +87,52 @@
             </div>
 
             <div>
-                <label for="address">Dirección</i></label>
+                <label for="address">Edite su Dirección</i></label>
                 <input 
                 id="address" 
                 type="text" 
                 name="address" 
-                placeholder="Dirección">
+                placeholder="Dirección"
+                value="<%= locals.oldData ? oldData.address : user.address %>">
             </div>
             
             
             <div>
-                <label for="location">Localidad</i></label>
+                <label for="location">Edite su Localidad</i></label>
                 <input 
                 id="location" 
                 type="text" 
                 name="location" 
-                placeholder="Localidad">
+                placeholder="Localidad"
+                value="<%= locals.oldData ? oldData.location : user.location %>">
             </div>
             
             <div>
-                <label for="postalCode">Código postal</i></label>
+                <label for="postalCode">Edite su Código postal</i></label>
                 <input 
                 id="postalCode" 
                 type="number" 
                 name="postalCode" 
-                placeholder="Código postal">
+                placeholder="Código postal"
+                value="<%= locals.oldData ? oldData.postalCode : user.postalCode %>">
             </div>
             
             <div>
-                <label for="phone">Teléfono</i></label>
+                <label for="phone">Edite su Teléfono</i></label>
                 <input 
                 id="phone" 
                 type="number" 
                 name="phone" 
-                placeholder="Teléfono">
+                placeholder="Teléfono"
+                value="<%= locals.oldData ? oldData.phone : user.phone %>">
             </div>
             <div>
-                <button type="submit">Registrarme</button>
+                <button type="submit">Actualizar datos</button>
             </div>
 
             <hr>
         </form>
-        <div class="form-user">
-            <div>
-                <h2>¿Ya tenés una cuenta?</h2>
-            </div>
-            <div>
-                <a href="/users/login">
-                    <button class="boton-nc" type="submit">Iniciar sesión</button>
-                </a>
-            </div>
-        </div>
+        
     </main>
 
     <%- include('../partials/footer') %> 

@@ -23,6 +23,11 @@ router.post('/login', usersController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware, usersController.profile);
 
+//formulario de edicion de usuario
+router.get('/edit',authMiddleware, usersController.edit)
+router.put('/edit', upload.single('image'), validations, usersController.update)
+
+
 // Logout
 router.get('/logout', usersController.logout);
 
