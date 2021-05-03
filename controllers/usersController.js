@@ -91,8 +91,23 @@ const usersController = {
         })
     },
 
-    update: (req, res) => {
-        
+    update: async (req, res) => { 
+        await db.Users.update({
+            fullName: req.body.fullName,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 12),
+            repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+            image: req.file.filename,
+            address: req.body.address,
+            location: req.body.location,
+            postalCode: req.body.postalCode,
+            phone: req.body.phone,
+        },{
+            where: {
+                id: req.session.userLogged.id
+            }
+        })
+        res.redirect("/users/profile")
     },
 
     logout: (req, res) => {

@@ -36,7 +36,7 @@
                 type="text" 
                 name="email" 
                 placeholder="Email"
-                value="<%= locals.oldData ? oldData.email : null %>">
+                value="<%= locals.oldData ? oldData.email : user.email %>">
 
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-error">
