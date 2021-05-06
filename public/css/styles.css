@@ -427,7 +427,8 @@ div.botones button p {
 
 .products-title {
     font-size: 18px;
-    margin: 15px auto;
+    text-align: center;
+    margin: 20px;
 }
 
 
