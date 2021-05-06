@@ -21,12 +21,13 @@ const usersController = {
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 12),
                 repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
-                image: req.file.filename,
+                image: req.files[0].filename,
                 address: req.body.address,
                 location: req.body.location,
                 postalCode: req.body.postalCode,
                 phone: req.body.phone,
             }).then(function(user){
+                req.session.userLogged = user;
                 res.redirect("/")
             })
         }
@@ -57,7 +58,7 @@ const usersController = {
                         req.session.userLogged = userToLogin;
         
                         if(req.body.remember_user){
-                            res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 })
+                            res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 }); //probamos otra opcion 'email'
                         }
         
                         return res.redirect('profile');
@@ -91,27 +92,52 @@ const usersController = {
         })
     },
 
-    update: async (req, res) => { 
-        await db.Users.update({
-            fullName: req.body.fullName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 12),
-            repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
-            image: req.file.filename,
-            address: req.body.address,
-            location: req.body.location,
-            postalCode: req.body.postalCode,
-            phone: req.body.phone,
-        },{
-            where: {
-                id: req.session.userLogged.id
-            }
-        })
-        res.redirect("/users/profile")
+    update: (req,res) =>{
+                 db.Users.update({
+                    fullName: req.body.fullName,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 12),
+                    repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                    image: req.files[0].filename,
+                    address: req.body.address,
+                    location: req.body.location,
+                    postalCode: req.body.postalCode,
+                    phone: req.body.phone,
+                },{
+                    where: {
+                        id: req.session.userLogged.id
+                    }
+                }).then(function(user){
+                    // req.session.userLogged = user;
+                    res.redirect("/")
+                })
     },
 
+
+
+// anda pero no cambia la imagen
+    // update: async (req, res) => { 
+    //     await db.Users.update({
+    //         fullName: req.body.fullName,
+    //         email: req.body.email,
+    //         password: bcryptjs.hashSync(req.body.password, 12),
+    //         repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+    //         image: req.files[0].filename,
+    //         address: req.body.address,
+    //         location: req.body.location,
+    //         postalCode: req.body.postalCode,
+    //         phone: req.body.phone,
+    //     },{
+    //         where: {
+    //             id: req.session.userLogged.id
+    //         }
+    //     })
+    //     req.session.userLogged = user;
+    //     res.redirect("/users/profile")
+    // },
+
     logout: (req, res) => {
-        res.clearCookie('userEmail');
+        res.clearCookie('userEmail'); //probamos otra opcion 'email'
         req.session.destroy();
         return res.redirect('/');
     }
