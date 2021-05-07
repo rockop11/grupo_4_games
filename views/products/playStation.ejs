@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("../partials/head", {Solapa:"ZG - PlayStation"}) %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <h1>PlayStation</h1>
+
+            <section class="container-products">
+
+                <% for (let i=0 ; i<playStation.length; i++) { %> 
+                 
+                    <% if (playStation[i].console_id == 1) { 
+                    let finalPrice = playStation[i].discount ? (playStation[i].price - playStation[i].price * playStation[i].discount / 100).toFixed(0) : playStation[i].price; %>
+                
+                    <article class="prod-contenedor">
+                        <a href="/products/detail/<%= playStation[i].id %>">
+                            <img src="/img/fotosMulter/<%= playStation[i].image %>" alt=""
+                                class="img-products-gral">
+
+                            <div class="products-gral">
+                                <i class="fas fa-truck"></i>
+                                <p class="prod-precio">
+                                    $<%= toThousand(finalPrice) %>
+                                </p>
+                                <p class="prod-descuento">
+                                    <%= playStation[i].discount %>%OFF
+                                </p>
+                                <h4 class="prod-descripcion">
+                                    <%= playStation[i].name %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                <% } %>
+                <% } %>
+            </section>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

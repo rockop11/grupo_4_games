@@ -78,6 +78,10 @@ img.img-profile {
     width: 30px;
     border-radius: 50%;
 }
+
+div.inputs-header {
+    display: flex;
+}
  
 div.inputs-header .input {
     height: 35px;
@@ -87,6 +91,7 @@ div.inputs-header .input {
     border-radius: 3px;
     line-height: 17px;
     font-size: 14px;
+    margin-right: 5px;
 }
 
 
@@ -130,7 +135,7 @@ ul.navbar-desktop {
 }
 
 
-.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
+.fa-id-card, .fa-sign-in-alt {
     color: #44d62d;
 }
 
@@ -371,7 +376,7 @@ span{
 }
 
 .main-producto{
-    height: 350px;
+    height: 410px;
     padding: 10px;
     background-color:  #ffffff;
 }
@@ -422,7 +427,8 @@ div.botones button p {
 
 .products-title {
     font-size: 18px;
-    margin: 15px auto;
+    text-align: center;
+    margin: 20px;
 }
 
 
@@ -655,6 +661,7 @@ h4.footer-copy-header {
     }
  
     div.inputs-header .input {
+        margin-right: 7px;
         height: 35px;
         background-color: #FFF;
         border-style: none;
@@ -686,6 +693,10 @@ h4.footer-copy-header {
     }
     /*NavBar*/
 
+    article.prod-contenedor {
+        width: 46%;
+    }
+
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;
         border-radius: 10px;
@@ -704,7 +715,7 @@ h4.footer-copy-header {
 
     /*--PAGINA PRODUCT/DETAIL--*/
     .main-producto{
-        height: 450px;;
+        height: 653px;
     }
 
     .barra-precio {

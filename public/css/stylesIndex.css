@@ -94,6 +94,7 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .xbox {
@@ -101,7 +102,12 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+/* .duos .plays a, .duos .xbox a {
+    margin-top: 350px;
+} */
 
 .duos img {
     width: 70px;
@@ -140,13 +146,21 @@ img.img-banner{
     font-weight: 300;
 }
 
-.img-producto {
-    width: 100%;
-}
-
 main section article {
     margin: 10px;
     max-width: 900px;
+    min-height: 450px;
+}
+
+main section article a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    min-height: 450px;
+}
+
+.img-producto {
+    width: 100%;
 }
 
 .producto {
@@ -155,6 +169,7 @@ main section article {
     padding: 15px;
     position: relative;
     display: flex;
+    align-self: flex-end;
     flex-grow: 1;
 }
 
@@ -361,14 +376,26 @@ p.blanco {
         font-size: 15px;
     }
 
-    .main-navbar a:hover {
-        color: #44d62d;
+    .duos {
+        height: 436px;
     }
+
+    /* .duos .plays a, .duos .xbox a {
+        margin-top: 190px;
+    } */
 
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;
         border-radius: 10px;
         width: 45%;
+    }
+
+    main section article {
+        min-height: 475px;
+    }
+    
+    main section article a {
+        min-height: 475px;
     }
 
     .producto {
@@ -392,8 +419,20 @@ p.blanco {
     }
 
     .duos {
-        height: 300px;
+        height: 100vh;
     }
+
+    main section article {
+        min-height: 333px;
+    }
+    
+    main section article a {
+        min-height: 333px;
+    }
+
+    /* .duos .plays a, .duos .xbox a {
+        margin-top: 340px;
+    } */
 
     /*Estilos provisorios Header Desktop*/
 

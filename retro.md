@@ -85,3 +85,22 @@ Menos charla de cafe, y mas codigo, pero que lindo que es charlar jajajaja
 
 ### Dejar de Hacer.
 pensar que no lo vamos a lograr cuando no nos salen las cosas como planeamos.
+
+
+
+### Retrospectiva del Sprint 5
+
+### Comenzar a hacer.
+Homogeneizar los tamaños de las imagenes de todos los productos.  
+
+### Hacer más.
+Seguir juntandonos entre sprint y sprint habiendo terminado el sprint actual.
+
+### Continuar Haciendo
+Dividir el proyectro entre los integrantes y seguir trabajando individualmente a excepción de algún inconveniente que sea necesario realizar en equipo.
+
+### Hacer Menos
+No pedir permiso para hacer ajustes en el código.
+
+### Dejar de Hacer.
+Consideramos que venimos bastasnte bien y que por el momento no hay nada que deberiamos dejar de hacer

@@ -13,36 +13,21 @@
             <h2>Crear cuenta</h2>
 
             <div>
-                <label for="nombre">Ingrese su Nombre:</label>
+                <label for="fullName">Ingrese su Nombre y Apellido:</label>
                 <input
-                 id="name" 
+                 id="fullName" 
                  type="text" 
-                 name="name" 
+                 name="fullName" 
                  placeholder="Nombre Completo" 
-                 value="<%= locals.oldData ? oldData.name : null %>">
+                 value="<%= locals.oldData ? oldData.fullName : null %>">
 
-                 <% if (locals.errors && errors.name) { %>
+                 <% if (locals.errors && errors.fullName) { %>
                     <div class="text-error">
-                        <%= errors.name.msg %> 
+                        <%= errors.fullName.msg %> 
                     </div>
                     <% } %>
             </div>
                     
-            <div>
-                <label for="usuario">Ingrese su Usuario:</i></label>
-                <input 
-                id="user" 
-                type="text" 
-                name="user" 
-                placeholder="Nombre de Usuario"
-                value="<%= locals.oldData ? oldData.user : null %>">
-
-                <% if (locals.errors && errors.user) { %>
-                    <div class="text-error">
-                        <%= errors.user.msg %> 
-                    </div>
-                    <% } %>
-            </div>
                     
             <div>
                 <label for="email">Ingrese su Email:</i></label>
@@ -101,6 +86,42 @@
                     <% } %>
             </div>
 
+            <div>
+                <label for="address">Dirección</i></label>
+                <input 
+                id="address" 
+                type="text" 
+                name="address" 
+                placeholder="Dirección">
+            </div>
+            
+            
+            <div>
+                <label for="location">Localidad</i></label>
+                <input 
+                id="location" 
+                type="text" 
+                name="location" 
+                placeholder="Localidad">
+            </div>
+            
+            <div>
+                <label for="postalCode">Código postal</i></label>
+                <input 
+                id="postalCode" 
+                type="number" 
+                name="postalCode" 
+                placeholder="Código postal">
+            </div>
+            
+            <div>
+                <label for="phone">Teléfono</i></label>
+                <input 
+                id="phone" 
+                type="number" 
+                name="phone" 
+                placeholder="Teléfono">
+            </div>
             <div>
                 <button type="submit">Registrarme</button>
             </div>

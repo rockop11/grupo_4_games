@@ -10,42 +10,60 @@
     <main>
         <form action="?_method=PUT" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>EDITAR PRODUCTO:<%= old.nombre %></h2>
+            <h2>EDITAR PRODUCTO: <%= old.name %></h2>
 
             <div>
-                <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" name="nombre" value="<%= old.nombre %>">
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="name" value="<%= old.name %>">
             </div>
 
             <div>
                 <label for="description">Descripcion</label>
-                <input id="description" type="text" name="descripcion" value="<%= old.descripcion %>">
+                <input id="description" type="text" name="description" value="<%= old.description %>">
             </div>
             
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="imagen" accept=".jpg, .png" multiple>
+                <input type="file" name="image" accept=".jpg, .png" multiple>
             </div>
             
 
             <div>
                 <label for="price">Precio</label>
-                <input id="price" type="text" name="precio" value="$<%= old.precio %>">
+                <input id="price" type="text" name="price" value="$<%= old.price %>">
             </div>
             
             <div>
-                <label for="descuento">Descuento</label>
-                <input id="descuento" type="number" name="descuento" placeholder="descuento" value="<%= old.descuento %>">
+                <label for="discount">Descuento</label>
+                <input id="discount" type="number" name="discount" placeholder="descuento" value="<%= old.discount %>">
             </div>
 
             <div>
-                <label>Categorías de interés:</label>
-                    <select name="interes">
-                        <option value="novedades" selected>Novedades</option>
-                        <option value="ofertas">Ofertas</option>
-                        <option value="visitados">visitados</option>
-                    </select>
+                <label>Categoria</label>
+                <select name="category_id" id="" required>
+                    <% category.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <div>
+                <label>Consola:</label>
+                <select name="console_id" id="" required>
+                    <% console.forEach(console => { %>
+                    <option value="<%= console.id %>"><%= console.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <div>
+                <label>Tipo de producto</label>
+                <select name="product_type_id" id="" required>
+                    <% productType.forEach(productType => { %>
+                    <option value="<%= productType.id %>"><%= productType.name %></option>
+                    <% }); %>
+                </select>
             </div>
 
             <div>

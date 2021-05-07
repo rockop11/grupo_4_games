@@ -1,101 +1,83 @@
 const bcryptjs = require('bcryptjs');
-const { validationResult} = require('express-validator');
-const User = require('../models/User')
+const { validationResult } = require('express-validator');
+const path = require('path');
+const db = require('../database/models');
+const { Op } = require("sequelize");
+const sequelize = db.sequelize;
 
 
 const usersController = {
-    registro: (req, res) => {
+    register: (req, res) => {
         res.render('users/register');
     },
 
     processRegister: (req,res)=> {
        const resultValidation = validationResult(req);
 
+       if (!resultValidation.length){
 
-       if (resultValidation.errors.length > 0){
-        return res.render('users/register', {
-            errors: resultValidation.mapped(),
-            oldData: req.body
-         });
-       }
+        db.Users.create({
+                fullName: req.body.fullName,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 12),
+                repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                image: req.files[0].filename,
+                address: req.body.address,
+                location: req.body.location,
+                postalCode: req.body.postalCode,
+                phone: req.body.phone,
+            }).then(function(user){
+                req.session.userLogged = user;
+                res.redirect("/")
+            })
+        }
+            else {
+                return res.render('users/register', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                 });
+            }
+       },
 
-       let emailInDB = User.findByField('email', req.body.email);
-       
-       let userInDB = User.findByField('user', req.body.user);
-
-       if(emailInDB){
-        return res.render('users/register', {
-            errors: {
-                email: {
-                    msg: 'Este email ya se encuentra registrado'
-                }
-            },
-
-            oldData: req.body
-         });
-       }
-
-       if(userInDB){
-        return res.render('users/register', {
-            errors: {
-                user: {
-                    msg: 'Este usuario ya se encuentra registrado'
-                }
-            },
-
-            oldData: req.body
-         });
-       }
-
-     
-
-       let userToCreate = {
-           ...req.body,
-           password: bcryptjs.hashSync(req.body.password, 10),
-           repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 10),
-           image: req.file.filename
-       }
-
-      let userCreated = User.create(userToCreate);
-
-      return res.redirect('/');
-    },
 
     login: (req, res) => {
         return res.render('users/login');
     },
 
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-
-        if(userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkThePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-                if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60 })
-                }
-
-                return res.redirect('profile');
-            }else{//si no coincide la contraseña se renderiza la vista de login con error
-                res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
-                    email:{
-                        msg:"Las credenciales son invalidas"
-                    }
-                }
-            })}
-    
-            }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
-                res.render("./users/login",{titulo:"Ingresá" , errors:{
-                    email:{
-                        msg:"El usuario no se encuentra en la base de datos"
-                    }
-                }
-            })
+    loginProcess: async (req, res) => {
+        
+        let userToLogin = await db.Users.findOne({
+            where: {
+                email: {[Op.like]:req.body.email}
             }
-    
+            })
+                if(userToLogin) {
+                    let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                    if (isOkThePassword) {
+                        delete userToLogin.password;
+                        req.session.userLogged = userToLogin;
+        
+                        if(req.body.remember_user){
+                            res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 }); //probamos otra opcion 'email'
+                        }
+        
+                        return res.redirect('profile');
+                    }else{//si no coincide la contraseña se renderiza la vista de login con error
+                        res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
+                            email:{
+                                msg:"Las credenciales son invalidas"
+                            }
+                        }
+                    })}
+            
+                    }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
+                        res.render("./users/login",{titulo:"Ingresá" , errors:{
+                            email:{
+                                msg:"El usuario no se encuentra en la base de datos"
+                            }
+                        }
+                    })
+                }
         },
 
     profile: (req, res) => {
@@ -104,8 +86,58 @@ const usersController = {
         });
     },
 
+    edit: (req, res) => {
+        res.render('users/userEdit', {
+            user: req.session.userLogged
+        })
+    },
+
+    update: (req,res) =>{
+                 db.Users.update({
+                    fullName: req.body.fullName,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 12),
+                    repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                    image: req.files[0].filename,
+                    address: req.body.address,
+                    location: req.body.location,
+                    postalCode: req.body.postalCode,
+                    phone: req.body.phone,
+                },{
+                    where: {
+                        id: req.session.userLogged.id
+                    }
+                }).then(function(user){
+                    // req.session.userLogged = user;
+                    res.redirect("/")
+                })
+    },
+
+
+
+// anda pero no cambia la imagen
+    // update: async (req, res) => { 
+    //     await db.Users.update({
+    //         fullName: req.body.fullName,
+    //         email: req.body.email,
+    //         password: bcryptjs.hashSync(req.body.password, 12),
+    //         repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+    //         image: req.files[0].filename,
+    //         address: req.body.address,
+    //         location: req.body.location,
+    //         postalCode: req.body.postalCode,
+    //         phone: req.body.phone,
+    //     },{
+    //         where: {
+    //             id: req.session.userLogged.id
+    //         }
+    //     })
+    //     req.session.userLogged = user;
+    //     res.redirect("/users/profile")
+    // },
+
     logout: (req, res) => {
-        res.clearCookie('userEmail');
+        res.clearCookie('userEmail'); //probamos otra opcion 'email'
         req.session.destroy();
         return res.redirect('/');
     }

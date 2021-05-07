@@ -11,14 +11,14 @@
 
             <section class="container-products">
 
-                <% if (productosJSON.length) { %>
+                <% if (products.length) { %>
                  
-                <% for (product of productosJSON) { 
-                    let finalPrice = product.descuento ? (product.precio - product.precio * product.descuento / 100).toFixed(0) : product.precio; 
+                <% for (product of products) { 
+                    let finalPrice = product.discount ? (product.price - product.price * product.discount / 100).toFixed(0) : product.price; 
                 %>
                     <article class="prod-contenedor">
                         <a href="/products/detail/<%= product.id %>">
-                            <img src="/img/fotosMulter/<%= product.imagen %>" alt=""
+                            <img src="/img/fotosMulter/<%= product.image %>" alt=""
                                 class="img-products-gral">
 
                             <div class="products-gral">
@@ -27,10 +27,10 @@
                                     $<%= toThousand(finalPrice) %>
                                 </p>
                                 <p class="prod-descuento">
-                                    <%= product.descuento %>%OFF
+                                    <%= product.discount %>%OFF
                                 </p>
                                 <h4 class="prod-descripcion">
-                                    <%= product.nombre %>
+                                    <%= product.name %>
                                 </h4>
                             </div>
                         </a>

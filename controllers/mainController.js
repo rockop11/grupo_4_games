@@ -1,30 +1,37 @@
 const path = require('path');
 const fs = require('fs');
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
 
-    index: function(req, res) {
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-        let ofertas = productosJSON.filter(product => product.categoria=='ofertas');
-		let novedades = productosJSON.filter(product => product.categoria=='novedades');
-        res.render('index', {productosJSON, ofertas, novedades, toThousand});
-    },
-    search: (req,res)=>{
-        let productos = path.join(__dirname, '../data/products.json');
-        let producto = fs.readFileSync(productos, 'utf-8');
-        let productosJSON = JSON.parse(producto);
-        let search = req.query.keywords;
-        let productsToSearch = productosJSON.filter(p=> p.nombre.toLowerCase().includes(search));
-        res.render('products/result', {
-            products: productsToSearch, 
-            search,
-            toThousand,
+    index: (req,res) => {
+        //Llamamos a la base de datos mostrando todos los productos con el findAll
+        db.Products.findAll().then(response => {
+            //devolvemos la vista con una promesa con todos los productos
+            res.render('index', {products:response, toThousand})
         })
     },
+
+    search: (req, res) => {
+        db.Products.findAll({
+            where: {
+                name: {[Op.like]: "%" + req.query.search + "%"}
+            }
+        }).then(response => {
+            let search = req.query.search
+            res.render('products/result',{
+                search,
+                products:response,
+                toThousand
+            })
+        })
+    }
+
 }
 
 module.exports = mainController;

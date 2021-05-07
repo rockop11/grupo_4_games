@@ -7,43 +7,27 @@
 
         <%- include('../partials/header') %>
 
-            <section class="container-products">
-                            <h2 class="products-title">Resultados de la búsqueda: <%= search %></h2>
-                      
-                        <% if (products.length) { %>
-                         
-                            <% for (product of products) { 
-                                let finalPrice=product.descuento ? (product.precio - product.precio * product.descuento / 100).toFixed(0) : product.precio; 
-                            %>
-                            <section class="container-products">
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <article class="prod-contenedor">
-                                        <a href="/products/detail/<%= product.id %> ">        
-                                         <img src="/img/fotosMulter/<%= product.imagen %> " alt="<%= product.nombre %>" class="img-products-gral">
-                                            
-                                         <div class="products-gral">
-                                            <p class="prod-precio">$<%= toThousand(finalPrice) %>
-                                            </p>
-                                            <p class="prod-descuento">
-                                                <%- product.descuento ? `<span>${product.descuento}% OFF</span>` : '' %>
-                                                    <h4 class="prod-descripcion">
-                                                        <%= product.nombre %>
-                                                    </h4>
-                                                
-                                                </p>
-                                                <i class="fas fa-truck"></i>
-                                            </div>
-                                        </a>
-                                    </article>
-                        </section>
-                                          
-                            <% } %>	
-                        <% } else { %>
-                            <div class="col-12">
-                                <h2 class="products-title" style="color:#44d62d;">No hay productos que coincidan con esa búsqueda</h2>
+        <h2 class="products-title">Resultados de la búsqueda: <%= search %></h2>
+
+            <section class="container-products result-products">
+                        
+                <% for( product of products ) {  %>
+                    <article class="prod-contenedor">
+                        <a href="/products/detail/<%= product.id %> ">        
+                         <img src="/img/fotosMulter/<%= product.image %> " alt="<%= product.name %>" class="img-products-gral">
+                            
+                            <div class="products-gral">
+                                <p class="prod-precio"><%= product.price %></p>
+                                <p class="prod-descuento">
+                                    <%- product.discount ? `<span>${product.discount}% OFF</span>` : '' %>
+                                        <h4 class="prod-descripcion"><%= product.name %></h4>
+                                </p>
+                                <i class="fas fa-truck"></i>
                             </div>
-                        <% } %>
- 
+                        </a>
+                    </article>
+                <% } %>
+
             </section>
 
             <%- include('../partials/footer') %>

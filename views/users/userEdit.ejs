@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("../partials/head", {Solapa:"ZG - Registro"}) %>
+
+<body>
+
+    <%- include('../partials/headerRegister') %> 
+
+    <main>
+        <form method="POST" action="/users/edit?_method=PUT" enctype="multipart/form-data" class="form-user">
+
+            <h2>Editar Cuenta</h2>
+
+            <div>
+                <label for="fullName">Edite su Nombre y Apellido:</label>
+                <input
+                 id="fullName" 
+                 type="text" 
+                 name="fullName" 
+                 placeholder="Nombre Completo" 
+                 value="<%= locals.oldData ? oldData.fullName : user.fullName %>">
+
+                 <% if (locals.errors && errors.fullName) { %>
+                    <div class="text-error">
+                        <%= errors.fullName.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
+                    
+            <div>
+                <label for="email">Edite su Email:</i></label>
+                <input 
+                id="email" 
+                type="text" 
+                name="email" 
+                placeholder="Email"
+                value="<%= locals.oldData ? oldData.email : user.email %>">
+
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <%= errors.email.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+                    
+            <div>
+                <label for="email">Edite la imagen </i></label>
+                <input id="image" type="file" name="image" placeholder="Agregar imagen">
+
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-error">
+                        <%= errors.image.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+
+            <div>
+                <label for="contraseña">Edite su Contraseña</i></label>
+                <input 
+                id="contraseña" 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña">
+
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-error">
+                        <%= errors.password.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+
+            <div>
+                <label for="repetirContraseña">Repetir Contraseña</i></label>
+                <input 
+                id="repeatPassword" 
+                type="password" 
+                name="repeatPassword" 
+                placeholder="Repetir Contraseña">
+                
+                <% if (locals.errors && errors.repeatPassword) { %>
+                    <div class="text-error">
+                        <%= errors.repeatPassword.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+
+            <div>
+                <label for="address">Edite su Dirección</i></label>
+                <input 
+                id="address" 
+                type="text" 
+                name="address" 
+                placeholder="Dirección"
+                value="<%= locals.oldData ? oldData.address : user.address %>">
+            </div>
+            
+            
+            <div>
+                <label for="location">Edite su Localidad</i></label>
+                <input 
+                id="location" 
+                type="text" 
+                name="location" 
+                placeholder="Localidad"
+                value="<%= locals.oldData ? oldData.location : user.location %>">
+            </div>
+            
+            <div>
+                <label for="postalCode">Edite su Código postal</i></label>
+                <input 
+                id="postalCode" 
+                type="number" 
+                name="postalCode" 
+                placeholder="Código postal"
+                value="<%= locals.oldData ? oldData.postalCode : user.postalCode %>">
+            </div>
+            
+            <div>
+                <label for="phone">Edite su Teléfono</i></label>
+                <input 
+                id="phone" 
+                type="number" 
+                name="phone" 
+                placeholder="Teléfono"
+                value="<%= locals.oldData ? oldData.phone : user.phone %>">
+            </div>
+            <div>
+                <button type="submit">Actualizar datos</button>
+            </div>
+
+            <hr>
+        </form>
+        
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+    
+</body>
+
+</html>
