@@ -94,6 +94,7 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .xbox {
@@ -101,11 +102,12 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.duos .plays a, .duos .xbox a {
+/* .duos .plays a, .duos .xbox a {
     margin-top: 350px;
-}
+} */
 
 .duos img {
     width: 70px;
@@ -369,9 +371,9 @@ p.blanco {
         height: 436px;
     }
 
-    .duos .plays a, .duos .xbox a {
+    /* .duos .plays a, .duos .xbox a {
         margin-top: 190px;
-    }
+    } */
 
     main section article.prod-contenedor {
         box-shadow : 0px 0px 5px #e5e7e9;
@@ -400,12 +402,12 @@ p.blanco {
     }
 
     .duos {
-        height: 800px;
+        height: 100vh;
     }
 
-    .duos .plays a, .duos .xbox a {
+    /* .duos .plays a, .duos .xbox a {
         margin-top: 340px;
-    }
+    } */
 
     /*Estilos provisorios Header Desktop*/
 
