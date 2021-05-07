@@ -15,6 +15,20 @@ const productsController = {
         });
     },
 
+    playStation: (req, res) => {
+        db.Products.findAll()
+        .then(response => {
+            res.render('products/playStation', {playStation:response, toThousand})
+        })
+    },
+
+    xbox: (req, res) => {
+        db.Products.findAll()
+        .then(response => {
+            res.render('products/xbox', {xbox:response, toThousand})
+        })
+    },
+
     show: (req, res) => {
         res.render('products/productCart');
     },
