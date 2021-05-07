@@ -146,13 +146,21 @@ img.img-banner{
     font-weight: 300;
 }
 
-.img-producto {
-    width: 100%;
-}
-
 main section article {
     margin: 10px;
     max-width: 900px;
+    min-height: 450px;
+}
+
+main section article a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    min-height: 450px;
+}
+
+.img-producto {
+    width: 100%;
 }
 
 .producto {
@@ -161,6 +169,7 @@ main section article {
     padding: 15px;
     position: relative;
     display: flex;
+    align-self: flex-end;
     flex-grow: 1;
 }
 
@@ -381,6 +390,14 @@ p.blanco {
         width: 45%;
     }
 
+    main section article {
+        min-height: 475px;
+    }
+    
+    main section article a {
+        min-height: 475px;
+    }
+
     .producto {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
@@ -403,6 +420,14 @@ p.blanco {
 
     .duos {
         height: 100vh;
+    }
+
+    main section article {
+        min-height: 333px;
+    }
+    
+    main section article a {
+        min-height: 333px;
     }
 
     /* .duos .plays a, .duos .xbox a {
