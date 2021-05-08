@@ -7,6 +7,7 @@ const cookies = require('cookie-parser');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
+
 // middlewares
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -18,6 +19,7 @@ app.use(session({
 }));
 
 app.use(cookies());
+
 app.use(userLoggedMiddleware);
 
 app.set('view engine', 'ejs');
@@ -27,6 +29,7 @@ app.set('views', path.join(__dirname, '/views'));
 const mainRoutes = require('./routes/main');
 const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
+
 
 //Rutas index
 app.use('/', mainRoutes);

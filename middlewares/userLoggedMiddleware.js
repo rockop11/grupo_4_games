@@ -29,7 +29,7 @@ const { Op } = require("sequelize");
 const sequelize = db.sequelize;
 
 
-async function userLoggedMiddleware(req, res, next)   {
+async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
@@ -39,7 +39,7 @@ async function userLoggedMiddleware(req, res, next)   {
         }})
         
     if(userFromCookie){
-        req.session.userLogged = userFromCookie;
+        req.session.userLogged = userFromCookie;    
     }
 
     if (req.session.userLogged) {

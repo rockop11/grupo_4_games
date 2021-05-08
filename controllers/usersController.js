@@ -61,7 +61,7 @@ const usersController = {
                     
                     // res.send(userToLogin)
                     if(req.body.remember_user){
-                        res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 }); //probamos otra opcion 'email'
+                        res.cookie('userEmail', req.body.email, { maxAge: 5*60*1000 }); //probamos otra opcion 'email'
                     } 
     
                     return res.redirect('profile');
@@ -142,8 +142,8 @@ const usersController = {
     // },
 
     logout: (req, res) => {
-        res.clearCookie('userEmail'); //probamos otra opcion 'email'
         req.session.destroy();
+        res.clearCookie('userEmail'); //probamos otra opcion 'email'
         return res.redirect('/');
     }
 }
