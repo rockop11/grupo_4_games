@@ -20,7 +20,7 @@ const usersController = {
                 fullName: req.body.fullName,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 12),
-                repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                // repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
                 image: req.files[0].filename,
                 address: req.body.address,
                 location: req.body.location,
@@ -46,39 +46,41 @@ const usersController = {
     },
 
     loginProcess: async (req, res) => {
-        
+        // res.send(req.body)
         let userToLogin = await db.Users.findOne({
             where: {
                 email: {[Op.like]:req.body.email}
             }
             })
-                if(userToLogin) {
-                    let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                    if (isOkThePassword) {
-                        delete userToLogin.password;
-                        req.session.userLogged = userToLogin;
+        // res.send(userToLogin)
+            if(userToLogin) {
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if (isOkThePassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    
+                    // res.send(userToLogin)
+                    if(req.body.remember_user){
+                        res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 }); //probamos otra opcion 'email'
+                    }
+    
+                    return res.redirect('profile');
+                }else{//si no coincide la contraseña se renderiza la vista de login con error
+                    res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
+                        email:{
+                            msg:"Las credenciales son invalidas"
+                        }
+                    }
+                })}
         
-                        if(req.body.remember_user){
-                            res.cookie('userEmail', req.body.email, { maxAge: 15*24*60*60*1000 }); //probamos otra opcion 'email'
+            }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
+                    res.render("./users/login",{titulo:"Ingresá" , errors:{
+                        email:{
+                            msg:"El usuario no se encuentra en la base de datos"
                         }
-        
-                        return res.redirect('profile');
-                    }else{//si no coincide la contraseña se renderiza la vista de login con error
-                        res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
-                            email:{
-                                msg:"Las credenciales son invalidas"
-                            }
-                        }
-                    })}
-            
-                    }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
-                        res.render("./users/login",{titulo:"Ingresá" , errors:{
-                            email:{
-                                msg:"El usuario no se encuentra en la base de datos"
-                            }
-                        }
-                    })
-                }
+                    }
+                })
+            }
         },
 
     profile: (req, res) => {
@@ -94,6 +96,7 @@ const usersController = {
     },
 
     update: (req,res) =>{
+
                  db.Users.findByPk(req.session.userLogged.id)
                  .then(function(user){
                     user.update({
@@ -106,13 +109,13 @@ const usersController = {
                         location: req.body.location,
                         postalCode: req.body.postalCode,
                         phone: req.body.phone,
-                    })
-                }).then(function(user){
-                        req.session.destroy();
+                    }).then(user=>{
                         req.session.userLogged = user;
-                        res.redirect("/")
-                        // res.send(user);           
-                    })
+                        res.redirect("/users/profile")
+                    });
+                }).catch(function(response){
+                   // si no  encuentra el ususario  
+                })
     },
 
 

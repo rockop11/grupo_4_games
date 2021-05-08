@@ -8,8 +8,9 @@ const { Op } = require("sequelize");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
-
     index: (req,res) => {
+        // res.send(req.session);
+        // res.send(req.session);
         //Llamamos a la base de datos mostrando todos los productos con el findAll
         db.Products.findAll().then(response => {
             //devolvemos la vista con una promesa con todos los productos

@@ -32,15 +32,17 @@ const sequelize = db.sequelize;
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = db.Users.findOne({
-        where:{
-            email:{[Op.like]:emailInCookie}
-        }})
+    // res.send(req.session);
 
-    if(userFromCookie){
-        req.session.userLogged = userFromCookie;
-    }
+    // let emailInCookie = req.cookies.userEmail;
+    // let userFromCookie = db.Users.findOne({
+    //     where:{
+    //         email:{[Op.like]:emailInCookie}
+    //     }})
+
+    // if(userFromCookie){
+    //     req.session.userLogged = userFromCookie;
+    // }
 
     if (req.session.userLogged) {
         res.locals.isLogged = true;
