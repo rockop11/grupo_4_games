@@ -41,6 +41,7 @@ const usersController = {
 
 
     login: (req, res) => {
+        // res.send("Hola")
         return res.render('users/login');
     },
 
@@ -93,24 +94,25 @@ const usersController = {
     },
 
     update: (req,res) =>{
-                 db.Users.update({
-                    fullName: req.body.fullName,
-                    email: req.body.email,
-                    password: bcryptjs.hashSync(req.body.password, 12),
-                    repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
-                    image: req.files[0].filename,
-                    address: req.body.address,
-                    location: req.body.location,
-                    postalCode: req.body.postalCode,
-                    phone: req.body.phone,
-                },{
-                    where: {
-                        id: req.session.userLogged.id
-                    }
+                 db.Users.findByPk(req.session.userLogged.id)
+                 .then(function(user){
+                    user.update({
+                        fullName: req.body.fullName,
+                        email: req.body.email,
+                        password: bcryptjs.hashSync(req.body.password, 12),
+                        repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                        image: req.files[0].filename,
+                        address: req.body.address,
+                        location: req.body.location,
+                        postalCode: req.body.postalCode,
+                        phone: req.body.phone,
+                    })
                 }).then(function(user){
-                    // req.session.userLogged = user;
-                    res.redirect("/")
-                })
+                        req.session.destroy();
+                        req.session.userLogged = user;
+                        res.redirect("/")
+                        // res.send(user);           
+                    })
     },
 
 
