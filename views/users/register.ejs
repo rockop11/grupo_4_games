@@ -72,21 +72,6 @@
             </div>
 
             <div>
-                <label for="repetirContraseña">Repetir Contraseña</i></label>
-                <input 
-                id="repeatPassword" 
-                type="password" 
-                name="repeatPassword" 
-                placeholder="Repetir Contraseña">
-                
-                <% if (locals.errors && errors.repeatPassword) { %>
-                    <div class="text-error">
-                        <%= errors.repeatPassword.msg %> 
-                    </div>
-                    <% } %>
-            </div>
-
-            <div>
                 <label for="address">Dirección</i></label>
                 <input 
                 id="address" 
@@ -122,17 +107,17 @@
                 name="phone" 
                 placeholder="Teléfono">
             </div>
-            <div>
+            <div class="submit">
                 <button type="submit">Registrarme</button>
             </div>
 
-            <hr>
         </form>
-        <div class="form-user">
-            <div>
-                <h2>¿Ya tenés una cuenta?</h2>
-            </div>
-            <div>
+        <hr>
+        <div class="form-user ask">
+            
+            <h2>¿Ya tenés una cuenta?</h2>
+            
+            <div class="submit">
                 <a href="/users/login">
                     <button class="boton-nc" type="submit">Iniciar sesión</button>
                 </a>

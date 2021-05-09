@@ -219,7 +219,7 @@ article.prod-contenedor a {
 
 main .form-user {
     margin: auto;
-    max-width: 700px;
+    max-width: 450px;
     padding: 20px 0;
 }
 
@@ -228,24 +228,44 @@ main .form-user div {
 }
 
 main .form-user label {
-    display: block;
-    padding-bottom: 10px;
-    font-size: 15px;
-    font-style: italic;
+    display: none;
+    padding-bottom: 7px;
+    font-size: 13px;
+    /* font-style: italic; */
 }
 
 main .form-user input {
     width: 100%;
-    border: solid #44d62d 1px;
+    border-style: none;
+    border-bottom: solid #44d62d 1px;
     outline: none;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 25px 0 7px;
+    /* border-radius: 8px; */
 }
+
+main .form-user input::placeholder {
+    color: #323f48;
+    /* font-size: 1.5em; */
+  }
+
+main .form-user input::file-selector-button {
+    border: 1px solid #44d62d;
+    color: #323f48;
+    padding: .3em .5em;
+    border-radius: .2em;
+    background-color: #ffffff;
+    transition: 1s;
+  }
 
 .form-user h2,
 .form-user p {
     text-align: center;
-    padding-top: 15px;
+    padding: 10px 0;
+}
+
+.form-user h2 {
+    color: #323f48;
+    font-size: 22px;
 }
 
 .form-user button {
@@ -267,7 +287,6 @@ main .form-user input {
 .form-user a {
     display: block;
     margin: auto;
-    padding-top: 10px;
     text-decoration: none;
     color:  #44d62d;
     text-align: center;
@@ -790,6 +809,31 @@ h4.footer-copy-header {
         box-shadow: 0px 0px 10px rgb(78, 78, 78);
     }
 
+    main hr {
+        max-width: 900px;
+    }
+    
+    main .form-user {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: auto;
+        max-width: 900px;
+        /* padding: 20px 0; */
+    }
+
+    main .form-user div {
+        width: 45%;
+    }
+
+    main .form-user h2,
+    main .form-user .submit,
+    main .form-user hr {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .footer-flex {
         display: flex;
         justify-content: space-between;
