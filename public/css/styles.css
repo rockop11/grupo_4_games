@@ -243,9 +243,13 @@ main .form-user input {
     /* border-radius: 8px; */
 }
 
+main .form-user section {
+    width: 100%;
+    margin: auto;
+}
+
 main .form-user input::placeholder {
     color: #323f48;
-    /* font-size: 1.5em; */
   }
 
 main .form-user input::file-selector-button {
@@ -260,7 +264,11 @@ main .form-user input::file-selector-button {
 .form-user h2,
 .form-user p {
     text-align: center;
-    padding: 10px 0;
+    padding: 0 10px 10px;
+}
+
+.form-user p {
+    font-size: 14px;
 }
 
 .form-user h2 {
@@ -825,6 +833,7 @@ h4.footer-copy-header {
 
     main .form-user div {
         width: 45%;
+        margin: 10px;
     }
 
     main .form-user h2,

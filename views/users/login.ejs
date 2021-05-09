@@ -9,11 +9,11 @@
 
     <main>
         <form class="form-user" action="/users/login" method="POST">
-            <div>
+            <section>
                 <h2>Iniciar sesión</h2>
                 <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
                
-            </div>
+            </section>
             <div>
                 <label for="usuario">Ingrese el E-mail:</label>
                 <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%= locals.oldData ? oldData.email : null %>>
@@ -33,12 +33,14 @@
                     <input type="checkbox" name="remember_user">
                 </label>
             </div>
-            <div>
+            <div class="submit">
                 <button type="submit">Enviar</button>
                 <a href="#">¿Olvidó su contraseña?</a>
             </div>
 
         </form>
+
+        <hr>
 
         <div class="form-user">
             <h2>Nuevo usuario</h2>
