@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("../partials/head", {Solapa:"ZG - Login"}) %>   
+<%- include("../partials/head", {Solapa:"ZG - Login"}) %>
 
-<body>
+    <body>
 
-    <%- include('../partials/headerRegister') %> 
+        <%- include('../partials/headerRegister') %>
 
-    <main>
-        <form class="form-user" action="/users/login" method="POST">
-            <section>
-                <h2>Iniciar sesión</h2>
-                <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
-               
-            </section>
-            <div>
-                <label for="usuario">Ingrese el E-mail:</label>
-                <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%= locals.oldData ? oldData.email : null %>>
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-error">
-                        <%= errors.email.msg %>
+            <main>
+                <form class="form-user" action="/users/login" method="POST">
+                    <section>
+                        <h2>Iniciar sesión</h2>
+                        <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
+
+                    </section>
+                    <div>
+                        <label for="usuario">Ingrese el E-mail:</label>
+                        <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%=locals.oldData ?
+                            oldData.email : null %>>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-error">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
                     </div>
-                <% } %>
-            </div>
-            <div>
-                <label for="clave">Contraseña</label>
-                <input id="clave" type="password" name="password" placeholder="Contraseña">
-            </div>
-            <div>
-                <label>
-                    <p>Recordar mi usuario</p>
-                    <input type="checkbox" name="remember_user">
-                </label>
-            </div>
-            <div class="submit">
-                <button type="submit">Enviar</button>
-                <a href="#">¿Olvidó su contraseña?</a>
-            </div>
+                    <div>
+                        <label for="clave">Contraseña</label>
+                        <input id="clave" type="password" name="password" placeholder="Contraseña">
+                    </div>
+                    <div class="remember">
 
-        </form>
+                        <p>Recordar mi usuario</p>
+                        <input type="checkbox" name="remember_user">
 
-        <hr>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Enviar</button>
+                        <a href="#">¿Olvidó su contraseña?</a>
+                    </div>
 
-        <div class="form-user">
-            <h2>Nuevo usuario</h2>
-            <p>Crear una cuenta tiene muchos beneficios: Paga más rápido, puede guardar más de una dirección, seguimiento de pedidos y mucho más.</p>
-            <a href="/users/registro"><button class="boton-nc" type="submit">Crear una cuenta</button></a>
-        </div>
-        
-        
+                </form>
 
-    </main>
+                <hr>
 
-    <%- include('../partials/footer') %> 
+                <div class="form-user">
+                    <h2>Nuevo usuario</h2>
+                    <p>Crear una cuenta tiene muchos beneficios: Paga más rápido, puede guardar más de una dirección,
+                        seguimiento de pedidos y mucho más.</p>
+                    <a href="/users/registro"><button class="boton-nc" type="submit">Crear una cuenta</button></a>
+                </div>
 
 
-</body>
+
+            </main>
+
+            <%- include('../partials/footer') %>
+
+
+    </body>
 
 </html>

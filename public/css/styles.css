@@ -836,6 +836,11 @@ h4.footer-copy-header {
         margin: 10px;
     }
 
+    main .form-user div.remember {
+        margin-top: 20px;
+        width: 100%
+    }
+
     main .form-user h2,
     main .form-user .submit,
     main .form-user hr {
