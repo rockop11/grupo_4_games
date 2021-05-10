@@ -47,8 +47,7 @@ body {
 }
 
 .fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
-    padding: 0px 9px;
-    margin-top: 10px;
+    /* padding: 0px 9px; */
     font-size: 18px;
     color: #ffffff;
 } 
@@ -61,16 +60,31 @@ body {
 /*----------*/
 /*imagen de perfil*/
 
+a.profile-icon {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    align-items: center;
+}
+
+.d-flex a {
+    margin-right: 10px;
+}
+
 .img-profile {
-    margin-right: 15px;
-    width: 35px;
+    /* margin-right: 15px; */
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
     border-radius: 50%;
 }
 
-
-
 .fa-sign-out-alt {
-    margin-top: 10px;
     font-size: 18px;
     color: #ffffff;
 }
@@ -384,6 +398,11 @@ p.blanco {
         display: inline-block;
         padding: 5px 0;
         font-size: 15px;
+    }
+
+    .right-navbar {
+        display: flex;
+        align-items: center;
     }
 
     .duos {

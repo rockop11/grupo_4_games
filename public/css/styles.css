@@ -14,8 +14,8 @@ body {
 
 .main-header {
     background-color: #323f48;
-    padding: 5px 10px;
-    border-bottom: solid 1px #44d62d;
+    padding: 7px 10px;
+    border-bottom: solid 2px #44d62d;
 }
 
 div.top-header {
@@ -74,10 +74,16 @@ li:hover a.consolas, li:active a.consolas {
     display: block;
 }
 
-img.img-profile {
-    width: 30px;
-    border-radius: 50%;
-}
+.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
+    /* padding: 0px 9px; */
+    font-size: 18px;
+    color: #ffffff;
+} 
+
+/* .profile-icon {
+    display: block;
+    margin-right: 15px;
+} */
 
 div.inputs-header {
     display: flex;
@@ -117,11 +123,6 @@ div.inputs-header button[type="submit"] {
 
 ul.left-navbar li {
     margin-left: 10px;
-}
-
-ul.right-navbar {
-    justify-content: space-between;
-    margin-top: 8px;
 }
 
 /*Navbar que desaparece en 360 para que solo queden iconos*/
@@ -671,6 +672,9 @@ h4.footer-copy-header {
         color: #ffffff;
         display: inline-block;
         padding: 5px 0;
+    }
+    
+    .top-header a {
         font-size: 15px;
     }
     
@@ -682,8 +686,22 @@ h4.footer-copy-header {
         display: block;
     }
 
-    img.img-profile {
+    .main-navbar a.profile-icon {
+        padding: 0;
+    }
+
+    a.profile-icon {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .img-profile {
         width: 30px;
+        height: 30px;
+        object-fit: cover;
         border-radius: 50%;
     }
  
@@ -718,6 +736,7 @@ h4.footer-copy-header {
     .main-navbar a:hover {
         color: #44d62d;
     }
+    
     /*NavBar*/
 
     article.prod-contenedor {
@@ -760,8 +779,6 @@ h4.footer-copy-header {
     div.botones {
         padding-left: 15px;
     }
-
-
 }
 
 @media (min-width: 1024px)  {
@@ -806,8 +823,6 @@ h4.footer-copy-header {
     .navbar-desktop li:hover ul.desplegable {
         display: block;
     }
-    
-
 
     article.prod-contenedor {
         width: 22%;
