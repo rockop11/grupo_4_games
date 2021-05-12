@@ -301,9 +301,25 @@ main .form-user input::file-selector-button {
     text-align: center;
 }
 
-.text-error{
+/* .text-error{
     color: red;
+} */
+
+/*VALIDACIONES */
+.is-valid{
+    background-color: green;
 }
+
+.is-invalid {
+    background-color: red;
+}
+
+.alert-warning{
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
+  }
 
 /*------- ESTILOS PAG. PERFIL USUARIO -------*/
 

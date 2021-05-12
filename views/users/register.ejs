@@ -12,6 +12,7 @@
 
             <h2>Crear cuenta</h2>
 
+            <ul class="errores"></ul>
             <div>
                 <label for="fullName">Ingrese su Nombre y Apellido:</label>
                 <input
@@ -59,7 +60,7 @@
             <div>
                 <label for="contraseña">Ingrese su Contraseña</i></label>
                 <input 
-                id="contraseña" 
+                id="password" 
                 type="password" 
                 name="password" 
                 placeholder="Contraseña">
@@ -127,7 +128,7 @@
 
     <%- include('../partials/footer') %> 
 
-    
+    <script src="/js/validations.js"></script>
 </body>
 
 </html>
