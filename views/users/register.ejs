@@ -63,7 +63,9 @@
                 id="password" 
                 type="password" 
                 name="password" 
-                placeholder="Contraseña">
+                placeholder="Contraseña"
+                value="<%= locals.oldData ? oldData.password : null %>">
+                
 
                 <% if (locals.errors && errors.password) { %>
                     <div class="text-error">
@@ -78,7 +80,14 @@
                 id="address" 
                 type="text" 
                 name="address" 
-                placeholder="Dirección">
+                placeholder="Dirección"
+                value="<%= locals.oldData ? oldData.address : null %>">
+
+                <% if (locals.errors && errors.address) { %>
+                    <div class="text-error">
+                        <%= errors.address.msg %> 
+                    </div>
+                <% } %>
             </div>
             
             
@@ -88,7 +97,14 @@
                 id="location" 
                 type="text" 
                 name="location" 
-                placeholder="Localidad">
+                placeholder="Localidad"
+                value="<%= locals.oldData ? oldData.location : null %>">
+
+                <% if (locals.errors && errors.location) { %>
+                    <div class="text-error">
+                        <%= errors.location.msg %> 
+                    </div>
+                <% } %>
             </div>
             
             <div>
@@ -97,7 +113,14 @@
                 id="postalCode" 
                 type="number" 
                 name="postalCode" 
-                placeholder="Código postal">
+                placeholder="Código postal"
+                value="<%= locals.oldData ? oldData.postalCode : null %>">
+
+                <% if (locals.errors && errors.postalCode) { %>
+                    <div class="text-error">
+                        <%= errors.postalCode.msg %> 
+                    </div>
+                <% } %>
             </div>
             
             <div>
@@ -106,7 +129,14 @@
                 id="phone" 
                 type="number" 
                 name="phone" 
-                placeholder="Teléfono">
+                placeholder="Teléfono"
+                value="<%= locals.oldData ? oldData.phone : null %>">
+
+                <% if (locals.errors && errors.phone) { %>
+                    <div class="text-error">
+                        <%= errors.phone.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="submit">
                 <button type="submit">Registrarme</button>

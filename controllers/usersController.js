@@ -11,13 +11,17 @@ const usersController = {
         res.render('users/register');
     },
 
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
         const resultValidation = validationResult(req);
 
-      
-
-        if (!resultValidation.errors.length) {
-
+        let usuarioRepetido = await db.Users.findOne({
+            where: {
+                email: { [Op.like]: req.body.email }
+            }
+        })
+        
+        if (!resultValidation.errors.length && !usuarioRepetido) {
+            
             db.Users.create({
                 fullName: req.body.fullName,
                 email: req.body.email,
@@ -28,34 +32,27 @@ const usersController = {
                 location: req.body.location,
                 postalCode: req.body.postalCode,
                 phone: req.body.phone,
-            }).then(function (user) {
+            }).then(function(user) {
                 req.session.userLogged = user;
                 res.redirect("/")
             })
-        }
-        else {
-            return res.render('users/register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        }
-
-        let usuarioRepetido =  db.Users.findOne({
-            where: {
-                email: { [Op.like]: req.body.email }
+        } else {
+            if (usuarioRepetido) {
+                return res.render('users/register', {
+                    errors: {
+                        email: {
+                            msg: 'Este email ya está registrado'
+                        }
+                    },
+                    oldData: req.body
+            })} else {
+                
+                return res.render('users/register', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
             }
-        })
-
-		if (usuarioRepetido) {
-			return res.render('users/register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
+        }
     },
 
 
