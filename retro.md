@@ -104,3 +104,21 @@ No pedir permiso para hacer ajustes en el código.
 
 ### Dejar de Hacer.
 Consideramos que venimos bastasnte bien y que por el momento no hay nada que deberiamos dejar de hacer
+
+
+### Retrospectiva del Sprint 6
+
+### Comenzar a hacer.
+Pensar alternativas mas recientes (ES6) para escribir código.
+
+### Hacer más.
+Ajustar estilos a medida que avanzamos con el proyecto.
+
+### Continuar Haciendo
+Dividir el proyectro entre los integrantes y seguir trabajando individualmente a excepción de algún inconveniente que sea necesario realizar en equipo.
+
+### Hacer Menos
+Desesperarnos cuando las cosas no nos salen.
+
+### Dejar de Hacer.
+Dejar de postergar las reuniones y tratar de que no pase mucho tiempo entre reunión y reunión.
