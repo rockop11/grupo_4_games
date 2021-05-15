@@ -14,7 +14,9 @@ const usersController = {
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
 
-        if (!resultValidation.length) {
+      
+
+        if (!resultValidation.errors.length) {
 
             db.Users.create({
                 fullName: req.body.fullName,
@@ -37,6 +39,23 @@ const usersController = {
                 oldData: req.body
             });
         }
+
+        let usuarioRepetido =  db.Users.findOne({
+            where: {
+                email: { [Op.like]: req.body.email }
+            }
+        })
+
+		if (usuarioRepetido) {
+			return res.render('users/register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
     },
 
 
