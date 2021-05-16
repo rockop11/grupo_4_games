@@ -9,7 +9,8 @@ const productsValidations = [
     .notEmpty().withMessage('Debe ingresar una descripción').bail()
     .isLength({min: 15}).withMessage('La descripción es demasiado corta'),
     check('price')
-    .notEmpty().withMessage('Debe ingresar un monto'),
+    .notEmpty().withMessage('Debe ingresar un monto').bail()
+    .isNumeric().withMessage('Debe ingresar un numero')
     // body('image').custom((value, { req })=>{
 	// 	let file = req.file;
 	// 	let acceptedExtensions = ['.jpg','.png','.gif'];

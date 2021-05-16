@@ -1,8 +1,8 @@
 const path = require('path');
-const fs = require('fs');
-const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
+
+const { validationResult } = require('express-validator');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -52,12 +52,16 @@ const productsController = {
         res.render('products/productCreate',{productType, category, console});
     },
 
-    store: async function (req,res) {
+    store: function (req,res) {
         const resultProductsValidation = validationResult(req);
 
-        if(!resultProductsValidation.errors.lenght){
+        let productType = db.ProductType.findAll();
+        let category = db.Category.findAll();
+        let console = db.Console.findAll();
 
-            await db.Products.create({
+        if(!resultProductsValidation.errors.length){
+
+            db.Products.create({
                 name: req.body.name,
                 description: req.body.description,
                 image: req.files[0].filename,
@@ -66,17 +70,19 @@ const productsController = {
                 product_type_id: req.body.product_type_id,
                 category_id: req.body.category_id,
                 console_id: req.body.console_id,
+            }).then(function(product){
+                res.redirect('/products',{product});
             })
-    
-            res.redirect('/products');
             
         } else {
             return res.render('products/productCreate', {
+                productType, 
+                category, 
+                console,
                 errors: resultProductsValidation.mapped(),
                 oldData: req.body
             });
         }
-         
     },
 
     //VISTA DE EDITAR PRODUCTO

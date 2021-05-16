@@ -14,7 +14,12 @@
 
             <div>
                 <label for="name">Nombre de producto:</label>
-                <input id="nombre" type="text" name="name" placeholder="Nombre Producto"value="<%= locals.oldData ? oldData.name : null %>">
+                <input 
+                id="nombre" 
+                type="text" 
+                name="name" 
+                placeholder="Nombre Producto"
+                value="<%= locals.oldData ? oldData.name : null %>">
 
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-error">
@@ -73,7 +78,7 @@
 
             <div>
                 <label>Categoria</label>
-                <select name="category_id" id="" required>
+                <select name="category_id" id="">
                     <% category.forEach(category => { %>
                     <option value="<%= category.id %>"><%= category.name %></option>
                     <% }); %>
@@ -82,7 +87,7 @@
 
             <div>
                 <label>Consola:</label>
-                <select name="console_id" id="" required>
+                <select name="console_id" id="">
                     <% console.forEach(console => { %>
                     <option value="<%= console.id %>"><%= console.name %></option>
                     <% }); %>
@@ -91,7 +96,7 @@
 
             <div>
                 <label>Tipo de producto</label>
-                <select name="product_type_id" id="" required>
+                <select name="product_type_id" id="">
                     <% productType.forEach(productType => { %>
                     <option value="<%= productType.id %>"><%= productType.name %></option>
                     <% }); %>
