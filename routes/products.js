@@ -4,17 +4,8 @@ const router = express.Router();
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
 
-// Multer
-const storage = multer.diskStorage({ 
-    destination: function (req, file, cb) { 
-      cb(null, path.join(__dirname, '../public/img/fotosMulter')); 
-    }, 
-    filename: function (req, file, cb) { 
-       cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);  
-    } 
-  })
+const uploadProducts = require('../middlewares/multerProductsMd');
 
-  var upload = multer({ storage: storage });
 
 // INDEX
 router.get('/', productsController.index)
@@ -31,11 +22,11 @@ router.get('/detail/:id', productsController.detail);
 
 // CREACION DEL PRODUCTO
 router.get('/create', productsController.create);
-router.post('/create', upload.any(), productsController.store);
+router.post('/create', uploadProducts.any(), productsController.store);
 
 // EDICION DEL PRODUCTO
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.any(), productsController.update);
+router.put('/edit/:id', uploadProducts.any(), productsController.update);
 
 // ELIMINACION DEL PRODUCTO
 router.delete('/delete/:id', productsController.delete),
