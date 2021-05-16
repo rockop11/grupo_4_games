@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
@@ -52,13 +53,11 @@ const productsController = {
     },
 
     store: async function (req,res) {
-        // let image
-        // if(!req.file){
-        //     image="default-image.jpg";
-        // }else{
-        //     image=req.files[0].filename;
-        // };
-        await db.Products.create({
+        const resultProductsValidation = validationResult(req);
+
+        if(!resultProductsValidation.errors.lenght){
+
+            await db.Products.create({
                 name: req.body.name,
                 description: req.body.description,
                 image: req.files[0].filename,
@@ -67,9 +66,17 @@ const productsController = {
                 product_type_id: req.body.product_type_id,
                 category_id: req.body.category_id,
                 console_id: req.body.console_id,
-        })
-
-        res.redirect('/products');
+            })
+    
+            res.redirect('/products');
+            
+        } else {
+            return res.render('products/productCreate', {
+                errors: resultProductsValidation.mapped(),
+                oldData: req.body
+            });
+        }
+         
     },
 
     //VISTA DE EDITAR PRODUCTO

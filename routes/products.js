@@ -5,6 +5,7 @@ const multer = require('multer');
 const productsController = require('../controllers/productsController');
 
 const uploadProducts = require('../middlewares/multerProductsMd');
+const validationProducts = require('../middlewares/validateProductsMd');
 
 
 // INDEX
@@ -22,11 +23,11 @@ router.get('/detail/:id', productsController.detail);
 
 // CREACION DEL PRODUCTO
 router.get('/create', productsController.create);
-router.post('/create', uploadProducts.any(), productsController.store);
+router.post('/create', uploadProducts.any(), validationProducts, productsController.store);
 
 // EDICION DEL PRODUCTO
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', uploadProducts.any(), productsController.update);
+router.put('/edit/:id', uploadProducts.any(), validationProducts, productsController.update);
 
 // ELIMINACION DEL PRODUCTO
 router.delete('/delete/:id', productsController.delete),

@@ -10,33 +10,65 @@
     <main>
         <form action="" method="POST" enctype="multipart/form-data" class="form-user">
 
-            <h2>AGREGAR PRODUCTO</h2>
+            <h2>Agregar Producto</h2>
 
             <div>
                 <label for="name">Nombre de producto:</label>
-                <input id="nombre" type="text" name="name" placeholder="Nombre Producto">
+                <input id="nombre" type="text" name="name" placeholder="Nombre Producto"value="<%= locals.oldData ? oldData.name : null %>">
+
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
             </div>
 
             <div>
                 <label for="description">Descripción:</label>
-                <input id="description" type="text" name="description" placeholder="Descripción">
+                <input id="description" type="text" name="description" placeholder="Descripción" value="<%= locals.oldData ? oldData.description : null %>">
+
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-error">
+                        <%= errors.description.msg %> 
+                    </div>
+                <% } %>
             </div>
             
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="image" accept=".jpg, .png" multiple>
+                <input type="file" name="image" accept=".jpg, .png" multiple >
+
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-error">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>
             </div>
             
 
             <div>
                 <label for="price">Precio:</label>
-                <input id="price" type="number" name="price" placeholder="Precio">
+                <input id="price" type="number" name="price" placeholder="Precio" value="<%= locals.oldData ? oldData.price : null %>">
+
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-error">
+                        <%= errors.price.msg %> 
+                    </div>
+                <% } %>
+
             </div>
 
             <div>
                 <label for="discount">Descuento:</label>
-                <input id="descuento" type="number" name="discount" placeholder="Descuento">
+                <input id="descuento" type="number" name="discount" placeholder="Descuento" value="<%= locals.oldData ? oldData.discount : null %>">
+
+                <% if (locals.errors && errors.discount) { %>
+                    <div class="text-error">
+                        <%= errors.discount.msg %> 
+                    </div>
+                <% } %>
+
             </div>
 
             <div>
