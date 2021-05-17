@@ -12,6 +12,7 @@
 
             <h2>Agregar Producto</h2>
 
+            <ul class="errores"></ul>
             <div>
                 <label for="name">Nombre de producto:</label>
                 <input 
@@ -61,7 +62,6 @@
                         <%= errors.price.msg %> 
                     </div>
                 <% } %>
-
             </div>
 
             <div>
@@ -76,32 +76,7 @@
 
             </div>
 
-            <div>
-                <label>Categoria</label>
-                <select name="category_id" id="">
-                    <% category.forEach(category => { %>
-                    <option value="<%= category.id %>"><%= category.name %></option>
-                    <% }); %>
-                </select>
-            </div>
-
-            <div>
-                <label>Consola:</label>
-                <select name="console_id" id="">
-                    <% console.forEach(console => { %>
-                    <option value="<%= console.id %>"><%= console.name %></option>
-                    <% }); %>
-                </select>
-            </div>
-
-            <div>
-                <label>Tipo de producto</label>
-                <select name="product_type_id" id="">
-                    <% productType.forEach(productType => { %>
-                    <option value="<%= productType.id %>"><%= productType.name %></option>
-                    <% }); %>
-                </select>
-            </div>
+            
 
             <div>
                 <button type="submit">Agregar Producto</button>
@@ -112,7 +87,7 @@
 
     <%- include('../partials/footer') %> 
 
-    
+    <script src="/js/productsValidations.js"></script>
 </body>
 
 </html>

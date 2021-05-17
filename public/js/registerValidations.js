@@ -1,7 +1,5 @@
 window.onload = function(){
     let formulario = document.querySelector('form');
-    
-    
 
     formulario.addEventListener('submit', (e) => {
 
@@ -10,7 +8,10 @@ window.onload = function(){
         let nombre = document.getElementById("fullName");
         let email = document.querySelector("#email");
         let password = document.querySelector("#password");
-        let address = document.querySelector('#address');
+        let address = document.querySelector("#address");
+        let location = document.querySelector("#location");
+        let postalCode = document.querySelector("#postalCode");
+        let phone = document.querySelector("#phone");
         
 
         if(nombre.value == '') {
