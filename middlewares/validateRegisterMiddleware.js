@@ -9,7 +9,9 @@ const validations = [
     check('email')
     .notEmpty().withMessage('Tienes que escribir un email').bail()
     .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    check('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    check('password')
+	.notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+	.isLength({min:8}).withMessage('La contraseña debe tener un minimo de 8 caracteres'),
 	check('address').notEmpty().withMessage('Tienes que completar este campo'),
 	check('location').notEmpty().withMessage('Tienes que completar este campo'),
 	check('postalCode').notEmpty().withMessage('Tienes que completar este campo'),
