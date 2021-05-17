@@ -76,7 +76,32 @@
 
             </div>
 
-            
+            <div>
+                <label>Categoria</label>
+                <select name="category_id" id="">
+                    <% category.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <div>
+                <label>Consola:</label>
+                <select name="console_id" id="">
+                    <% console.forEach(console => { %>
+                    <option value="<%= console.id %>"><%= console.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <div>
+                <label>Tipo de producto</label>
+                <select name="product_type_id" id="">
+                    <% productType.forEach(productType => { %>
+                    <option value="<%= productType.id %>"><%= productType.name %></option>
+                    <% }); %>
+                </select>
+            </div>
 
             <div>
                 <button type="submit">Agregar Producto</button>
