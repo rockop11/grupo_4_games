@@ -13,7 +13,7 @@ window.onload = function(){
 
 
         if(nombre.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Nombre" está vacío');
             nombre.classList.add('is-invalid');
         } else {
             nombre.classList.add('is-valid');
@@ -22,7 +22,7 @@ window.onload = function(){
         }
 
         if(description.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Descripción" está vacío');
             description.classList.add('is-invalid');
         } else {
             description.classList.add('is-valid');
@@ -31,21 +31,12 @@ window.onload = function(){
         }
 
         if(price.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Precio" está vacío');
             price.classList.add('is-invalid');
         } else {
             price.classList.add('is-valid');
             price.classList.remove('is-invalid')
             formulario.descuento.focus();
-        }
-
-        if(descuento.value == '') {
-            errors.push('El campo está vacío');
-            descuento.classList.add('is-invalid');
-        } else {
-            descuento.classList.add('is-valid');
-            descuento.classList.remove('is-invalid')
-            formulario.nombre.focus();
         }
 
         if(errors.length > 0) {
