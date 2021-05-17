@@ -15,69 +15,69 @@ window.onload = function(){
         
 
         if(nombre.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Nombre" está vacío');
             nombre.classList.add('is-invalid');
         } else {
             nombre.classList.add('is-valid');
-            nombre.classList.remove('is-invalid')
+            nombre.classList.remove('is-invalid');
             formulario.email.focus();
         }
 
         if(email.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "E-mail" está vacío');
             email.classList.add('is-invalid');
         } else {
             email.classList.add('is-valid');
-            email.classList.remove('is-invalid')
+            email.classList.remove('is-invalid');
             formulario.password.focus();
         }
 
         if(password.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Contraseña" está vacío');
             password.classList.add('is-invalid');
         } else {
             password.classList.add('is-valid');
-            password.classList.remove('is-invalid')
+            password.classList.remove('is-invalid');
             formulario.address.focus();
         }
 
         if(address.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Direccion" está vacío');
             address.classList.add('is-invalid');
         } else {
             address.classList.add('is-valid');
-            address.classList.remove('is-invalid')
+            address.classList.remove('is-invalid');
             formulario.location.focus();
         }
 
         if(location.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Localidad" está vacío');
             location.classList.add('is-invalid');
         } else {
             location.classList.add('is-valid');
-            location.classList.remove('is-invalid')
+            location.classList.remove('is-invalid');
             formulario.postalCode.focus();
         }
 
         if(postalCode.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Codigo Postal" está vacío');
             postalCode.classList.add('is-invalid');
         } else {
             postalCode.classList.add('is-valid');
-            postalCode.classList.remove('is-invalid')
+            postalCode.classList.remove('is-invalid');
             formulario.phone.focus();
         }
 
         if(phone.value == '') {
-            errors.push('El campo está vacío');
+            errors.push('El campo "Telefono" está vacío');
             phone.classList.add('is-invalid');
         } else {
             phone.classList.add('is-valid');
-            phone.classList.remove('is-invalid')
+            phone.classList.remove('is-invalid');
             formulario.nombre.focus();
         }
 
-        
+
         if(errors.length > 0) {
             e.preventDefault();
             let ulErrors = document.querySelector('.errores');

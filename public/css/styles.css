@@ -309,21 +309,31 @@ main .form-user input::file-selector-button {
     color: red;
 } */
 
-/*VALIDACIONES */
+/*VALIDACIONES FRONT REGISTRO USUARIO*/
 .is-valid{
-    background-color: green;
+    border-bottom: 1px solid #44d62d !important;
 }
 
 .is-invalid {
-    background-color: red;
+    border-bottom: 1px solid red !important;
 }
 
 .alert-warning{
-    color:#842029;
-    background-color: #F8D7DA;
+    color:#b10615;
     text-align: center;
     border-radius: 10px;
-  }
+}
+
+ul.errores {
+    display: block;
+    margin: auto;
+}
+
+ul.errores li {
+    list-style: none;
+    padding: 5px;
+    font-size: 15px;
+}
 
 /*------- ESTILOS PAG. PERFIL USUARIO -------*/
 
