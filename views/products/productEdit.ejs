@@ -14,29 +14,62 @@
 
             <div>
                 <label for="name">Nombre</label>
-                <input id="name" type="text" name="name" value="<%= old.name %>">
+                <input id="name" type="text" name="name" value="<%= old.name %>"
+                value="<%= locals.oldData ? oldData.name : null %>">
+
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
+
             </div>
 
             <div>
                 <label for="description">Descripcion</label>
-                <input id="description" type="text" name="description" value="<%= old.description %>">
+                <input id="description" type="text" name="description" value="<%= old.description %>"
+                value="<%= locals.oldData ? oldData.description : null %>">
+
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-error">
+                        <%= errors.description.msg %> 
+                    </div>
+                <% } %>
+
             </div>
             
             
             <div>
                 <label>Agregar imagenes del producto:</label>
-                <input type="file" name="image" accept=".jpg, .png" multiple>
+                <input type="file" name="image" accept=".jpg, .png" multiple
+                value="<%= locals.oldData ? oldData.image : null %>">
+
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-error">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>
+
             </div>
             
 
             <div>
                 <label for="price">Precio</label>
-                <input id="price" type="text" name="price" value="$<%= old.price %>">
+                <input id="price" type="text" name="price" value="$<%= old.price %>"
+                value="<%= locals.oldData ? oldData.price : null %>">
+
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-error">
+                        <%= errors.price.msg %> 
+                    </div>
+                <% } %>
+
             </div>
             
             <div>
                 <label for="discount">Descuento</label>
-                <input id="discount" type="number" name="discount" placeholder="descuento" value="<%= old.discount %>">
+                <input id="discount" type="number" name="discount" placeholder="descuento" value="<%= old.discount %>"
+                value="<%= locals.oldData ? oldData.discount : null %>">
             </div>
 
             <div>
