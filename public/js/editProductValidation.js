@@ -2,14 +2,11 @@ window.onload = function(){
     let formulario = document.querySelector('.form-user');
 
     formulario.addEventListener('submit', (e) => {
-        
         let errors = [];
 
-        let nombre = document.getElementById("nombre");
+        let nombre = document.getElementById("name");
         let description = document.querySelector("#description");
         let price = document.querySelector("#price");
-
-
 
         if(nombre.value == '') {
             errors.push('El campo "Nombre" está vacío');

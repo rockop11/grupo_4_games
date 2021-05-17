@@ -14,7 +14,7 @@
 
             <div>
                 <label for="name">Nombre</label>
-                <input id="name" type="text" name="name" value="<%= old.name %>"
+                <input id="name" type="text" name="name" placeholder="Nombre Producto" value="<%= old.name %>"
                 value="<%= locals.oldData ? oldData.name : null %>">
 
                 <% if (locals.errors && errors.name) { %>
@@ -27,7 +27,9 @@
 
             <div>
                 <label for="description">Descripcion</label>
-                <input id="description" type="text" name="description" value="<%= old.description %>"
+                <input id="description" type="text" name="description"
+                placeholder="Descripción" 
+                value="<%= old.description %>"
                 value="<%= locals.oldData ? oldData.description : null %>">
 
                 <% if (locals.errors && errors.description) { %>
@@ -56,7 +58,8 @@
             <div>
                 <label for="price">Precio</label>
                 <input id="price" type="text" name="price" value="$<%= old.price %>"
-                value="<%= locals.oldData ? oldData.price : null %>">
+                value="<%= locals.oldData ? oldData.price : null %>"
+                placeholder="Precio">
 
                 <% if (locals.errors && errors.price) { %>
                     <div class="text-error">
@@ -68,7 +71,7 @@
             
             <div>
                 <label for="discount">Descuento</label>
-                <input id="discount" type="number" name="discount" placeholder="descuento" value="<%= old.discount %>"
+                <input id="discount" type="number" name="discount" placeholder="Descuento" value="<%= old.discount %>"
                 value="<%= locals.oldData ? oldData.discount : null %>">
             </div>
 
@@ -98,7 +101,7 @@
                     <% }); %>
                 </select>
             </div>
-
+            <ul class="errores"></ul>
             <div>
                 <button type="submit">Actualizar Producto</button>
             </div>
@@ -107,6 +110,7 @@
     </main>
 
     <%- include('../partials/footer') %> 
+    <script src="/js/editProductValidation.js"></script>
 
     
 </body>
