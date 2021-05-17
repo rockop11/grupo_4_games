@@ -19,20 +19,22 @@
                         <label for="usuario">Ingrese el E-mail:</label>
                         <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%=locals.oldData ?
                             oldData.email : null %>>
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="text-error">
-                                <%= errors.email.msg %>
-                            </div>
-                            <% } %>
                     </div>
-
+                    
+                    
                     <div>
                         <label for="clave">Contraseña</label>
                         <input id="clave" type="password" name="password" placeholder="Contraseña">
                     </div>
-
+                    
                     <div class="remember">
-
+                        
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errores alert-warning">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                        
                         <p>Recordar mi usuario</p>
                         <input type="checkbox" name="remember_user">
 
