@@ -47,7 +47,7 @@ window.onload = function(){
                 ulErrors.innerHTML += `<li >  ${errors[i]} </li>`;
             };
         }else{
-            alert('La validación fué exitosa')
+            // alert('La validación fué exitosa')
             formulario.submit();
         }
     })
