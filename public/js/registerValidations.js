@@ -41,9 +41,43 @@ window.onload = function(){
             formulario.address.focus();
         }
 
+        if(address.value == '') {
+            errors.push('El campo está vacío');
+            address.classList.add('is-invalid');
+        } else {
+            address.classList.add('is-valid');
+            address.classList.remove('is-invalid')
+            formulario.location.focus();
+        }
+
+        if(location.value == '') {
+            errors.push('El campo está vacío');
+            location.classList.add('is-invalid');
+        } else {
+            location.classList.add('is-valid');
+            location.classList.remove('is-invalid')
+            formulario.postalCode.focus();
+        }
+
+        if(postalCode.value == '') {
+            errors.push('El campo está vacío');
+            postalCode.classList.add('is-invalid');
+        } else {
+            postalCode.classList.add('is-valid');
+            postalCode.classList.remove('is-invalid')
+            formulario.phone.focus();
+        }
+
+        if(phone.value == '') {
+            errors.push('El campo está vacío');
+            phone.classList.add('is-invalid');
+        } else {
+            phone.classList.add('is-valid');
+            phone.classList.remove('is-invalid')
+            formulario.nombre.focus();
+        }
+
         
-    
-    
         if(errors.length > 0) {
             e.preventDefault();
             let ulErrors = document.querySelector('.errores');
