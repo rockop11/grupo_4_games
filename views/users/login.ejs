@@ -14,6 +14,7 @@
                         <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
 
                     </section>
+
                     <div>
                         <label for="usuario">Ingrese el E-mail:</label>
                         <input id="usuario" type="text" name="email" placeholder="E-mail" value=<%=locals.oldData ?
@@ -24,16 +25,21 @@
                             </div>
                             <% } %>
                     </div>
+
                     <div>
                         <label for="clave">Contraseña</label>
                         <input id="clave" type="password" name="password" placeholder="Contraseña">
                     </div>
+
                     <div class="remember">
 
                         <p>Recordar mi usuario</p>
                         <input type="checkbox" name="remember_user">
 
                     </div>
+
+                    <ul class="errores"></ul>
+                    
                     <div class="submit">
                         <button type="submit">Enviar</button>
                         <a href="#">¿Olvidó su contraseña?</a>
@@ -56,6 +62,7 @@
 
             <%- include('../partials/footer') %>
 
+            <script src="/js/loginValidations.js"></script>
 
     </body>
 

@@ -4,13 +4,14 @@ const usersController = require('../controllers/usersController');
 
 const upload = require ('../middlewares/multerMiddleware');
 const validations = require ('../middlewares/validateRegisterMiddleware');
+const loginValidations = require ('../middlewares/validateLoginMd');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
 // vista del login
 router.get('/login', guestMiddleware, usersController.login);
 // Procesar el login
-router.post('/login', usersController.loginProcess);
+router.post('/login',loginValidations, usersController.loginProcess);
 
 // vista del registro
 router.get('/registro', guestMiddleware, usersController.register);
