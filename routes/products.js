@@ -13,7 +13,7 @@ const editProductsValidation = require('../middlewares/validateEditProductsMd');
 router.get('/', productsController.index)
 
 //ESTO ES LO QUE VA DESPUES DE /PRODUCTOS!!!!!
-router.get('/cart', productsController.show);
+router.get('/cart/:id', productsController.show);
 
 //Vistas menu Duos
 router.get('/playStation', productsController.playStation);
