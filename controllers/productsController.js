@@ -59,11 +59,7 @@ const productsController = {
 
     store: function (req,res) {
         const resultProductsValidation = validationResult(req);
-
-        let productType = db.ProductType.findAll();
-        let category = db.Category.findAll();
-        let console = db.Console.findAll();
-
+        
         if(!resultProductsValidation.errors.length){
 
             db.Products.create({
@@ -75,15 +71,12 @@ const productsController = {
                 product_type_id: req.body.product_type_id,
                 category_id: req.body.category_id,
                 console_id: req.body.console_id,
-            }).then(function(product){
-                res.redirect('/products',{product});
+            }).then(function(){
+                res.redirect('/products');
             })
             
         } else {
             return res.render('products/productCreate', {
-                productType, 
-                category, 
-                console,
                 errors: resultProductsValidation.mapped(),
                 oldData: req.body
             });
