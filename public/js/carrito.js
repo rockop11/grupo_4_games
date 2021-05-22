@@ -38,5 +38,4 @@ function borrarItem(id){
     })
     localStorage.setItem("carrito", JSON.stringify(carrito))
     location.reload();
-    
 }
