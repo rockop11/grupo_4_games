@@ -23,6 +23,12 @@
             <h2 class="precio">$<%= toThousand(finalPrice) %> </h2>
             <p class="descuento"><%= productDetail.discount + " %OFF"%> </p>
             <p class="color">12 cuotas s/interés</p>
+            <div class="cant">
+                <label class="count">Cantidad</label>
+                <button class="menos" onclick="contadormenos()">-</button>
+                <input id="count" type="text" style="text-align: center; width: 30px;" >
+                <button class="menos" onclick="contadormas()">+</button>
+            </div>
         </div>
         
         <!-- SI ESTA LOGEADO SE MUESTA COMPRAR Y BORRAR -->
@@ -47,6 +53,7 @@
     <%- include('../partials/footer') %> 
 
     <script src="/js/agregarProducto.js"></script>
+    <script src="/js/contadorProds.js"></script>
 </body>
 
 </html>

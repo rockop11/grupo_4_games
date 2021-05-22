@@ -38,10 +38,11 @@
                     </a>
                 </li>
                 <li><a class="profile-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></li>
-                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="/products/cart"><i class="fas fa-shopping-basket"></i></a></li>
             <% } else { %>
                 <li><a href="/users/registro"><i class="far fa-id-card" title="registrarse"></i></a></li>
                 <li><a href="/users/login"><i class="fas fa-sign-in-alt" title="loguearse"></i></a></li>
+                <li><a href="/products/cart"><i class="fas fa-shopping-basket"></i></a></li>
             <% } %>
 
             <form class="form" action='/search' method="GET">

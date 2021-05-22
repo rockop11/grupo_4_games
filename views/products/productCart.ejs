@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+  <%- include("../partials/head", {Solapa:"ZG - Carrito de Compras"}) %>
 
-    <%- include("../partials/head", {Solapa:"ZG - Carrito de Compras"}) %>
-
-<body>
-
-    <%- include('../partials/header') %> 
-
-    
+  <body>
+    <%- include('../partials/header') %>
 
     <main class="contenedor-cart">
-        <h4>Carrito de compras</h4>
+      <h4>Carrito de compras</h4>
 
-        <div id="vacio" class="vacio">
-        
+      <div id="vacio" class="vacio"></div>
+
+      <section class="sumario-cart">
+        <h4>Resumen de compra</h4>
+        <div class="descuento-cart">
+          <p><%=productCart.discount %></p>
         </div>
-        
+
+        <div class="totales">
+          <div class="titulos">
+            <h5>SUBTOTAL:</h5>
+            <h3>TOTAL:</h3>
+          </div>
+          <div class="cantidades">
+            <h5>$0</h5>
+            <h3>${producto.precio}</h3>
+          </div>
+        </div>
+        <form action="#" method="GET">
+          <button type="submit">Iniciar Pago</button>
+        </form>
+
+        <a href="/products"
+          ><button type="submit">Agregar más productos</button></a
+        >
+      </section>
     </main>
-    
-    <%- include('../partials/footer') %> 
+
+    <%- include('../partials/footer') %>
 
     <script src="/js/carrito.js"></script>
-</body>
-
+  </body>
 </html>
