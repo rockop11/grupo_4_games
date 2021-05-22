@@ -30,7 +30,7 @@ const productsController = {
         })
     },
 
-    show: (req, res) => {
+    cart: (req, res) => {
         db.Products.findByPk(req.params.id)
         .then(response => {
          res.render('products/productCart', {productCart:response, toThousand});
