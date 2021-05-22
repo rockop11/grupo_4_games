@@ -15,7 +15,7 @@ router.get('/', productsController.index)
 //ESTO ES LO QUE VA DESPUES DE /PRODUCTOS!!!!!
 
 //Ruta de Carrito de Compras
-router.get('/cart/:id', productsController.cart);
+router.get('/cart', productsController.cart);
 
 //Vistas menu Duos
 router.get('/playStation', productsController.playStation);

@@ -31,12 +31,11 @@ const productsController = {
     },
 
     cart: (req, res) => {
-        db.Products.findByPk(req.params.id)
-        .then(response => {
-         res.render('products/productCart', {productCart:response, toThousand});
-        })
-
-        
+        res.render('products/productCart')
+        // db.Products.findByPk(req.params.id)
+        // .then(response => {
+        //  res.render('products/productCart', {productCart:response, toThousand});
+        // })
     },
 
     detail: (req, res) => {

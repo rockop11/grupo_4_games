@@ -21,7 +21,7 @@
             <h2>Descripción</h2>
             <p> <%= productDetail.description %> </p>    
             <h2 class="precio">$<%= toThousand(finalPrice) %> </h2>
-            <p class="descuento"><%= productDetail.discount %>%OFF </p>
+            <p class="descuento"><%= productDetail.discount + " %OFF"%> </p>
             <p class="color">12 cuotas s/interés</p>
         </div>
         
@@ -29,24 +29,24 @@
         <div class="botones">
                 <% if(locals.isLogged) { %>
                 <!--BOTON EDITAR-->
-                <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario"><p>Editar </p><i class="fas fa-edit"></i></button></a>
+                <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario"><i class="fas fa-edit"></i></button></a>
 
                 <form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST">
                     <!--BOTON BORRAR-->
-                    <button type="submit" class="boton-formulario"><p>Borrar </p><i class="fas fa-trash-alt"></i></button>
+                    <button type="submit" class="boton-formulario"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 <% } %>
                      <!-- SI NO ESTA LOGEADO SOLO MUESTRA COMPRAR -->
                      <!--BOTON COMPRAR-->
-                    <a href="/products/cart/<%= productDetail.id %>"><button type="submit"class="boton-formulario"><p>Comprar </p><i class="fas fa-shopping-cart"></i></button></a>
-            </div>
+                    <a href=""><button type="submit"class="boton-formulario"><i class="fas fa-shopping-cart"></i></button></a>
+        </div>
 
     
     </main>
 
     <%- include('../partials/footer') %> 
 
-
+    <script src="/js/agregarProducto.js"></script>
 </body>
 
 </html>
