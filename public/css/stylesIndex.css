@@ -93,46 +93,15 @@ a.profile-icon {
 
 /* ------------------------ MAIN --------------------------- */
 
-/* Estilos del Menú duos */
+.carousel {
+    display: none;
+}
 
 .duos {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    border-top: 5px solid #ffffff;
-    height: 200px;
+    display: none;
 }
 
-.plays{
-    background-color:  #004EFF;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.xbox {
-    background-color: #44d62d;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .duos .plays a, .duos .xbox a {
-    margin-top: 350px;
-} */
-
-.duos img {
-    width: 70px;
-    margin: auto;
-    opacity: 15%;
-}
-
-.plays:hover img,
-.xbox:hover img {
-    opacity: 100%;
-}
 
 /*-----BANNER DE LA MITAD DE PAGINA-------*/
 img.img-banner{
@@ -403,6 +372,51 @@ p.blanco {
     .right-navbar {
         display: flex;
         align-items: center;
+    }
+
+    .carousel {
+        display: flex; 
+    }
+
+    /* Estilos del Menú duos */
+
+    .duos {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        border-top: 5px solid #ffffff;
+        height: 200px;
+    }
+
+    .plays{
+        background-color:  #004EFF;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .xbox {
+        background-color: #44d62d;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .duos .plays a, .duos .xbox a {
+        margin-top: 350px;
+    } */
+
+    .duos img {
+        width: 70px;
+        margin: auto;
+        opacity: 15%;
+    }
+
+    .plays:hover img,
+    .xbox:hover img {
+        opacity: 100%;
     }
 
     .duos {
