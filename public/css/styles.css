@@ -141,7 +141,7 @@ ul.navbar-desktop {
 }
 
 
-.fa-id-card, .fa-sign-in-alt {
+.fa-id-card, .fa-sign-in-alt, .fa-shopping-basket {
     color: #44d62d;
 }
 
@@ -495,7 +495,6 @@ div.botones button p {
 /* --- Carrito de Compras ---*/
 main {
     margin: auto;
-    /* padding: 15px; */
     max-width: 700px;
 }
 
