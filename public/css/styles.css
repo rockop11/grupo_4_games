@@ -463,7 +463,7 @@ span{
     padding-bottom: 10px;
 }
 
-.boton-formulario-shop{
+.boton-formulario, .boton-formulario-shop{
     width: 45px;
     background-color: #44d62d;
     border: none;
