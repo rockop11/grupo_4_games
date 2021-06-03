@@ -26,11 +26,11 @@ router.get('/detail/:id', productsController.detail);
 
 // CREACION DEL PRODUCTO
 router.get('/create', productsController.create);
-router.post('/create', uploadProducts.any(), validationProducts, productsController.store);
+router.post('/create', uploadProducts.single('image'), validationProducts, productsController.store);
 
 // EDICION DEL PRODUCTO
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', uploadProducts.any(), editProductsValidation, productsController.update);
+router.put('/edit/:id', uploadProducts.single('image'), editProductsValidation, productsController.update);
 
 // ELIMINACION DEL PRODUCTO
 router.delete('/delete/:id', productsController.delete),

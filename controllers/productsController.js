@@ -52,10 +52,10 @@ const productsController = {
         let category = await db.Category.findAll();
         let console = await db.Console.findAll();
 
-        res.render('products/productCreate',{productType, category, console});
+        res.render('products/productCreate',{productType:productType, category:category, console:console});
     },
 
-    store: function (req,res) {
+    store: async function (req,res) {
         const resultProductsValidation = validationResult(req);
         
         if(!resultProductsValidation.errors.length){
@@ -63,7 +63,7 @@ const productsController = {
             db.Products.create({
                 name: req.body.name,
                 description: req.body.description,
-                image: req.files[0].filename,
+                image: req.file.filename,
                 price: req.body.price,
                 discount: req.body.discount,
                 product_type_id: req.body.product_type_id,
@@ -74,9 +74,16 @@ const productsController = {
             })
             
         } else {
+            let productType = await db.ProductType.findAll();
+            let category = await db.Category.findAll();
+            let console = await db.Console.findAll();
+            
             return res.render('products/productCreate', {
                 errors: resultProductsValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                productType:productType,
+                category:category,
+                console:console
             });
         }
     },
@@ -90,20 +97,21 @@ const productsController = {
 
         let product = await db.Products.findByPk(req.params.id)
 
-        res.render('products/productEdit', {old:product, console, category, productType});
+        res.render('products/productEdit', {old:product, productType:productType, category:category, console:console});
     },
 
     //EDITAR PRODUCTO POR POST!
     update: async function(req,res) {
+        // res.send(req.body)
         const resultProductsValidation = validationResult(req);
 
 
         if(!resultProductsValidation.errors.length){
 
             await db.Products.update({
-                name: req.body.name,
+                    name: req.body.name,
                     description: req.body.description,
-                    image: req.files[0].filename,
+                    image: req.file.filename,
                     price: req.body.price,
                     discount: req.body.discount,
                     product_type_id: req.body.product_type_id,
@@ -118,9 +126,15 @@ const productsController = {
             )
             res.redirect('/products')
         }else{
+            let productType = await db.ProductType.findAll();
+            let category = await db.Category.findAll();
+            let console = await db.Console.findAll();
             return res.render('products/productCreate', {
                 errors: resultProductsValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                productType:productType,
+                category:category,
+                console:console
             });
         }
 

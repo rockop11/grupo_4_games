@@ -8,7 +8,7 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="" method="POST" enctype="multipart/form-data" class="form-user">
+        <form action="/products/create" method="POST" enctype="multipart/form-data" class="form-user">
 
             <h2>Agregar Producto</h2>
 
@@ -19,8 +19,7 @@
                 id="nombre" 
                 type="text" 
                 name="name" 
-                placeholder="Nombre Producto"
-                value="<%= locals.oldData ? oldData.name : null %>">
+                placeholder="Nombre Producto">
 
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-error">
@@ -31,7 +30,7 @@
 
             <div>
                 <label for="description">Descripción:</label>
-                <input id="description" type="text" name="description" placeholder="Descripción" value="<%= locals.oldData ? oldData.description : null %>">
+                <input id="description" type="text" name="description" placeholder="Descripción" >
 
                 <% if (locals.errors && errors.description) { %>
                     <div class="text-error">
@@ -55,7 +54,7 @@
 
             <div>
                 <label for="price">Precio:</label>
-                <input id="price" type="number" name="price" placeholder="Precio" value="<%= locals.oldData ? oldData.price : null %>">
+                <input id="price" type="number" name="price" placeholder="Precio">
 
                 <% if (locals.errors && errors.price) { %>
                     <div class="text-error">
@@ -66,7 +65,7 @@
 
             <div>
                 <label for="discount">Descuento:</label>
-                <input id="descuento" type="number" name="discount" placeholder="Descuento" >
+                <input id="descuento" type="number" name="discount" placeholder="Descuento">
 
                 <% if (locals.errors && errors.discount) { %>
                     <div class="text-error">
@@ -78,7 +77,7 @@
 
             <div>
                 <label>Categoria</label>
-                <select name="category_id" id="">
+                <select name="category_id">
                     <% category.forEach(category => { %>
                     <option value="<%= category.id %>"><%= category.name %></option>
                     <% }); %>
@@ -87,7 +86,8 @@
 
             <div>
                 <label>Consola:</label>
-                <select name="console_id" id="">
+                <select name="console_id">
+                    <option value="" >Elija una consola</option>
                     <% console.forEach(console => { %>
                     <option value="<%= console.id %>"><%= console.name %></option>
                     <% }); %>
@@ -96,7 +96,7 @@
 
             <div>
                 <label>Tipo de producto</label>
-                <select name="product_type_id" id="">
+                <select name="product_type_id">
                     <% productType.forEach(productType => { %>
                     <option value="<%= productType.id %>"><%= productType.name %></option>
                     <% }); %>

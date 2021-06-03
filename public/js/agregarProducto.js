@@ -1,5 +1,5 @@
 window.onload = function() {
-    let botonAgregar = document.querySelector('.boton-formulario');
+    let botonAgregar = document.querySelector('.boton-formulario-shop');
     
     botonAgregar.addEventListener('click', function(){
 
