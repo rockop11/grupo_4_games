@@ -105,6 +105,7 @@ const productsController = {
         // res.send(req.body)
         const resultProductsValidation = validationResult(req);
 
+        
 
         if(!resultProductsValidation.errors.length){
 
@@ -129,12 +130,15 @@ const productsController = {
             let productType = await db.ProductType.findAll();
             let category = await db.Category.findAll();
             let console = await db.Console.findAll();
-            return res.render('products/productCreate', {
+            let product = await db.Products.findByPk(req.params.id);
+
+            return res.render('products/productEdit', {
                 errors: resultProductsValidation.mapped(),
+                old:product,
                 oldData: req.body,
                 productType:productType,
                 category:category,
-                console:console
+                console:console,
             });
         }
 

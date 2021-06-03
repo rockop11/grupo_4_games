@@ -15,8 +15,6 @@ const productsValidations = [
 		let file = req.file;
 		let acceptedExtensions = ['.jpg','.png','.gif'];
 
-		console.log(req.file);
-
 		if (!file){
 			throw new Error('Tienes que subir una imagen');
 		}else{

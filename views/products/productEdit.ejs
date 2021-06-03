@@ -14,8 +14,7 @@
 
             <div>
                 <label for="name">Nombre</label>
-                <input id="name" type="text" name="name" placeholder="Nombre Producto" value="<%= old.name %>"
-                value="<%= locals.oldData ? oldData.name : null %>">
+                <input id="name" type="text" name="name" placeholder="Nombre Producto" value="<%= old.name %>">
 
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-error">
@@ -29,8 +28,7 @@
                 <label for="description">Descripcion</label>
                 <input id="description" type="text" name="description"
                 placeholder="Descripción" 
-                value="<%= old.description %>"
-                value="<%= locals.oldData ? oldData.description : null %>">
+                value="<%= old.description %>">
 
                 <% if (locals.errors && errors.description) { %>
                     <div class="text-error">
@@ -44,7 +42,7 @@
             <div>
                 <label>Agregar imagenes del producto:</label>
                 <input type="file" name="image" accept=".jpg, .png" multiple
-                value="<%= locals.oldData ? oldData.image : null %>">
+               >
 
                 <% if (locals.errors && errors.image) { %>
                     <div class="text-error">
@@ -57,8 +55,7 @@
 
             <div>
                 <label for="price">Precio</label>
-                <input id="price" type="text" name="price" value="$<%= old.price %>"
-                value="<%= locals.oldData ? oldData.price : null %>"
+                <input id="price" type="text" name="price" value="<%= old.price %>"
                 placeholder="Precio">
 
                 <% if (locals.errors && errors.price) { %>
@@ -71,8 +68,7 @@
             
             <div>
                 <label for="discount">Descuento</label>
-                <input id="discount" type="number" name="discount" placeholder="Descuento" value="<%= old.discount %>"
-                value="<%= locals.oldData ? oldData.discount : null %>">
+                <input id="discount" type="number" name="discount" placeholder="Descuento">
             </div>
 
             <div>
