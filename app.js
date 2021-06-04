@@ -8,6 +8,10 @@ const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
+//Requerimos rutas de Api
+const productsApiRouter = require('./routes/api/productsApiRoutes');
+const usersApiRouter = require('./routes/api/usersApiRoutes');
+
 // middlewares
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -17,6 +21,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
 
 app.use(cookies());
 
@@ -40,6 +45,12 @@ app.use('/products', productsRoutes);
 
 //Rutas usuarios
 app.use('/users', usersRoutes);
+
+
+//Endpoints de Apis
+app.use('/api/products', productsApiRouter);
+app.use('/api/users', usersApiRouter);
+
 
 //Servidor
 app.listen(3000, function(){
