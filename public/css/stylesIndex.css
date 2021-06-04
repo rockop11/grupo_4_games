@@ -165,7 +165,7 @@ main section article.prod-contenedor {
     height: 100%;
 }
 
-.producto {
+.products-gral {
     border-top: 1px solid #ebebeb;
     background-color: #fff;
     padding: 15px;
@@ -189,18 +189,18 @@ main section article.prod-contenedor {
     top: -15px;
 }
 
-.descuento {
+.prod-descuento {
     flex-grow: 7;
     font-size: 16px;
 }
 
-.precio {
+.prod-precio {
     flex-grow: 3;
     font-size: 18px;
     color: #323f48;
 }
 
-.descuento,
+.prod-descuento,
 .fa-truck {
     color: #44d62d;
     border-radius: 50%;
@@ -210,7 +210,7 @@ main section article.prod-contenedor {
     padding-bottom: 15px;
 }
 
-.descripcion {
+.prod-descripcion {
     padding-top: 15px;
 }
 
@@ -335,7 +335,7 @@ p.blanco {
         width: 95%;
     }
 
-    .descripcion {
+    .prod-descripcion {
         display: none;
     }
 
@@ -467,7 +467,7 @@ p.blanco {
         min-height: 475px;
     } */
 
-    .producto {
+    .products-gral {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     }
