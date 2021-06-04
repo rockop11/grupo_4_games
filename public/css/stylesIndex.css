@@ -89,9 +89,41 @@ a.profile-icon {
     color: #ffffff;
 }
 
-
-
 /* ------------------------ MAIN --------------------------- */
+
+/*-----BANNER MOBILE-------*/
+
+.banner-mobile {
+    display: block;
+    /* margin-bottom: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-mobile img {
+    min-height: 360px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+.banner-mobile h1 {
+    /* font-family: 'Paytone One', sans-serif; */
+    font-weight: 300;
+    font-size: 30px;
+    display: block;
+    width: 45%;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    line-height: 40px;
+    /* background-color: #323f48; */
+}
+
 
 .carousel {
     display: none;
@@ -381,6 +413,10 @@ p.blanco {
     .right-navbar {
         display: flex;
         align-items: center;
+    }
+
+    .banner-mobile {
+        display: none;
     }
 
     .carousel {
