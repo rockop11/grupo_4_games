@@ -3,12 +3,11 @@ const router = express.Router();
 const productsApiController = require('../../controllers/api/productsApiController');
 
 //Rutas
-//Lista de productos
-router.get('')
+//Lista de usuarios
+router.get('/', productsApiController.list)
 
-
-
-
+//Detalle del usuario
+router.get('/:id', productsApiController.detail)
 
 
 module.exports = router;
