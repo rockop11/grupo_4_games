@@ -25,7 +25,7 @@
                     <div class="text-error">
                         <%= errors.fullName.msg %> 
                     </div>
-                    <% } %>
+                <% } %>
             </div>
                     
                     
@@ -42,18 +42,18 @@
                     <div class="text-error">
                         <%= errors.email.msg %> 
                     </div>
-                    <% } %>
+                <% } %>
             </div>
                     
             <div>
-                <label for="email">Edite la imagen </i></label>
+                <label for="image">Edite la imagen </i></label>
                 <input id="image" type="file" name="image" placeholder="Agregar imagen">
 
                 <% if (locals.errors && errors.image) { %>
                     <div class="text-error">
                         <%= errors.image.msg %> 
                     </div>
-                    <% } %>
+                <% } %>
             </div>
 
             <div>
@@ -68,22 +68,7 @@
                     <div class="text-error">
                         <%= errors.password.msg %> 
                     </div>
-                    <% } %>
-            </div>
-
-            <div>
-                <label for="repetirContraseña">Repetir Contraseña</i></label>
-                <input 
-                id="repeatPassword" 
-                type="password" 
-                name="repeatPassword" 
-                placeholder="Repetir Contraseña">
-                
-                <% if (locals.errors && errors.repeatPassword) { %>
-                    <div class="text-error">
-                        <%= errors.repeatPassword.msg %> 
-                    </div>
-                    <% } %>
+                <% } %>
             </div>
 
             <div>
@@ -126,6 +111,8 @@
                 placeholder="Teléfono"
                 value="<%= locals.oldData ? oldData.phone : user.phone %>">
             </div>
+
+            <ul class="errores"></ul>
             <div>
                 <button type="submit">Actualizar datos</button>
             </div>
@@ -137,7 +124,7 @@
 
     <%- include('../partials/footer') %> 
 
-    
+    <script src="/js/editUserValidation.js"></script>
 </body>
 
 </html>
