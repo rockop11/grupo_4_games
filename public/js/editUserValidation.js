@@ -82,7 +82,6 @@ window.onload = function() {
         } else {
             phone.classList.add('is-valid');
             phone.classList.remove('is-invalid');
-            // formulario.nombre.focus();
         }
 
 
