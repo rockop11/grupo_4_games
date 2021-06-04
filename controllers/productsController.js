@@ -69,10 +69,8 @@ const productsController = {
                 product_type_id: req.body.product_type_id,
                 category_id: req.body.category_id,
                 console_id: req.body.console_id,
-            }).then(function(){
-                res.redirect('/products');
             })
-            
+                res.redirect('/products');
         } else {
             let productType = await db.ProductType.findAll();
             let category = await db.Category.findAll();
