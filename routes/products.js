@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
 
+const adminMiddleware = require('../middlewares/adminMiddleware');
 const uploadProducts = require('../middlewares/multerProductsMd');
 const validationProducts = require('../middlewares/validateProductsMd');
 const editProductsValidation = require('../middlewares/validateEditProductsMd');
@@ -25,11 +26,11 @@ router.get('/xbox', productsController.xbox);
 router.get('/detail/:id', productsController.detail);
 
 // CREACION DEL PRODUCTO
-router.get('/create', productsController.create);
+router.get('/create', adminMiddleware, productsController.create);
 router.post('/create', uploadProducts.single('image'), validationProducts, productsController.store);
 
 // EDICION DEL PRODUCTO
-router.get('/edit/:id', productsController.edit);
+router.get('/edit/:id', adminMiddleware, productsController.edit);
 router.put('/edit/:id', uploadProducts.single('image'), editProductsValidation, productsController.update);
 
 // ELIMINACION DEL PRODUCTO

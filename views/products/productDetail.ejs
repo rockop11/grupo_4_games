@@ -33,7 +33,7 @@
         
         <!-- SI ESTA LOGEADO SE MUESTA COMPRAR Y BORRAR -->
         <div class="botones">
-                <% if(locals.isLogged) { %>
+                <% if(locals.isLogged && userLogged.isAdmin == true) { %>
                 <!--BOTON EDITAR-->
                 <a href="/products/edit/<%= productDetail.id %> "><button type="submit"class="boton-formulario"><i class="fas fa-edit"></i></button></a>
 

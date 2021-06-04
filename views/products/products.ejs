@@ -9,6 +9,13 @@
 
             <h1>Productos</h1>
 
+            <% if(userLogged && userLogged.isAdmin == true){ %>
+            
+            <a href="/products/create">Crear Producto</a>
+
+            <% } %> 
+
+            
             <section class="container-products">
 
                 <% if (products.length) { %>

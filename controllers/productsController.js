@@ -8,11 +8,13 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     //Muestra todos los productos en LH:3000/products
-    index: (req, res) => {
+    index: async (req, res) => {
         //llamamos a la DB y mostramos todos los prods.
+        let userLogged = await req.session.userLogged
+
         db.Products.findAll()
         .then(response => {
-            res.render('products/products', {products:response, toThousand})
+            res.render('products/products', {products:response, toThousand, userLogged})
         });
     },
 
@@ -37,11 +39,14 @@ const productsController = {
         })
     },
 
-    detail: (req, res) => {
+    detail: async (req, res) => {
         //entramos al producto mediante req.params.id
+
+        let userLogged = await req.session.userLogged
+
         db.Products.findByPk(req.params.id)
         .then(response => {
-            res.render('products/productDetail', {productDetail:response, toThousand})
+            res.render('products/productDetail', {productDetail:response, toThousand, userLogged})
         })
     },
 
