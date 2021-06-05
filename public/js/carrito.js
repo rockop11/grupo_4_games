@@ -20,7 +20,7 @@ window.onload = function(){
             </article>
             <article class="cant-cart">
                 <form action="#" method="GET">
-                    <label for="cantidad">Cantidad:</label>
+                    <label for="cantidad"></label>
                     <input id="count" value=${producto.inputCantidad} type="text">
                 </form>
             </article>

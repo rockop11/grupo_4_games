@@ -489,6 +489,7 @@ span{
     padding: 13px;
     border-radius: 5px;
     justify-content: center;
+    cursor: pointer;
 }
 
 div.botones {
@@ -521,7 +522,7 @@ main {
 }
 
 .descripcion-cart {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
 }
 
@@ -562,6 +563,14 @@ main h4 {
     display: block;
     font-size: 20px;
     padding: 10px;
+}
+
+.fa-times {
+    cursor: pointer !important;
+}
+
+#count {
+    width: 15px;
 }
 
 .img-cart img {
