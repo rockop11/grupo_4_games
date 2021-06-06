@@ -3,12 +3,23 @@ const sequelize = db.sequelize;
 
 const productsApiController = {
     list:(req,res)=>{
-        db.ProductType.findAll()
+        db.ProductType.findAll({
+            include:['products']
+        })
         .then(categories => {
+
         db.Products.findAll({
         include:['categories', 'consoles', 'productTypes']
     })
         .then(products=>{
+            let arrayCategorias = []
+            for(let i=0; i<categories.length ; i++){
+                arrayCategorias.push({
+                    nombre: categories[i].dataValues.name,
+                    total: categories[i].dataValues.products.length
+                })
+            }
+
             let consola = products.filter(product => product.product_type_id == 1)
             let accesorio = products.filter(product => product.product_type_id == 2)
             let juego = products.filter(product => product.product_type_id == 3)
@@ -18,11 +29,12 @@ const productsApiController = {
                     total: products.length,
                     url: "/api/products",
                     categories: categories.length,
-                    countByCategory: {
-                        consola: consola.length,
-                        accesorio: accesorio.length,
-                        juego: juego.length,
-                    }
+                    categoryNames: arrayCategorias,
+                    countByCategory: [
+                        {consola: consola.length},
+                        {accesorio: accesorio.length},
+                        {juego: juego.length}
+                    ]
                 },
                 data: products.map(product => {
                     return{
@@ -42,6 +54,9 @@ const productsApiController = {
             res.json(respuesta)
         })    
         })
+        .catch(function(error){
+            res.json({status:800})
+        })
     },
 
     detail:(req,res)=>{
@@ -52,7 +67,6 @@ const productsApiController = {
             let respuesta = {
                 meta:{
                     status: 200,
-                    total: product.id.length,
                     url: "/api/products/" + product.id
                 },
                 data: {
@@ -69,6 +83,29 @@ const productsApiController = {
                 }
             
             res.json(respuesta)
+        })
+        .catch(function(error){
+            res.json({status:800})
+        })
+    },
+
+    ultimo: (req, res) => {
+        db.Products.findAll({order:[["id", "DESC"]] ,limit:1})
+        .then(function (products) {
+            products[0].setDataValue("endpoint", "/api/products/lastProduct" + products.length)
+
+            let apiResponse= {
+                meta: {
+                    status: 200,
+                    url:"/api/products/lastProduct",
+                    total: products.length
+                },
+                data: products
+            }
+            res.json(apiResponse)
+        })
+        .catch(function(error){
+            res.json({status:500})
         })
     }
 
