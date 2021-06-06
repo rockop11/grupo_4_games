@@ -90,17 +90,17 @@ const productsApiController = {
     },
 
     ultimo: (req, res) => {
-        db.Products.findAll({order:[["id", "DESC"]] ,limit:1})
-        .then(function (products) {
-            products[0].setDataValue("endpoint", "/api/products/lastProduct" + products.length)
+        db.Products.findAll({order:[["id", "DESC"]], limit:1})
+        .then(function (product) {
+            product[0].setDataValue("endpoint", "/api/products/lastProduct/" + product.length)
 
             let apiResponse= {
                 meta: {
                     status: 200,
                     url:"/api/products/lastProduct",
-                    total: products.length
+                    total: product.length
                 },
-                data: products
+                data: product
             }
             res.json(apiResponse)
         })

@@ -6,11 +6,11 @@ const productsApiController = require('../../controllers/api/productsApiControll
 //Lista de usuarios
 router.get('/', productsApiController.list)
 
+//Ulitmo Producto
+router.get('/lastProduct', productsApiController.ultimo)
+
 //Detalle del usuario
 router.get('/:id', productsApiController.detail)
-
-//Ulitmo Producto
-// router.get('/lastProduct', productsApiController.ultimo)
 
 
 module.exports = router;
