@@ -3,6 +3,8 @@ const sequelize = db.sequelize;
 
 const productsApiController = {
     list:(req,res)=>{
+        db.ProductType.findAll()
+        .then(categories => {
         db.Products.findAll({
         include:['categories', 'consoles', 'productTypes']
     })
@@ -15,6 +17,7 @@ const productsApiController = {
                     status: 200,
                     total: products.length,
                     url: "/api/products",
+                    categories: categories.length,
                     countByCategory: {
                         consola: consola.length,
                         accesorio: accesorio.length,
@@ -35,7 +38,9 @@ const productsApiController = {
                     }
                 })
             }
+        
             res.json(respuesta)
+        })    
         })
     },
 
