@@ -61,6 +61,13 @@ div.top-header {
     font-size: 16px;
 }
 
+.img-profile {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /*BOTON BURGA PARA CUANDO SEPAMOS JSFRONT*/
 a.burger-button {
     display: none;
@@ -81,14 +88,8 @@ li:hover a.consolas, li:active a.consolas {
     color: #ffffff;
 } 
 
-.profile-navbar {
-    display: none;
-}
 
-/* .profile-icon {
-    display: block;
-    margin-right: 15px;
-} */
+
 
 div.inputs-header {
     display: flex;
@@ -233,6 +234,10 @@ article.prod-contenedor {
 
 article.prod-contenedor a {
     text-decoration: none;
+}
+
+.img-ps, .img-xb {
+    width: 100%;
 }
 
 /*-------------------------------------------------------*/
@@ -425,7 +430,19 @@ h1{
     margin: 15px 0px;
     text-align: center;
     color: black;
-    
+}
+
+.create-btn {
+    text-align: center;
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    background-color: #44d62d;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 body p{
