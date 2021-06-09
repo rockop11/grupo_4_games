@@ -17,23 +17,24 @@
                     let finalPrice = xbox[i].discount ? (xbox[i].price - xbox[i].price * xbox[i].discount / 100).toFixed(0) : xbox[i].price; %>
                 
                     <article class="prod-contenedor">
-                        <a href="/products/detail/<%= xbox[i].id %>">
-                            <img src="/img/fotosMulter/<%= xbox[i].image %>" alt=""
-                                class="img-products-gral img-xb">
+                        <div class="img-producto">
+                            <a href="/products/detail/<%= xbox[i].id %>">
+                                <img src="/img/fotosMulter/<%= xbox[i].image %>" alt="<%= xbox[i].name %>" class="img-producto">
+                            </a>
+                        </div>
 
-                            <div class="products-gral">
-                                <i class="fas fa-truck"></i>
-                                <p class="prod-precio">
-                                    $<%= toThousand(finalPrice) %>
-                                </p>
-                                <p class="prod-descuento">
-                                    <%= xbox[i].discount %>%OFF
-                                </p>
-                                <h4 class="prod-descripcion">
-                                    <%= xbox[i].name %>
-                                </h4>
-                            </div>
-                        </a>
+                        <div class="products-gral">
+                            <i class="fas fa-truck"></i>
+                            <p class="prod-precio">
+                                $<%= toThousand(finalPrice) %>
+                            </p>
+                            <p class="prod-descuento">
+                                <%= xbox[i].discount %>%OFF
+                            </p>
+                            <h4 class="prod-descripcion">
+                                <%= xbox[i].name %>
+                            </h4>
+                        </div>
                     </article>
                 <% } %>
                 <% } %>

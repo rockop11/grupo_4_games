@@ -17,23 +17,23 @@
                     let finalPrice = playStation[i].discount ? (playStation[i].price - playStation[i].price * playStation[i].discount / 100).toFixed(0) : playStation[i].price; %>
                 
                     <article class="prod-contenedor">
-                        <a href="/products/detail/<%= playStation[i].id %>">
-                            <img src="/img/fotosMulter/<%= playStation[i].image %>" alt=""
-                                class="img-products-gral img-ps">
-
-                            <div class="products-gral">
-                                <i class="fas fa-truck"></i>
-                                <p class="prod-precio">
-                                    $<%= toThousand(finalPrice) %>
-                                </p>
-                                <p class="prod-descuento">
-                                    <%= playStation[i].discount %>%OFF
-                                </p>
-                                <h4 class="prod-descripcion">
-                                    <%= playStation[i].name %>
-                                </h4>
-                            </div>
-                        </a>
+                        <div class="img-producto">
+                            <a href="/products/detail/<%= playStation[i].id %>">
+                                <img src="/img/fotosMulter/<%= playStation[i].image %>" alt="<%= playStation[i].name %>" class="img-producto">
+                            </a>
+                        </div>
+                        <div class="products-gral">
+                            <i class="fas fa-truck"></i>
+                            <p class="prod-precio">
+                                $<%= toThousand(finalPrice) %>
+                            </p>
+                            <p class="prod-descuento">
+                                <%= playStation[i].discount %>%OFF
+                            </p>
+                            <h4 class="prod-descripcion">
+                                <%= playStation[i].name %>
+                            </h4>
+                        </div>
                     </article>
                 <% } %>
                 <% } %>
