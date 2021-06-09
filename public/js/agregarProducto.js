@@ -1,8 +1,9 @@
+
 window.onload = function() {
     let botonAgregar = document.querySelector('.boton-formulario-shop');
     
-    botonAgregar.addEventListener('click', function(){
-
+    botonAgregar.addEventListener('click', function(e){
+        e.preventDefault();
         //capturamos la URL del producto
         let url = window.location.href.split("/");
         
@@ -18,15 +19,31 @@ window.onload = function() {
             idProducto: id, 
             imagen,
             tituloProd,
-            precio,
-            descuento,
-            inputCantidad
+            precio:parseFloat(precio),
+            descuento: parseFloat(descuento),
+            inputCantidad: parseFloat(inputCantidad)
         }
 
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
+
+
+
+            //ppio suma totales
+            let totalCarrito = 0
+            for (let i=0; i<carrito.length; i++) {
+               let carro = carrito[i];
+               totalCarrito = totalCarrito + carro 
+            }
+            console.log(totalCarrito)
+            localStorage.setItem("totalCarrito", totalCarrito)
+            //fin suma totales
+
+
+
+
         } else {
             let carrito = JSON.parse(localStorage.carrito)
             let arrayProductos = carrito.filter(function(producto){

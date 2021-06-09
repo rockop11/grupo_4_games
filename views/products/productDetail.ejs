@@ -20,7 +20,8 @@
         <div class="barra-precio">
             <h2>Descripción</h2>
             <p> <%= productDetail.description %> </p>    
-            <h2 class="precio">$<%= toThousand(finalPrice) %> </h2>
+            <h2>$<%= toThousand(finalPrice) %> </h2>
+            <span class="precio" style="display: none"><%=finalPrice%></span>
             <p class="descuento"><%= productDetail.discount + " %OFF"%> </p>
             <p class="color">12 cuotas s/interés</p>
             <div class="cant">
