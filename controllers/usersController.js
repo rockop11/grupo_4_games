@@ -128,8 +128,8 @@ const usersController = {
                     req.session.userLogged = user;
                     res.redirect("/users/profile")
                 });
-            }).catch(function (response) {
-                // si no  encuentra el ususario  
+            }).catch(function (e) {
+                res.render('error')// si no  encuentra el ususario  
         })
     },
 
