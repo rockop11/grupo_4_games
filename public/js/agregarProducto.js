@@ -1,4 +1,3 @@
-
 window.onload = function() {
     let botonAgregar = document.querySelector('.boton-formulario-shop');
     
@@ -48,7 +47,6 @@ window.onload = function() {
                let carro = carrito[i].precio * carrito[i].inputCantidad;
                totalCarrito += carro 
             }
-            console.log(totalCarrito)
             localStorage.setItem("totalCarrito", totalCarrito)
         }
 
