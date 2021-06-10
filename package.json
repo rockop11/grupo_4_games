@@ -4,7 +4,7 @@
   "description": "URL REPO: https://github.com/rockop11/grupo_4_games",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
