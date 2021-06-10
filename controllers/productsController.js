@@ -15,6 +15,8 @@ const productsController = {
         db.Products.findAll()
         .then(response => {
             res.render('products/products', {products:response, toThousand, userLogged})
+        }).catch(function (e) {
+                res.render('error')// si no  encuentra el ususario  
         });
     },
 
@@ -22,6 +24,8 @@ const productsController = {
         db.Products.findAll()
         .then(response => {
             res.render('products/playStation', {playStation:response, toThousand})
+        }).catch(function (e) {
+            res.render('error')// si no  encuentra el ususario  
         })
     },
 
@@ -29,6 +33,8 @@ const productsController = {
         db.Products.findAll()
         .then(response => {
             res.render('products/xbox', {xbox:response, toThousand})
+        }).catch(function (e) {
+            res.render('error')// si no  encuentra el ususario  
         })
     },
 
@@ -36,6 +42,8 @@ const productsController = {
         db.Products.findAll()
         .then(response => {
          res.render('products/productCart', {productCart:response, toThousand});
+        }).catch(function (e) {
+            res.render('error')// si no  encuentra el ususario  
         })
     },
 
@@ -47,6 +55,8 @@ const productsController = {
         db.Products.findByPk(req.params.id)
         .then(response => {
             res.render('products/productDetail', {productDetail:response, toThousand, userLogged})
+        }).catch(function (e) {
+            res.render('error')// si no  encuentra el ususario  
         })
     },
 
