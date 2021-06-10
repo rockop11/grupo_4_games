@@ -28,22 +28,7 @@ window.onload = function() {
             let carrito = []
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
-
-
-
-            //ppio suma totales
-            let totalCarrito = 0
-            for (let i=0; i<carrito.length; i++) {
-               let carro = carrito[i];
-               totalCarrito = totalCarrito + carro 
-            }
-            console.log(totalCarrito)
-            localStorage.setItem("totalCarrito", totalCarrito)
-            //fin suma totales
-
-
-
-
+            localStorage.setItem("totalCarrito", producto.precio * producto.inputCantidad)
         } else {
             let carrito = JSON.parse(localStorage.carrito)
             let arrayProductos = carrito.filter(function(producto){
@@ -57,6 +42,14 @@ window.onload = function() {
                 arrayProductos[0].inputCantidad == parseInt(arrayProductos[0].inputCantidad)+1;
                 localStorage.setItem("carrito", JSON.stringify(carrito))
             }
+
+            let totalCarrito = 0
+            for (let i=0; i<carrito.length; i++) {
+               let carro = carrito[i].precio * carrito[i].inputCantidad;
+               totalCarrito += carro 
+            }
+            console.log(totalCarrito)
+            localStorage.setItem("totalCarrito", totalCarrito)
         }
 
     })

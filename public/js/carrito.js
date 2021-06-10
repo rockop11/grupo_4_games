@@ -1,4 +1,5 @@
 window.onload = function(){
+    const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     if(typeof localStorage.carrito == 'undefined' || typeof localStorage.carrito == "[]"){
         let div = document.getElementById("vacio");
         div.innerHTML += "<h2>No hay productos agregados </h2>"
@@ -16,7 +17,7 @@ window.onload = function(){
                 </form>
                 <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
                 <div class="descripcion-cart">${producto.tituloProd}</div>
-                <div class="precio-cart"> ${producto.precio}</div>
+                <div class="precio-cart">$ ${toThousand(producto.precio)}</div>
             </article>
             <article class="cant-cart">
                 <form action="#" method="GET">
