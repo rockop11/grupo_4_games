@@ -118,7 +118,7 @@ const usersController = {
                     fullName: req.body.fullName,
                     email: req.body.email,
                     password: bcryptjs.hashSync(req.body.password, 12),
-                    repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
+                    // repeatPassword: bcryptjs.hashSync(req.body.repeatPassword, 12),
                     image: req.files[0].filename,
                     address: req.body.address,
                     location: req.body.location,
@@ -127,10 +127,10 @@ const usersController = {
                 }).then(user => {
                     req.session.userLogged = user;
                     res.redirect("/users/profile")
+                }).catch(function(e){
+                    res.render('error')
                 });
-            }).catch(function (e) {
-                res.render('error')// si no  encuentra el ususario  
-        })
+            })
     },
 
     logout: (req, res) => {

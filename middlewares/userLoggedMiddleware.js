@@ -47,11 +47,8 @@ async function userLoggedMiddleware(req, res, next) {
 		res.locals.userLogged = req.session.userLogged;
     } 
 
-    next()
+    next();
 
-    .catch(function (e) {
-        res.render('error')// si no  encuentra el ususario  
-    })
 }
 
 module.exports = userLoggedMiddleware;
