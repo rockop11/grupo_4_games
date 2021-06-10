@@ -30,6 +30,32 @@ window.onload = function(){
         div.innerHTML += contenido
         }
     }
+
+    let totalCarrito = localStorage.totalCarrito
+    let divTotales = document.getElementById("total")
+    let contenido2 = ` <section class="sumario-cart">
+    <h4>Resumen de compra</h4>
+    
+
+    <div class="totales">
+      <div class="titulos">
+        <h3>TOTAL:</h3>
+      </div>
+      <div class="cantidades">
+        <h3>$ ${totalCarrito}</h3>
+      </div>
+    </div>
+    <form action="#" method="GET">
+      <button type="submit">Iniciar Pago</button>
+    </form>
+
+    <a href="/products">
+      <button type="submit">Agregar más productos</button>
+    </a>
+  </section>`
+
+  divTotales.innerHTML += contenido2
+    
 }
 
 function borrarItem(id){
