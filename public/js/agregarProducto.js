@@ -49,6 +49,5 @@ window.onload = function() {
             }
             localStorage.setItem("totalCarrito", totalCarrito)
         }
-
     })
 }
