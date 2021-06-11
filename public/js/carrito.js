@@ -31,30 +31,57 @@ window.onload = function(){
         }
     }
 
-    let totalCarrito = localStorage.totalCarrito
-    let divTotales = document.getElementById("total")
-    let contenido2 = ` <section class="sumario-cart">
-    <h4>Resumen de compra</h4>
+    if(typeof localStorage.totalCarrito == 'undefined') {
+      let divTotales = document.getElementById("total")
+      let contenido2 = ` <section class="sumario-cart">
+      <h4>Resumen de compra</h4>
     
 
-    <div class="totales">
-      <div class="titulos">
-        <h3>TOTAL:</h3>
+      <div class="totales">
+        <div class="titulos">
+          <h3>TOTAL:</h3>
+        </div>
+        <div class="cantidades">
+          <h3>$ 0</h3>
+        </div>
       </div>
-      <div class="cantidades">
-        <h3>$ ${totalCarrito}</h3>
+      <form action="#" method="GET">
+        <button type="submit">Iniciar Pago</button>
+      </form>
+
+      <a href="/products">
+        <button type="submit">Agregar más productos</button>
+      </a>
+    </section>`
+
+    divTotales.innerHTML += contenido2
+    } else {
+
+      let totalCarrito = localStorage.totalCarrito
+      let divTotales = document.getElementById("total")
+      let contenido2 = ` <section class="sumario-cart">
+      <h4>Resumen de compra</h4>
+      
+  
+      <div class="totales">
+        <div class="titulos">
+          <h3>TOTAL:</h3>
+        </div>
+        <div class="cantidades">
+          <h3>$ ${totalCarrito}</h3>
+        </div>
       </div>
-    </div>
-    <form action="#" method="GET">
-      <button type="submit">Iniciar Pago</button>
-    </form>
-
-    <a href="/products">
-      <button type="submit">Agregar más productos</button>
-    </a>
-  </section>`
-
-  divTotales.innerHTML += contenido2
+      <form action="#" method="GET">
+        <button type="submit">Iniciar Pago</button>
+      </form>
+  
+      <a href="/products">
+        <button type="submit">Agregar más productos</button>
+      </a>
+    </section>`
+  
+    divTotales.innerHTML += contenido2
+    }
     
 }
 
