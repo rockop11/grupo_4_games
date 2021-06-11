@@ -13,8 +13,11 @@
                         
                 <% for( product of products ) {  %>
                     <article class="prod-contenedor">
-                        <a href="/products/detail/<%= product.id %> ">        
-                         <img src="/img/fotosMulter/<%= product.image %> " alt="<%= product.name %>" class="img-products-gral">
+                        <div class="img-producto">
+                            <a href="/products/detail/<%= product.id %> ">        
+                                <img src="/img/fotosMulter/<%= product.image %> " alt="<%= product.name %>" class="img-producto">
+                            </a>
+                        </div>
                             
                             <div class="products-gral">
                                 <p class="prod-precio"><%= product.price %></p>
@@ -24,7 +27,6 @@
                                 </p>
                                 <i class="fas fa-truck"></i>
                             </div>
-                        </a>
                     </article>
                 <% } %>
 

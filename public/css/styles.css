@@ -941,6 +941,9 @@ h4.footer-copy-header {
         min-height: 72vh;
     }
 
+    .result-products {
+        min-height: 59vh;
+    }
     article.prod-contenedor {
         width: 22%;
     }
