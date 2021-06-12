@@ -42,6 +42,8 @@ window.onload = function() {
                 localStorage.setItem("carrito", JSON.stringify(carrito))
             }
 
+            
+
             let totalCarrito = 0
             for (let i=0; i<carrito.length; i++) {
                let carro = carrito[i].precio * carrito[i].inputCantidad;
@@ -49,5 +51,6 @@ window.onload = function() {
             }
             localStorage.setItem("totalCarrito", totalCarrito)
         }
+        alert('Agregaste' + " " + tituloProd + " al carrito")
     })
 }

@@ -10,12 +10,37 @@
 
       <div id="vacio" class="vacio"></div>
 
-      <div id="total" class="total"></div>
+      <!-- <div id="total" class="total"></div> -->
+
+      <section class="sumario-cart">
+        <h4>Resumen de compra</h4>
+        
+    
+        <div class="totales">
+          <div class="titulos">
+            <h3>TOTAL:</h3>
+          </div>
+          <div class="cantidades">
+            <h3 id="precioTotal">$</h3>
+          </div>
+        </div>
+
+        <form action="#" method="GET">
+          <button type="submit">Iniciar Pago</button>
+        </form>
+    
+        <button id="botonBorrar" type="button" onclick="">Vaciar Carrito</button>
+      
+        <a href="/products">
+          <button type="submit">Agregar más productos</button>
+        </a>
+      </section>
 
     </main>
 
     <%- include('../partials/footer') %>
 
+    
     <script src="/js/carrito.js"></script>
   </body>
 </html>
